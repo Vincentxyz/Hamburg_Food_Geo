@@ -2,12 +2,12 @@ import json
 import pandas as pd
 import numpy as np
 
-with open('response.json') as json_data:
+with open('merged_extract.json') as json_data:
     d = json.load(json_data)
     json_data.close()
     
-businesses = d['businesses']
-
+#businesses = d['businesses']
+businesses = d
 
 
 restaurant_id = []
@@ -24,6 +24,7 @@ i = 0
 category_restaurant_id = []
 category_alias = []
 category_title = []
+category_index = []
 
 for biz in businesses:
 
@@ -32,7 +33,10 @@ for biz in businesses:
     #(Better do as list)category_title = biz['categories'][0]['title']
     latitude.append(biz['coordinates']['latitude'])
     longitude.append(biz['coordinates']['longitude'])
-    price.append(biz['price'])
+    try:
+        price.append(biz['price'])
+    except:
+        price.append('n/a')
     rating.append(biz['rating'])
     review_count.append(biz['review_count'])
     is_closed.append(biz['is_closed'])
@@ -41,6 +45,7 @@ for biz in businesses:
         category_restaurant_id.append(biz['id'])
         category_alias.append(cat['alias'])
         category_title.append(cat['title'])
+        category_index.append(biz['id']+ '_' + cat['alias'])
 
 df_businesses = pd.DataFrame(index=restaurant_id, data = {"rating": rating,
                                                                "review_count": review_count,
@@ -50,7 +55,19 @@ df_businesses = pd.DataFrame(index=restaurant_id, data = {"rating": rating,
                                                                "zip_code": zip_code,
                                                                "price": price})
 
-df_categories = pd.DataFrame(data = {'restaurant_id': category_restaurant_id,
+df_businesses = df_businesses[~df_businesses.index.duplicated(keep='first')]    
+
+df_businesses.to_csv('extract_businesses.csv')
+
+
+
+    
+
+df_categories = pd.DataFrame(index = category_index, data = {'restaurant_id': category_restaurant_id,
                                      'alias': category_alias,
                                      'title': category_title})
+    
+df_categories = df_categories[~df_categories.index.duplicated(keep='first')] 
+
+df_categories.to_csv('extract_categories.csv')
 
