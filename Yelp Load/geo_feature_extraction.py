@@ -1,6 +1,13 @@
 import json
 import pandas as pd
 import numpy as np
+import pyproj
+
+def transform_coord(lat_in, long_in): #output to yelp
+  inProj = pyproj.Proj(init='epsg:25832')
+  outProj = pyproj.Proj(init='epsg:4326')
+  lat_out,long_out = pyproj.transform(inProj,outProj,lat_in,long_in)
+  return lat_out, long_out
 
 with open('merged_extract.json') as json_data:
     d = json.load(json_data)
@@ -11,8 +18,10 @@ businesses = d
 
 
 restaurant_id = []
-latitude = []
-longitude = []
+epsg4326_latitude = []
+epsg4326_longitude = []
+epsg25832_latitude = []
+epsg25832_longitude = []
 price = []
 rating = []
 review_count = []
@@ -31,8 +40,11 @@ for biz in businesses:
     restaurant_id.append(biz['id'])
     #(Better do as list)category_alias = biz['categories'][0]['alias']
     #(Better do as list)category_title = biz['categories'][0]['title']
-    latitude.append(biz['coordinates']['latitude'])
-    longitude.append(biz['coordinates']['longitude'])
+    epsg4326_latitude.append(biz['coordinates']['latitude'])
+    epsg4326_longitude.append(biz['coordinates']['longitude'])
+    lat_temp, long_temp = transform_coord(epsg4326_latitude, epsg4326_longitude)
+    epsg25832_latitude.append(lat_temp)
+    epsg25832_longitude.append(long_temp)
     try:
         price.append(biz['price'])
     except:
@@ -50,8 +62,10 @@ for biz in businesses:
 df_businesses = pd.DataFrame(index=restaurant_id, data = {"rating": rating,
                                                                "review_count": review_count,
                                                                "is_closed": is_closed,
-                                                               "latitude": latitude,
-                                                               "longitude": longitude,
+                                                               "epsg4326_latitude": epsg4326_latitude,
+                                                               "epsg4326_longitude": epsg4326_longitude,
+                                                               "epsg25832_latitude": epsg25832_latitude,
+                                                               "epsg25832_longitude": epsg25832_longitude,                                                            
                                                                "zip_code": zip_code,
                                                                "price": price})
 
