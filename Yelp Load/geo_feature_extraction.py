@@ -2,86 +2,91 @@ import json
 import pandas as pd
 import numpy as np
 import pyproj
+from collections import namedtuple
 
-def transform_coord(lat_in, long_in): #output to yelp
-  inProj = pyproj.Proj(init='epsg:25832')
-  outProj = pyproj.Proj(init='epsg:4326')
-  lat_out,long_out = pyproj.transform(inProj,outProj,lat_in,long_in)
+import os
+os.chdir('C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/JSON')
+
+def transform_coord(long_in, lat_in): #output to yelp
+  inProj = pyproj.Proj(init='epsg:4326')
+  outProj = pyproj.Proj(init='epsg:25832')
+  long_out,lat_out = pyproj.transform(inProj,outProj,long_in,lat_in)
   return lat_out, long_out
 
+#definition of a restaurant
+Restaurant = namedtuple("Restaurant",
+                        'id \
+                        epsg25832_latitude \
+                        epsg25832_longitude \
+                        epsg4326_latitude \
+                        epsg4326_longitude \
+                        price rating \
+                        review_count \
+                        is_closed \
+                        zip_code \
+                        category_restaurant_id \
+                        category_alias \
+                        category_title \
+                        category_index'
+                        )
+
 with open('merged_extract.json') as json_data:
-    d = json.load(json_data)
-    json_data.close()
-    
-#businesses = d['businesses']
-businesses = d
+  businesses = json.load(json_data)
 
-
-restaurant_id = []
-epsg4326_latitude = []
-epsg4326_longitude = []
-epsg25832_latitude = []
-epsg25832_longitude = []
-price = []
-rating = []
-review_count = []
-is_closed = []
-zip_code = []
-#df_categories = pd.DataFrame(columns = ['id', 'alias', 'title'])
-i = 0
-
-category_restaurant_id = []
-category_alias = []
-category_title = []
-category_index = []
+restaurants = [] #list of restaurants
 
 for biz in businesses:
+  try:
+    price_temp = biz['price']
+  except:
+    price_temp = 'n/a'
 
-    restaurant_id.append(biz['id'])
-    #(Better do as list)category_alias = biz['categories'][0]['alias']
-    #(Better do as list)category_title = biz['categories'][0]['title']
-    epsg4326_latitude.append(biz['coordinates']['latitude'])
-    epsg4326_longitude.append(biz['coordinates']['longitude'])
-    lat_temp, long_temp = transform_coord(epsg4326_latitude, epsg4326_longitude)
-    epsg25832_latitude.append(lat_temp)
-    epsg25832_longitude.append(long_temp)
-    try:
-        price.append(biz['price'])
-    except:
-        price.append('n/a')
-    rating.append(biz['rating'])
-    review_count.append(biz['review_count'])
-    is_closed.append(biz['is_closed'])
-    zip_code.append(biz['location']['zip_code'])
-    for cat in biz['categories']:
-        category_restaurant_id.append(biz['id'])
-        category_alias.append(cat['alias'])
-        category_title.append(cat['title'])
-        category_index.append(biz['id']+ '_' + cat['alias'])
+  long_temp, lat_temp = transform_coord(biz['coordinates']['longitude'], biz['coordinates']['latitude'])
 
-df_businesses = pd.DataFrame(index=restaurant_id, data = {"rating": rating,
-                                                               "review_count": review_count,
-                                                               "is_closed": is_closed,
-                                                               "epsg4326_latitude": epsg4326_latitude,
-                                                               "epsg4326_longitude": epsg4326_longitude,
-                                                               "epsg25832_latitude": epsg25832_latitude,
-                                                               "epsg25832_longitude": epsg25832_longitude,                                                            
-                                                               "zip_code": zip_code,
-                                                               "price": price})
+  restaurant = Restaurant(  #extract data into an instance of type Restaurant
+    id = biz['id'],
+    epsg4326_latitude = biz['coordinates']['latitude'],
+    epsg4326_longitude = biz['coordinates']['longitude'],
+    epsg25832_latitude = lat_temp,
+    epsg25832_longitude = long_temp,
+    price = price_temp,
+    rating = biz['rating'],
+    review_count = biz['review_count'],
+    is_closed = biz['is_closed'],
+    zip_code = biz['location']['zip_code'],
+    category_restaurant_id = biz['id'],
+    category_alias = biz['categories'][0]['alias'],
+    category_title = biz['categories'][0]['title'],
+    category_index = biz['id'] + biz['categories'][0]['alias']
+  )
+  restaurants.append(restaurant)
 
-df_businesses = df_businesses[~df_businesses.index.duplicated(keep='first')]    
+#print(Restaurant._fields)
+
+raw_df_businesses = pd.DataFrame( #dataframe with all attributes of Restaurant
+  data = restaurants,
+  columns = Restaurant._fields
+)
+
+raw_head = raw_df_businesses.head()
+
+df_businesses = raw_df_businesses[['id', 'price', 'rating', 'review_count', 'is_closed', 'zip_code',
+                           'epsg25832_latitude', 'epsg25832_longitude',
+                           'epsg4326_latitude', 'epsg4326_longitude']]
+
+df_businesses.set_index('id', drop= True, inplace=True)
+
+df_businesses = df_businesses[~df_businesses.index.duplicated(keep='first')]
+
 
 df_businesses.to_csv('extract_businesses.csv')
 
-
-
+df_categories = raw_df_businesses[['category_restaurant_id',
+                                    'category_alias',
+                                     'category_title']]
     
+df_categories.set_index('category_restaurant_id', drop= True, inplace=True)
 
-df_categories = pd.DataFrame(index = category_index, data = {'restaurant_id': category_restaurant_id,
-                                     'alias': category_alias,
-                                     'title': category_title})
-    
 df_categories = df_categories[~df_categories.index.duplicated(keep='first')] 
 
 df_categories.to_csv('extract_categories.csv')
-
