@@ -1,0 +1,16 @@
+\contentsline {chapter}{Declaration of Authorship}{i}{dummy.1}
+\vspace {1em}
+\contentsline {chapter}{Abstract}{ii}{dummy.2}
+\vspace {1em}
+\contentsline {chapter}{List of Figures}{iv}{dummy.4}
+\contentsline {chapter}{List of Tables}{v}{dummy.6}
+\contentsline {chapter}{Abbreviations}{vi}{chapter*.8}
+\contentsline {chapter}{Physical Constants}{vii}{dummy.9}
+\contentsline {chapter}{Symbols}{viii}{dummy.12}
+\vspace {2em}
+\contentsline {chapter}{\numberline {1}Methods}{1}{chapter.15}
+\contentsline {section}{\numberline {1.1}Concept of Predictive Maintenance}{1}{section.16}
+\contentsline {section}{\numberline {1.2}Benefits of Predictive Maintenance}{2}{section.23}
+\vspace {2em}
+\contentsline {chapter}{\numberline {A}An Appendix}{3}{appendix.24}
+\vspace {2em}

@@ -1,0 +1,12 @@
+\vspace {1em}
+\contentsline {chapter}{Abstract}{ii}{dummy.1}% 
+\vspace {1em}
+\contentsline {chapter}{Abbreviations}{iv}{chapter*.3}% 
+\vspace {2em}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.4}% 
+\contentsline {chapter}{\numberline {2}Elements of a restaurant location analysis}{2}{chapter.5}% 
+\contentsline {chapter}{\numberline {3}Data Sources}{3}{chapter.6}% 
+\contentsline {section}{\numberline {3.1}Transparency Portal Hamburg}{3}{section.7}% 
+\contentsline {section}{\numberline {3.2}Yelp}{4}{section.9}% 
+\contentsline {chapter}{\numberline {4}Conclusion}{5}{chapter.10}% 
+\vspace {2em}

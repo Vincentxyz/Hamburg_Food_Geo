@@ -38,21 +38,21 @@ df_features = pd.DataFrame({
         #social values
         'population': df_all['Bevölkerung'],
         'share_under_18_years_old': df_all['Unter 18-Jährige'],
-        #'65_year_olds_and_older': df_all[' 65-Jährige und Ältere'],
+        '65_year_olds_and_older': df_all[' 65-Jährige und Ältere'],
         'share_65_year_olds_and_older': df_all['Anteil der 65-Jährigen und Älteren in %'],
-        #'foreigners': df_all['Ausländerinnen und Ausländer'],
+        'foreigners': df_all['Ausländerinnen und Ausländer'],
         'share_foreigners': df_all['Ausländeranteil in %'],
-        #'population_with_migration_background': df_all['Bevölkerung mit Migrations-hintergrund'],
+        'population_with_migration_background': df_all['Bevölkerung mit Migrations-hintergrund'],
         'share_population_with_migration_background': df_all['Anteil der Bevölkerung mit Migrations-hintergrund in %'],
-        #'below_18_year_olds_with_migration_background' : df_all['Unter 18-Jährige mit Migrations-hintergrund'],
+        'below_18_year_olds_with_migration_background' : df_all['Unter 18-Jährige mit Migrations-hintergrund'],
         'share_below_18_year_olds_with_migration_background': df_all['Anteil der unter 18-Jährigen mit Migrations-hintergrund in %'],
         'households' : df_all['Haushalte'],
         'people_per_household' : df_all['Personen je Haushalt'],
-        #'one_person_households' : df_all['Einpersonen-haushalte'],
+        'one_person_households' : df_all['Einpersonen-haushalte'],
         'share_one_person_households' : df_all['Anteil der Einpersonen-haushalte in %'],
-        #'households_with_children' : df_all['Haushalte mit Kindern'],
+        'households_with_children' : df_all['Haushalte mit Kindern'],
         'share_households_with_children': df_all['Anteil der Haushalte mit Kindern in %'],
-        #'single_parents' : df_all['Alleinerziehende'],
+        'single_parents' : df_all['Alleinerziehende'],
         'share_households_with_single_parents' : df_all['Anteil der Haushalte von Alleinerziehenden in %'],
         'area_in_square_kms' : df_all['Fläche in km²'],
         'population_density' : df_all['Bevölkerungs-dichte'],
@@ -60,18 +60,18 @@ df_features = pd.DataFrame({
         'deaths': df_all['Sterbefälle'],
         'immigration': df_all['Zuzüge'],
         'emigration': df_all['Fortzüge'],
-        #'migration_balance': df_all['Wanderungssaldo'],
+        'migration_balance': df_all['Wanderungssaldo'],
         'insurable_employees': df_all['Sozial-versicherungs-pflichtig Beschäftigte (Dez 2016)'],
         'employment_quote_in_%': df_all['Beschäftigten-quote in % (Dez 2016)'],
-        #'unemployed_people': df_all['Arbeitslose (Dez 2016)'],
+        'unemployed_people': df_all['Arbeitslose (Dez 2016)'],
         'share_unemployed_people': df_all['Arbeitslosenanteil in % (Dez 2016)'],
-        #'younger_unemployed_people' : df_all['Jüngere Arbeitslose (Dez 2016)'],
+        'younger_unemployed_people' : df_all['Jüngere Arbeitslose (Dez 2016)'],
         'share_younger_unemployed_people': df_all['Arbeitslosenanteil Jüngerer in % (Dez 2016)'],
-        #'older_unemployed_people': df_all['Ältere Arbeitslose (Dez 2016)'],
+        'older_unemployed_people': df_all['Ältere Arbeitslose (Dez 2016)'],
         'share_older_unemployed_people': df_all['Arbeitslosenanteil Älterer in % (Dez 2016)'],
-       # 'service_recipients_per_SGB_II' : df_all['Leistungs-empfänger/-innen nach SGB II (Dez 2016)'],
+        'service_recipients_per_SGB_II' : df_all['Leistungs-empfänger/-innen nach SGB II (Dez 2016)'],
         'share_service_recipients_per_SGB_II': df_all['Anteil der Leistungs-empfänger/-innen nach SGB II in % (Dez 2016)'],
-        #'under_15_year_olds_in_minimum_income': df_all['Unter 15-Jährige in Mindestsicherung (Dez 2016)'],
+        'under_15_year_olds_in_minimum_income': df_all['Unter 15-Jährige in Mindestsicherung (Dez 2016)'],
         'share_under_15_year_olds_in_minimum_income': df_all['Anteil der unter 15-Jährigen in Mindestsicherung in % (Dez 2016)'],
         'shared_households_per_SGB_II': df_all['Bedarfs-gemeinschaften nach SGB II (Dez 2016)'],
         'tax_liable_people' : df_all['Lohn- und Einkommen-steuerpflichtige (2013)'],
@@ -85,7 +85,7 @@ df_features = pd.DataFrame({
         'living_area_per_resident_in_sqm' : df_all['Wohnfläche je Einwohner/-in in m² (2016)'],
         'social_homes': df_all['Sozialwohnungen (Jan 2017)'],
         'share_social_homes' : df_all['Sozialwohnungs-anteil in % (Jan 2017)'],
-        #'social_homes_with_ends_of_commitment_until_2022' : df_all['Sozialwohnungen mit Bindungsauslauf bis 2022'],
+        'social_homes_with_ends_of_commitment_until_2022' : df_all['Sozialwohnungen mit Bindungsauslauf bis 2022'],
         'share_social_homes_with_ends_of_commitment_until_2022': df_all['Sozialwohnungen mit Bindungsauslauf bis 2022 in %'],
         'prices_for_properties' : df_all['Preise für Grundstücke in EUR/m² (Jan 2017)'],
         'prices_for_one_or_two_family_houses_in_EUR/sqm' : df_all['Preise für Ein- bzw Zwei-familienhäuser in EUR/m² (Jan 2017)'],
@@ -103,6 +103,9 @@ df_features = pd.DataFrame({
         'car_density' : df_all['PKW-Dichte (Jan 2017)']
     
   })
+
+# For Sachin's Excel
+df_features.to_csv('restaurant_features.csv',encoding='utf-8')
 
 df_features.set_index('id', inplace=True,drop=True)
 
