@@ -6,7 +6,6 @@ df_restaurants = pd.read_csv('C:/Users/vince_000/Documents/Geotesting/Test_Files
 df_restaurants.set_index('id', inplace = True, drop = True)
 
 water_points = pd.read_csv('C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/geokarte_grid/water_points.csv', sep = ';')
-#water_points = water_points[:,1:3]
 
 distance_to_water = []
 ids = []
@@ -15,8 +14,7 @@ def calculate_distance(x1, y1, x2, y2):
     distance = math.sqrt(math.pow(x2-x1,2) + math.pow(y2-y1,2))
     return distance
 
-#for i in range(582,len(df_restaurants)):
-for i in range(582,586):
+for i in range(1,len(df_restaurants)):
     min_distance = 99999999999.0
     
     for j in range(len(water_points)):
@@ -33,10 +31,9 @@ for i in range(582,586):
     print('restaurant ' + str(i) + ' finished')
     
 distances = pd.DataFrame({'distance': distance_to_water}, index = ids)
-distances.to_csv('distances_' + str(583) + '_' + str(i+1) + '.csv')
+distances.to_csv('distances_' + str(1) + '_' + str(i+1) + '.csv')
 df_restaurants['water_distance'] = distance_to_water
 
-df_part_restaurants = df_restaurants.iloc[0:2496,:]
 df_part_restaurants['water_distance'] = distance_to_water
 df_part_restaurants.to_csv('C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/CSV/Restaurants_in_Hamburg_with_water_distance.csv')
 

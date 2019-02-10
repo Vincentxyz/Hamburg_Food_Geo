@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:app="http://www.deegree.org/app" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.deegree.org/app" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+  <element name="kfz_dauerzaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="knoten" minOccurs="0" type="integer"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="dateTime"/>
+            <element name="geom" minOccurs="0" type="gml:MultiPointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="rad_jaehrliche_zaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="dateTime"/>
+            <element name="geom" minOccurs="0" type="gml:MultiPointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="kfz_jaehrliche_zaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="knoten" minOccurs="0" type="integer"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="dateTime"/>
+            <element name="geom" minOccurs="0" type="gml:MultiPointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="rad_bedarfszaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="dateTime"/>
+            <element name="geom" minOccurs="0" type="gml:MultiPointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="rad_pegel" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="dateTime"/>
+            <element name="geom" minOccurs="0" type="gml:MultiPointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="kfz_pegel" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="knoten" minOccurs="0" type="integer"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="dateTime"/>
+            <element name="geom" minOccurs="0" type="gml:MultiPointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="fussgaenger_bedarfszaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="dateTime"/>
+            <element name="geom" minOccurs="0" type="gml:MultiPointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="kfz_bedarfszaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="knoten" minOccurs="0" type="integer"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="dateTime"/>
+            <element name="geom" minOccurs="0" type="gml:MultiPointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+</schema>

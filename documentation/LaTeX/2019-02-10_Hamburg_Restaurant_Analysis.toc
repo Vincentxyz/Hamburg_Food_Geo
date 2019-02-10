@@ -1,0 +1,31 @@
+\vspace {1em}
+\contentsline {chapter}{Abstract}{ii}{dummy.1}% 
+\vspace {1em}
+\contentsline {chapter}{List of Figures}{v}{dummy.3}% 
+\contentsline {chapter}{Abbreviations}{vi}{chapter*.5}% 
+\vspace {2em}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}% 
+\contentsline {chapter}{\numberline {2}Elements of a restaurant location analysis}{2}{chapter.7}% 
+\contentsline {chapter}{\numberline {3}Data Sources}{3}{chapter.8}% 
+\contentsline {section}{\numberline {3.1}Transparency Portal Hamburg}{3}{section.9}% 
+\contentsline {section}{\numberline {3.2}Yelp}{4}{section.11}% 
+\contentsline {chapter}{\numberline {4}Analysis Methods}{5}{chapter.12}% 
+\contentsline {section}{\numberline {4.1}Random Forest Regression}{5}{section.13}% 
+\contentsline {section}{\numberline {4.2}Performance Measures}{5}{section.14}% 
+\contentsline {chapter}{\numberline {5}Data Extraction}{6}{chapter.15}% 
+\contentsline {section}{\numberline {5.1}Yelp Restaurant Data Extraction}{6}{section.16}% 
+\contentsline {section}{\numberline {5.2}Hamburg District Map}{6}{section.17}% 
+\contentsline {section}{\numberline {5.3}Social Values}{6}{section.22}% 
+\contentsline {section}{\numberline {5.4}Proximity to Water}{6}{section.23}% 
+\contentsline {chapter}{\numberline {6}Machine Learning}{8}{chapter.24}% 
+\contentsline {section}{\numberline {6.1}Exploratory Data Analysis}{8}{section.25}% 
+\contentsline {section}{\numberline {6.2}Data Preprocessing}{8}{section.26}% 
+\contentsline {subsection}{\numberline {6.2.1}Handling of Missing Values}{8}{subsection.27}% 
+\contentsline {subsection}{\numberline {6.2.2}Feature Subset Selection}{8}{subsection.28}% 
+\contentsline {subsection}{\numberline {6.2.3}Dimensionality Reduction}{8}{subsection.29}% 
+\contentsline {section}{\numberline {6.3}Data Analysis}{8}{section.30}% 
+\contentsline {chapter}{\numberline {7}Results and Discussion}{9}{chapter.31}% 
+\contentsline {section}{\numberline {7.1}Results}{9}{section.32}% 
+\contentsline {section}{\numberline {7.2}Discussion}{9}{section.33}% 
+\contentsline {chapter}{\numberline {8}Conclusion}{10}{chapter.34}% 
+\vspace {2em}
