@@ -9,10 +9,10 @@ yelp_api = YelpAPI(g_MY_API)
 
 g_perimeter = 100
 
-#Get all nearby restaurants with a centroid(latitude, longitude) and the perimeter of the square formed by the centroid
-#Radius of the circle with the centroid = perimeter / sqrt(2)
-def get_nearby_restaurants(latitude, longitude, perimeter):
-  radius = round(perimeter / math.sqrt(2))
+#Get all nearby restaurants with a centroid(latitude, longitude) and the side of the square formed by the centroid
+#Radius of the circle with the centroid = side / sqrt(2)
+def get_nearby_restaurants(latitude, longitude, side):
+  radius = round(side / math.sqrt(2))
   offset = 0
   print('get_restaurants( lat = ' + str(latitude) + ', long = ' + str(longitude) + ', radius = ' + str(radius) + ')')
   response = yelp_api.search_query(term='restaurants', latitude=latitude, longitude=longitude, limit=50, offset=0, radius = radius)
@@ -49,7 +49,7 @@ def get_restaurants_by_rows(min_longitude, max_longitude, lat, perimeter):
     print(lat, ',', current_longitude)
     restaurants_by_rows.extend(get_nearby_restaurants(lat, current_longitude, perimeter))
     current_longitude = get_new_longitude(current_longitude, perimeter)
-  restaurants_ids = [item['id'] for item in get_restaurants_by_rows]
+  restaurants_ids = [item['id'] for item in restaurants_by_rows]
   #remove duplicates and then return
   return [item for n, item in enumerate(restaurants_by_rows) if item not in restaurants_ids[n+1:]]
   #return restaurants_by_rows
@@ -97,11 +97,12 @@ i = 0 #place breakpoint here to observe when debugging
 
 
 # Get the restaurant density (restaurants/km) from a given centroid(latitude, longitude)
-def get_density(latitude, longitude, perimeter_in_km):
-  restaurants = get_nearby_restaurants(latitude, longitude, perimeter_in_km * 1000)
+# side_in_km is the side of the square around the centroid
+def get_density(latitude, longitude, side_in_km):
+  restaurants = get_nearby_restaurants(latitude, longitude, side_in_km * 1000)
   print(restaurants)
   number_of_restaurants = len(restaurants)
-  restaurants_per_km = number_of_restaurants / perimeter_in_km
+  restaurants_per_km = number_of_restaurants / side_in_km
   return restaurants_per_km
 
 #test
