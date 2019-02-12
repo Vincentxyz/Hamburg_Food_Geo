@@ -109,3 +109,10 @@ def get_density(latitude, longitude, side_in_km):
 density = get_density(53.513216, 9.986797, 2)
 
 i = 0 #place breakpoint here to observe when debugging
+
+import pandas as pd
+
+path = 'C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/data/restaurants/'
+
+businesses = pd.read_csv(path + 'Restaurants_in_Hamburg.csv')
+
