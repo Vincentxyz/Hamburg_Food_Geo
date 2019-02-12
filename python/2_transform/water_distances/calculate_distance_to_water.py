@@ -34,6 +34,7 @@ distances = pd.DataFrame({'distance': distance_to_water}, index = ids)
 distances.to_csv('distances_' + str(1) + '_' + str(i+1) + '.csv')
 df_restaurants['water_distance'] = distance_to_water
 
+df_part_restaurants = df_restaurants.iloc[0:2496,:]
 df_part_restaurants['water_distance'] = distance_to_water
 df_part_restaurants.to_csv('C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/CSV/Restaurants_in_Hamburg_with_water_distance.csv')
 

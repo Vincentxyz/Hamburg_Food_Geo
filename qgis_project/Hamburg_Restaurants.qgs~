@@ -8,10 +8,10 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Restaurants_in_Hamburg20190104182644221" source="C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/CSV/Restaurants_in_Hamburg.csv" name="Restaurants_in_Hamburg">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Restaurants_in_Hamburg20190104182317585" source="C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/Restaurants_in_Hamburg.shp" name="Restaurants_in_Hamburg">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Restaurants_in_Hamburg20190104182317585" source="C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/Restaurants_in_Hamburg.shp" name="Restaurants_in_Hamburg">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="memory_20190104182136663" source="Point?uuid=31fab43e-c86f-4818-af79-ebf728cc18db&amp;crs=EPSG:25832&amp;field=id:string&amp;field=price:string&amp;field=rating:double&amp;field=review_count:integer&amp;field=is_closed:string&amp;field=zip_code:integer&amp;field=epsg25832_latitude:double&amp;field=epsg25832_longitude:double&amp;field=epsg4326_latitude:double&amp;field=epsg4326_longitude:double&amp;field=gml_id:string&amp;field=OBJECTID:integer&amp;field=Bezirk_Name:string&amp;field=Stadtteil:string&amp;field=Ortsteilnummer:integer&amp;field=Bezirk:integer&amp;field=SHP_Length:double&amp;field=SHP_Area:double" name="Joined layer">
+    <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Unchecked" id="memory_20190104182136663" source="memory?geometry=Point&amp;crs=EPSG:25832&amp;field=id:string(255,0)&amp;field=price:string(255,0)&amp;field=rating:double(20,5)&amp;field=review_count:integer(-1,0)&amp;field=is_closed:string(255,0)&amp;field=zip_code:integer(-1,0)&amp;field=epsg25832_latitude:double(20,5)&amp;field=epsg25832_longitude:double(20,5)&amp;field=epsg4326_latitude:double(20,5)&amp;field=epsg4326_longitude:double(20,5)&amp;field=gml_id:string(255,0)&amp;field=OBJECTID:integer(-1,0)&amp;field=Bezirk_Name:string(255,0)&amp;field=Stadtteil:string(255,0)&amp;field=Ortsteilnummer:integer(-1,0)&amp;field=Bezirk:integer(-1,0)&amp;field=SHP_Length:double(20,5)&amp;field=SHP_Area:double(20,5)" name="Joined layer">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="delimitedtext" checked="Qt::Unchecked" id="extract_businesses20190104181202382" source="file:///C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/CSV/extract_businesses.csv?type=csv&amp;xField=epsg25832_latitude&amp;yField=epsg25832_longitude&amp;spatialIndex=no&amp;subsetIndex=no&amp;watchFile=no" name="extract_businesses">
@@ -56,6 +56,15 @@
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="OpenStreetMap20181202145317466" source="&lt;GDAL_WMS>&#xa;  &lt;Service name=&quot;TMS&quot;>&#xa;    &lt;ServerUrl>http://tile.openstreetmap.org/${z}/${x}/${y}.png&lt;/ServerUrl>&#xa;  &lt;/Service>&#xa;  &lt;DataWindow>&#xa;    &lt;UpperLeftX>-20037508.34&lt;/UpperLeftX>&#xa;    &lt;UpperLeftY>20037508.34&lt;/UpperLeftY>&#xa;    &lt;LowerRightX>20037508.34&lt;/LowerRightX>&#xa;    &lt;LowerRightY>-20037508.34&lt;/LowerRightY>&#xa;    &lt;TileLevel>19&lt;/TileLevel>&#xa;    &lt;TileCountX>1&lt;/TileCountX>&#xa;    &lt;TileCountY>1&lt;/TileCountY>&#xa;    &lt;YOrigin>top&lt;/YOrigin>&#xa;  &lt;/DataWindow>&#xa;  &lt;Projection>EPSG:3857&lt;/Projection>&#xa;  &lt;BlockSizeX>256&lt;/BlockSizeX>&#xa;  &lt;BlockSizeY>256&lt;/BlockSizeY>&#xa;  &lt;BandsCount>3&lt;/BandsCount>&#xa;  &lt;Cache />&#xa;&lt;/GDAL_WMS>&#xa;" name="OpenStreetMap">
       <customproperties/>
     </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="geokarte_grid_tiny20190105172424991" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/geokarte_grid/geokarte_grid_tiny.xyz" name="geokarte_grid_tiny">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="Geokarte_tiny20190105172147400" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/Geokarte_Smaller/Geokarte_tiny.tif" name="Geokarte_tiny">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="Geokarte_Smaller20190105172032590" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/Geokarte_Smaller/Geokarte_Smaller.tif" name="Geokarte_Smaller">
+      <customproperties/>
+    </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="Geologische_Karte20181222134128353" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/Geologische Karte/Geologische Karte.vrt" name="Geologische Karte">
       <customproperties/>
     </layer-tree-layer>
@@ -64,10 +73,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>554238.90631469618529081</xmin>
-      <ymin>5907546.68695806246250868</ymin>
-      <xmax>610780.36117570311762393</xmax>
-      <ymax>5961299.2917846767231822</ymax>
+      <xmin>537258.87064859922975302</xmin>
+      <ymin>5911272.91922663524746895</ymin>
+      <xmax>593800.32550960592925549</xmax>
+      <ymax>5965025.52405324950814247</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -86,6 +95,8 @@
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Restaurants_in_Hamburg20190104182317585"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geokarte_Smaller20190105172032590"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_tiny20190105172424991"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="app_verkehrsstaerken20181209180203116"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104181340872"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="extract_businesses20190104181202382"/>
@@ -98,6 +109,7 @@
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="020181222141631170"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="verkehr_stadtteile_vm20181211150407760"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Restaurants_with_district_social_and_traffic_values20181222134057186"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geokarte_tiny20190105172147400"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
@@ -121,6 +133,9 @@
       <item>memory_20190104182136663</item>
       <item>Restaurants_in_Hamburg20190104182317585</item>
       <item>Restaurants_in_Hamburg20190104182644221</item>
+      <item>Geokarte_Smaller20190105172032590</item>
+      <item>Geokarte_tiny20190105172147400</item>
+      <item>geokarte_grid_tiny20190105172424991</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -129,9 +144,9 @@
         <legendlayerfile isInOverview="0" layerid="Restaurants_in_Hamburg20190104182644221" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Restaurants_in_Hamburg" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Restaurants_in_Hamburg" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Restaurants_in_Hamburg20190104182317585" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="Restaurants_in_Hamburg20190104182317585" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Joined layer" showFeatureCount="0">
@@ -207,6 +222,21 @@
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="OpenStreetMap" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="OpenStreetMap20181202145317466" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="geokarte_grid_tiny" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="geokarte_grid_tiny20190105172424991" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Geokarte_tiny" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="Geokarte_tiny20190105172147400" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Geokarte_Smaller" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="Geokarte_Smaller20190105172032590" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Geologische Karte" showFeatureCount="0">
@@ -612,6 +642,102 @@ def my_form_open(dialog, layer, feature):
         <xmax>590183.43602999998256564</xmax>
         <ymax>5954980</ymax>
       </extent>
+      <id>Geokarte_Smaller20190105172032590</id>
+      <datasource>./Geokarte_Smaller/Geokarte_Smaller.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Geokarte_Smaller</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>2105</srsid>
+          <srid>25832</srid>
+          <authid>EPSG:25832</authid>
+          <description>ETRS89 / UTM zone 32N</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+        <noDataList bandNo="4" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="4" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>546580</xmin>
+        <ymin>5915768.6078899996355176</ymin>
+        <xmax>590183.43602999998256564</xmax>
+        <ymax>5954980</ymax>
+      </extent>
+      <id>Geokarte_tiny20190105172147400</id>
+      <datasource>./Geokarte_Smaller/Geokarte_tiny.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Geokarte_tiny</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>2105</srsid>
+          <srid>25832</srid>
+          <authid>EPSG:25832</authid>
+          <description>ETRS89 / UTM zone 32N</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+        <noDataList bandNo="4" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="4" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>546580</xmin>
+        <ymin>5915768.6078899996355176</ymin>
+        <xmax>590183.43602999998256564</xmax>
+        <ymax>5954980</ymax>
+      </extent>
       <id>Geologische_Karte20181222134128353</id>
       <datasource>./Geologische Karte/Geologische Karte.vrt</datasource>
       <keywordList>
@@ -784,10 +910,28 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="epsg4326_1">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="gml_id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OBJECTID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
         <edittype widgetv2type="TextEdit" name="Bezirk_Nam">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
         <edittype widgetv2type="TextEdit" name="Stadtteil">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Ortsteilnu">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Bezirk">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SHP_Length">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SHP_Area">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
@@ -846,7 +990,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="price" index="1" name=""/>
@@ -858,8 +1002,14 @@ def my_form_open(dialog, layer, feature):
         <alias field="epsg2583_1" index="7" name=""/>
         <alias field="epsg4326_l" index="8" name=""/>
         <alias field="epsg4326_1" index="9" name=""/>
-        <alias field="Bezirk_Nam" index="10" name=""/>
-        <alias field="Stadtteil" index="11" name=""/>
+        <alias field="gml_id" index="10" name=""/>
+        <alias field="OBJECTID" index="11" name=""/>
+        <alias field="Bezirk_Nam" index="12" name=""/>
+        <alias field="Stadtteil" index="13" name=""/>
+        <alias field="Ortsteilnu" index="14" name=""/>
+        <alias field="Bezirk" index="15" name=""/>
+        <alias field="SHP_Length" index="16" name=""/>
+        <alias field="SHP_Area" index="17" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -887,10 +1037,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -910,8 +1060,14 @@ def my_form_open(dialog, layer, feature):
         <default field="epsg2583_1" expression=""/>
         <default field="epsg4326_l" expression=""/>
         <default field="epsg4326_1" expression=""/>
+        <default field="gml_id" expression=""/>
+        <default field="OBJECTID" expression=""/>
         <default field="Bezirk_Nam" expression=""/>
         <default field="Stadtteil" expression=""/>
+        <default field="Ortsteilnu" expression=""/>
+        <default field="Bezirk" expression=""/>
+        <default field="SHP_Length" expression=""/>
+        <default field="SHP_Area" expression=""/>
       </defaults>
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
     </maplayer>
@@ -980,7 +1136,7 @@ def my_form_open(dialog, layer, feature):
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
       </edittypes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="price" index="1" name=""/>
@@ -998,13 +1154,13 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="687847976">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns/>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -2994,7 +3150,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="price" index="1" name=""/>
@@ -3010,7 +3166,7 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="684923712">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="id"/>
           <column width="-1" hidden="0" type="field" name="price"/>
@@ -3025,10 +3181,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
@@ -3050,6 +3206,56 @@ def my_form_open(dialog, layer, feature):
         <default field="epsg4326_longitude" expression=""/>
       </defaults>
       <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>546580</xmin>
+        <ymin>5915768.6078899996355176</ymin>
+        <xmax>590183.43603000009898096</xmax>
+        <ymax>5954980</ymax>
+      </extent>
+      <id>geokarte_grid_tiny20190105172424991</id>
+      <datasource>./geokarte_grid/geokarte_grid_tiny.xyz</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>geokarte_grid_tiny</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>2105</srsid>
+          <srid>25832</srid>
+          <authid>EPSG:25832</authid>
+          <description>ETRS89 / UTM zone 32N</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+          <rasterTransparency/>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
@@ -3194,7 +3400,7 @@ def my_form_open(dialog, layer, feature):
         <multilineenabled fieldname="" on=""/>
         <selectedonly on=""/>
       </labelattributes>
-      <annotationform></annotationform>
+      <annotationform>.</annotationform>
       <aliases>
         <alias field="id" index="0" name=""/>
         <alias field="price" index="1" name=""/>
@@ -3218,7 +3424,7 @@ def my_form_open(dialog, layer, feature):
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="17">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
         <columns>
           <column width="-1" hidden="0" type="field" name="id"/>
           <column width="-1" hidden="0" type="field" name="price"/>
@@ -3241,10 +3447,10 @@ def my_form_open(dialog, layer, feature):
           <column width="-1" hidden="1" type="actions"/>
         </columns>
       </attributetableconfig>
-      <editform></editform>
+      <editform>.</editform>
       <editforminit/>
       <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath></editforminitfilepath>
+      <editforminitfilepath>.</editforminitfilepath>
       <editforminitcode><![CDATA[]]></editforminitcode>
       <featformsuppress>0</featformsuppress>
       <editorlayout>generatedlayout</editorlayout>
