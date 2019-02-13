@@ -1,0 +1,80 @@
+import pandas as pd
+
+
+github_path = 'C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo'
+
+df_social_values = pd.read_csv(github_path + '/data/social_values/Social_Values_2016_adjusted.csv')
+
+
+df_social_values = pd.DataFrame({
+
+        'city_part': df_social_values['Stadtgebiet'],
+        'population': df_social_values['Bevölkerung'],
+        'share_under_18_years_old': df_social_values['Unter 18-Jährige'],
+        '65_year_olds_and_older': df_social_values[' 65-Jährige und Ältere'],
+        'share_65_year_olds_and_older': df_social_values['Anteil der 65-Jährigen und Älteren in %'],
+        'foreigners': df_social_values['Ausländerinnen und Ausländer'],
+        'share_foreigners': df_social_values['Ausländeranteil in %'],
+        'population_with_migration_background': df_social_values['Bevölkerung mit Migrations-hintergrund'],
+        'share_population_with_migration_background': df_social_values['Anteil der Bevölkerung mit Migrations-hintergrund in %'],
+        'below_18_year_olds_with_migration_background' : df_social_values['Unter 18-Jährige mit Migrations-hintergrund'],
+        'share_below_18_year_olds_with_migration_background': df_social_values['Anteil der unter 18-Jährigen mit Migrations-hintergrund in %'],
+        'households' : df_social_values['Haushalte'],
+        'people_per_household' : df_social_values['Personen je Haushalt'],
+        'one_person_households' : df_social_values['Einpersonen-haushalte'],
+        'share_one_person_households' : df_social_values['Anteil der Einpersonen-haushalte in %'],
+        'households_with_children' : df_social_values['Haushalte mit Kindern'],
+        'share_households_with_children': df_social_values['Anteil der Haushalte mit Kindern in %'],
+        'single_parents' : df_social_values['Alleinerziehende'],
+        'share_households_with_single_parents' : df_social_values['Anteil der Haushalte von Alleinerziehenden in %'],
+        'area_in_square_kms' : df_social_values['Fläche in km²'],
+        'population_density' : df_social_values['Bevölkerungs-dichte'],
+        'births': df_social_values['Geburten'],
+        'deaths': df_social_values['Sterbefälle'],
+        'immigration': df_social_values['Zuzüge'],
+        'emigration': df_social_values['Fortzüge'],
+        'migration_balance': df_social_values['Wanderungssaldo'],
+        'insurable_employees': df_social_values['Sozial-versicherungs-pflichtig Beschäftigte (Dez 2016)'],
+        'employment_quote_in_%': df_social_values['Beschäftigten-quote in % (Dez 2016)'],
+        'unemployed_people': df_social_values['Arbeitslose (Dez 2016)'],
+        'share_unemployed_people': df_social_values['Arbeitslosenanteil in % (Dez 2016)'],
+        'younger_unemployed_people' : df_social_values['Jüngere Arbeitslose (Dez 2016)'],
+        'share_younger_unemployed_people': df_social_values['Arbeitslosenanteil Jüngerer in % (Dez 2016)'],
+        'older_unemployed_people': df_social_values['Ältere Arbeitslose (Dez 2016)'],
+        'share_older_unemployed_people': df_social_values['Arbeitslosenanteil Älterer in % (Dez 2016)'],
+        'service_recipients_per_SGB_II' : df_social_values['Leistungs-empfänger/-innen nach SGB II (Dez 2016)'],
+        'share_service_recipients_per_SGB_II': df_social_values['Anteil der Leistungs-empfänger/-innen nach SGB II in % (Dez 2016)'],
+        'under_15_year_olds_in_minimum_income': df_social_values['Unter 15-Jährige in Mindestsicherung (Dez 2016)'],
+        'share_under_15_year_olds_in_minimum_income': df_social_values['Anteil der unter 15-Jährigen in Mindestsicherung in % (Dez 2016)'],
+        'shared_households_per_SGB_II': df_social_values['Bedarfs-gemeinschaften nach SGB II (Dez 2016)'],
+        'tax_liable_people' : df_social_values['Lohn- und Einkommen-steuerpflichtige (2013)'],
+        'sum_of_incomes_per_tax_reliable_person_in_EUR': df_social_values['Gesamtbetrag der Einkünfte je Steuerpflichtigen in EUR (2013)'],
+        'residential_buildings' : df_social_values['Wohngebäude (2016)'],
+        'apartments' : df_social_values['Wohnungen (2016)'],
+        'apartments_ready_for_occupancy' : df_social_values['Bezugsfertige Wohnungen (2016)'],
+        'homes_in_one_or_two_family_houses': df_social_values['Wohnungen in Ein- und Zweifamilien-häusern (2016)'],
+        'share_homes_in_one_or_two_family_houses': df_social_values['Anteil der Wohnungen in Ein- und Zweifamilien-häusern in % (2016)'],
+        'home_size_in_sqm': df_social_values['Wohnungsgröße in m² (2016)'], 
+        'living_area_per_resident_in_sqm' : df_social_values['Wohnfläche je Einwohner/-in in m² (2016)'],
+        'social_homes': df_social_values['Sozialwohnungen (Jan 2017)'],
+        'share_social_homes' : df_social_values['Sozialwohnungs-anteil in % (Jan 2017)'],
+        'social_homes_with_ends_of_commitment_until_2022' : df_social_values['Sozialwohnungen mit Bindungsauslauf bis 2022'],
+        'share_social_homes_with_ends_of_commitment_until_2022': df_social_values['Sozialwohnungen mit Bindungsauslauf bis 2022 in %'],
+        'prices_for_properties' : df_social_values['Preise für Grundstücke in EUR/m² (Jan 2017)'],
+        'prices_for_one_or_two_family_houses_in_EUR/sqm' : df_social_values['Preise für Ein- bzw Zwei-familienhäuser in EUR/m² (Jan 2017)'],
+        'prices_for_condominiums' : df_social_values['Preise für Eigentums-wohnungen in EUR/m² (Jan 2017)'],
+        'kindergardens_and_preschool_classes': df_social_values['Kindergärten und Vorschulklassen (März 2017)'],
+        'primary_schools': df_social_values['Grundschulen (2016/2017)'],
+        'students_in_secondary_level_1': df_social_values['Schülerinnen und Schüler der Sekundarstufe I (2016/2017)'],
+        'share_students_in_city_district_schools' : df_social_values['Anteil der Schülerinnen und Schüler in Stadtteilschulen in % (2016/2017)'],
+        'share_students_in_Gymnasium' : df_social_values['Anteil der Schülerinnen und Schüler in Gymnasien in % (2016/2017)'],
+        'residential_practitioners': df_social_values['Niedergelassene Ärzte (Jan 2017)'],
+        'general_practitioners': df_social_values['Allgemeinärzte (Jan 2017)'],
+        'dentists': df_social_values['Zahnärzte (Dez 2016)'],
+        'pharmacys': df_social_values['Apotheken (Dez 2016)'],
+        'private_cars': df_social_values['Private PKW (Jan 2017)'],
+        'car_density' : df_social_values['PKW-Dichte (Jan 2017)']
+    
+  })
+
+df_social_values.to_csv((github_path + '/data/social_values/Social_Values_2016_adjusted.csv'))

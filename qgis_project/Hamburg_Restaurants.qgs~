@@ -5,7 +5,7 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Restaurants_in_Hamburg20190104182644221" source="C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/CSV/Restaurants_in_Hamburg.csv" name="Restaurants_in_Hamburg">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Restaurants_in_Hamburg20190104182644221" source="C:\Users\vince_000\Documents\GitHub\Hamburg_Food_Geo\data\restaurants\restaurants_in_hamburg.csv" name="Restaurants_in_Hamburg">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Restaurants_in_Hamburg20190104182317585" source="C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/Restaurants_in_Hamburg.shp" name="Restaurants_in_Hamburg">
@@ -17,55 +17,37 @@
     <layer-tree-layer expanded="1" providerKey="delimitedtext" checked="Qt::Unchecked" id="extract_businesses20190104181202382" source="file:///C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/CSV/extract_businesses.csv?type=csv&amp;xField=epsg25832_latitude&amp;yField=epsg25832_longitude&amp;spatialIndex=no&amp;subsetIndex=no&amp;watchFile=no" name="extract_businesses">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Restaurants_with_district_and_social_values20181222140733265" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/Restaurants_with_district_and_social_values.shp" name="Restaurants_with_district_and_social_values">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="traffic_strength_vm20181212063324219" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/qgis_project/traffic_strength_vm.shp" name="traffic_strength_vm">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="wfs_hh_verkehrszaehlstellen_fussgaenger_bedarfszaehlstellen20181209172241517" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=fussgaenger_bedarfszaehlstellen" name="wfs_hh_verkehrszaehlstellen fussgaenger_bedarfszaehlstellen">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="traffic_strength20181211143016672" source="C:\Users\vince_000\Documents\GitHub\Hamburg_Food_Geo\qgis_project\traffic_strength_vm.shp" name="traffic_strength">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="wfs_hh_verkehrszaehlstellen_kfz_bedarfszaehlstellen20181209172246033" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=kfz_bedarfszaehlstellen" name="wfs_hh_verkehrszaehlstellen kfz_bedarfszaehlstellen">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="traffic_strength_vm20181212063324219" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/traffic_strength_vm.shp" name="traffic_strength_vm">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Restaurants_with_district_social_and_traffic_values20181222134057186" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/Restaurants_with_district_social_and_traffic_values.shp" name="Restaurants_with_district_social_and_traffic_values">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="traffic_strength20181211143016672" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/Data/Verkehrszaehlstellen_HH_2017-01-12/traffic_strength.shp" name="traffic_strength">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="wfs_hh_verkehrszaehlstellen_rad_jaehrliche_zaehlstellen20181209172254966" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=rad_jaehrliche_zaehlstellen" name="wfs_hh_verkehrszaehlstellen rad_jaehrliche_zaehlstellen">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="verkehr_stadtteile_vm20181211150407760" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/verkehr_stadtteile_vm.shp" name="verkehr_stadtteile_vm">
+    <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="verkehr_stadtteile_vm20181211150407760" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/qgis_project/verkehr_stadtteile_vm.shp" name="verkehr_stadtteile_vm">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="wfs_hh_verkehrszaehlstellen_rad_pegel20181209172256133" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=rad_pegel" name="wfs_hh_verkehrszaehlstellen rad_pegel">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/Data/ALKISVerwaltungsgrenzen.gml|layername=Ortsteile" name="ALKISVerwaltungsgrenzen Ortsteile">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465" source="C:\Users\vince_000\Documents\GitHub\Hamburg_Food_Geo\data\administrative_boundaries\ALKISVerwaltungsgrenzen.gml|layername=Ortsteile" name="ALKISVerwaltungsgrenzen Ortsteile">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="0" providerKey="wms" checked="Qt::Unchecked" id="020181222141631170" source="contextualWMSLegend=0&amp;crs=EPSG:25832&amp;dpiMode=7&amp;featureCount=10&amp;format=image/jpeg&amp;layers=0&amp;styles=default&amp;url=https://geodienste.hamburg.de/HH_WMS_Geologie_GLA" name="0">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="geokarte_2_grid20190210143341276" source="C:/Users/vince_000/Documents/Geotesting/geokarte2/geokarte_2_grid.xyz" name="geokarte_2_grid">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="delimitedtext" checked="Qt::Checked" id="Social_Values_2016_adjusted20181202152740910" source="file:///C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/Data/Social_Values_2016_adjusted.csv?type=csv&amp;geomType=none&amp;subsetIndex=no&amp;watchFile=no" name="Social_Values_2016_adjusted">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="geokarte220190210125127620" source="C:/Users/vince_000/Documents/Geotesting/geokarte2/geokarte2.tif" name="geokarte2">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="OpenStreetMap20181202145317466" source="&lt;GDAL_WMS>&#xa;  &lt;Service name=&quot;TMS&quot;>&#xa;    &lt;ServerUrl>http://tile.openstreetmap.org/${z}/${x}/${y}.png&lt;/ServerUrl>&#xa;  &lt;/Service>&#xa;  &lt;DataWindow>&#xa;    &lt;UpperLeftX>-20037508.34&lt;/UpperLeftX>&#xa;    &lt;UpperLeftY>20037508.34&lt;/UpperLeftY>&#xa;    &lt;LowerRightX>20037508.34&lt;/LowerRightX>&#xa;    &lt;LowerRightY>-20037508.34&lt;/LowerRightY>&#xa;    &lt;TileLevel>19&lt;/TileLevel>&#xa;    &lt;TileCountX>1&lt;/TileCountX>&#xa;    &lt;TileCountY>1&lt;/TileCountY>&#xa;    &lt;YOrigin>top&lt;/YOrigin>&#xa;  &lt;/DataWindow>&#xa;  &lt;Projection>EPSG:3857&lt;/Projection>&#xa;  &lt;BlockSizeX>256&lt;/BlockSizeX>&#xa;  &lt;BlockSizeY>256&lt;/BlockSizeY>&#xa;  &lt;BandsCount>3&lt;/BandsCount>&#xa;  &lt;Cache />&#xa;&lt;/GDAL_WMS>&#xa;" name="OpenStreetMap">
+    <layer-tree-layer expanded="1" providerKey="wms" checked="Qt::Unchecked" id="020181222141631170" source="contextualWMSLegend=0&amp;crs=EPSG:25832&amp;dpiMode=7&amp;featureCount=10&amp;format=image/jpeg&amp;layers=0&amp;styles=default&amp;url=https://geodienste.hamburg.de/HH_WMS_Geologie_GLA" name="0">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="geokarte_grid_tiny20190105172424991" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/geokarte_grid/geokarte_grid_tiny.xyz" name="geokarte_grid_tiny">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="OpenStreetMap20181202145317466" source="&lt;GDAL_WMS>&#xd;&#xa;  &lt;Service name=&quot;TMS&quot;>&#xd;&#xa;    &lt;ServerUrl>http://tile.openstreetmap.org/${z}/${x}/${y}.png&lt;/ServerUrl>&#xd;&#xa;  &lt;/Service>&#xd;&#xa;  &lt;DataWindow>&#xd;&#xa;    &lt;UpperLeftX>-20037508.34&lt;/UpperLeftX>&#xd;&#xa;    &lt;UpperLeftY>20037508.34&lt;/UpperLeftY>&#xd;&#xa;    &lt;LowerRightX>20037508.34&lt;/LowerRightX>&#xd;&#xa;    &lt;LowerRightY>-20037508.34&lt;/LowerRightY>&#xd;&#xa;    &lt;TileLevel>19&lt;/TileLevel>&#xd;&#xa;    &lt;TileCountX>1&lt;/TileCountX>&#xd;&#xa;    &lt;TileCountY>1&lt;/TileCountY>&#xd;&#xa;    &lt;YOrigin>top&lt;/YOrigin>&#xd;&#xa;  &lt;/DataWindow>&#xd;&#xa;  &lt;Projection>EPSG:3857&lt;/Projection>&#xd;&#xa;  &lt;BlockSizeX>256&lt;/BlockSizeX>&#xd;&#xa;  &lt;BlockSizeY>256&lt;/BlockSizeY>&#xd;&#xa;  &lt;BandsCount>3&lt;/BandsCount>&#xd;&#xa;  &lt;Cache />&#xd;&#xa;&lt;/GDAL_WMS>&#xd;&#xa;" name="OpenStreetMap">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="Geokarte_tiny20190105172147400" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/Geokarte_Smaller/Geokarte_tiny.tif" name="Geokarte_tiny">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="geokarte_grid_tiny20190105172424991" source="C:\Users\vince_000\Documents\Geotesting\hamburg_data\geokarte_grid_tiny.xyz" name="geokarte_grid_tiny">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="Geokarte_Smaller20190105172032590" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/Geokarte_Smaller/Geokarte_Smaller.tif" name="Geokarte_Smaller">
-      <customproperties/>
-    </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="Geologische_Karte20181222134128353" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/QGIS_Projects/Geologische Karte/Geologische Karte.vrt" name="Geologische Karte">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="Geokarte_tiny20190105172147400" source="C:\Users\vince_000\Documents\GitHub\Hamburg_Food_Geo\qgis_project\geomap_grounds\Geokarte_tiny.tif" name="Geokarte_tiny">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -73,10 +55,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>537258.87064859922975302</xmin>
-      <ymin>5911272.91922663524746895</ymin>
-      <xmax>593800.32550960592925549</xmax>
-      <ymax>5965025.52405324950814247</ymax>
+      <xmin>555243.05881802784278989</xmin>
+      <ymin>5914280.91113315243273973</ymin>
+      <xmax>601026.65038502775132656</xmax>
+      <ymax>5955452.8059773026034236</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -94,48 +76,48 @@
     </destinationsrs>
     <rendermaptile>0</rendermaptile>
     <layer_coordinate_transform_info>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Restaurants_in_Hamburg20190104182317585"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geokarte_Smaller20190105172032590"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_tiny20190105172424991"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="app_verkehrsstaerken20181209180203116"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104181340872"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="extract_businesses20190104181202382"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104181714008"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geologische_Karte20181222134128353"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="traffic_strength_vm20181212063324219"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Restaurants_with_district_and_social_values20181222140733265"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104182136663"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104182037435"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="020181222141631170"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="verkehr_stadtteile_vm20181211150407760"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geokarte_Smaller20190105172032590"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte220190210124717414"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104181340872"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_smaller20190210140424339"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_smaller20190210140646031"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="app_verkehrsstaerken20181209180203116"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte220190210125127620"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geologische_Karte20181222134128353"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Restaurants_with_district_social_and_traffic_values20181222134057186"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="extract_businesses20190104181202382"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geokarte_tiny20190105172147400"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_tiny20190105172424991"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte220190210124926168"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_2_grid20190210143341276"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104182037435"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104182136663"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="020181222141631170"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Restaurants_with_district_and_social_values20181222140733265"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Restaurants_in_Hamburg20190104182317585"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="verkehr_stadtteile_vm20181211150407760"/>
     </layer_coordinate_transform_info>
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
       <item>ALKISVerwaltungsgrenzen_Ortsteile20181202141741465</item>
       <item>OpenStreetMap20181202145317466</item>
-      <item>Social_Values_2016_adjusted20181202152740910</item>
-      <item>wfs_hh_verkehrszaehlstellen_fussgaenger_bedarfszaehlstellen20181209172241517</item>
-      <item>wfs_hh_verkehrszaehlstellen_kfz_bedarfszaehlstellen20181209172246033</item>
-      <item>wfs_hh_verkehrszaehlstellen_rad_jaehrliche_zaehlstellen20181209172254966</item>
       <item>wfs_hh_verkehrszaehlstellen_rad_pegel20181209172256133</item>
       <item>traffic_strength20181211143016672</item>
       <item>verkehr_stadtteile_vm20181211150407760</item>
       <item>traffic_strength_vm20181212063324219</item>
-      <item>Restaurants_with_district_social_and_traffic_values20181222134057186</item>
-      <item>Geologische_Karte20181222134128353</item>
-      <item>Restaurants_with_district_and_social_values20181222140733265</item>
       <item>020181222141631170</item>
       <item>extract_businesses20190104181202382</item>
       <item>memory_20190104182136663</item>
       <item>Restaurants_in_Hamburg20190104182317585</item>
       <item>Restaurants_in_Hamburg20190104182644221</item>
-      <item>Geokarte_Smaller20190105172032590</item>
       <item>Geokarte_tiny20190105172147400</item>
       <item>geokarte_grid_tiny20190105172424991</item>
+      <item>geokarte220190210125127620</item>
+      <item>geokarte_2_grid20190210143341276</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
@@ -159,39 +141,14 @@
         <legendlayerfile isInOverview="0" layerid="extract_businesses20190104181202382" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Restaurants_with_district_and_social_values" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Restaurants_with_district_and_social_values20181222140733265" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="wfs_hh_verkehrszaehlstellen fussgaenger_bedarfszaehlstellen" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="wfs_hh_verkehrszaehlstellen_fussgaenger_bedarfszaehlstellen20181209172241517" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="wfs_hh_verkehrszaehlstellen kfz_bedarfszaehlstellen" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="wfs_hh_verkehrszaehlstellen_kfz_bedarfszaehlstellen20181209172246033" visible="0"/>
-      </filegroup>
-    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="traffic_strength_vm" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="traffic_strength_vm20181212063324219" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Restaurants_with_district_social_and_traffic_values" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Restaurants_with_district_social_and_traffic_values20181222134057186" visible="0"/>
-      </filegroup>
-    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="traffic_strength" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="traffic_strength20181211143016672" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="wfs_hh_verkehrszaehlstellen rad_jaehrliche_zaehlstellen" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="wfs_hh_verkehrszaehlstellen_rad_jaehrliche_zaehlstellen20181209172254966" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="verkehr_stadtteile_vm" showFeatureCount="0">
@@ -209,14 +166,19 @@
         <legendlayerfile isInOverview="0" layerid="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="false" checked="Qt::Unchecked" name="0" showFeatureCount="0">
-      <filegroup open="false" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="020181222141631170" visible="0"/>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="geokarte_2_grid" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="geokarte_2_grid20190210143341276" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Social_Values_2016_adjusted" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="geokarte2" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Social_Values_2016_adjusted20181202152740910" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="geokarte220190210125127620" visible="0"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="0" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="020181222141631170" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="OpenStreetMap" showFeatureCount="0">
@@ -229,19 +191,9 @@
         <legendlayerfile isInOverview="0" layerid="geokarte_grid_tiny20190105172424991" visible="0"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Geokarte_tiny" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Geokarte_tiny" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Geokarte_tiny20190105172147400" visible="1"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Geokarte_Smaller" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Geokarte_Smaller20190105172032590" visible="0"/>
-      </filegroup>
-    </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="Geologische Karte" showFeatureCount="0">
-      <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="Geologische_Karte20181222134128353" visible="0"/>
+        <legendlayerfile isInOverview="0" layerid="Geokarte_tiny20190105172147400" visible="0"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -299,7 +251,7 @@
         <ymax>5979762.10699999984353781</ymax>
       </extent>
       <id>ALKISVerwaltungsgrenzen_Ortsteile20181202141741465</id>
-      <datasource>../Data/ALKISVerwaltungsgrenzen.gml|layername=Ortsteile</datasource>
+      <datasource>../data/administrative_boundaries/ALKISVerwaltungsgrenzen.gml|layername=Ortsteile</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -642,108 +594,12 @@ def my_form_open(dialog, layer, feature):
         <xmax>590183.43602999998256564</xmax>
         <ymax>5954980</ymax>
       </extent>
-      <id>Geokarte_Smaller20190105172032590</id>
-      <datasource>./Geokarte_Smaller/Geokarte_Smaller.tif</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Geokarte_Smaller</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>2105</srsid>
-          <srid>25832</srid>
-          <authid>EPSG:25832</authid>
-          <description>ETRS89 / UTM zone 32N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Value"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-        <noDataList bandNo="4" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="4" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>546580</xmin>
-        <ymin>5915768.6078899996355176</ymin>
-        <xmax>590183.43602999998256564</xmax>
-        <ymax>5954980</ymax>
-      </extent>
       <id>Geokarte_tiny20190105172147400</id>
-      <datasource>./Geokarte_Smaller/Geokarte_tiny.tif</datasource>
+      <datasource>./geomap_grounds/Geokarte_tiny.tif</datasource>
       <keywordList>
         <value></value>
       </keywordList>
       <layername>Geokarte_tiny</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>2105</srsid>
-          <srid>25832</srid>
-          <authid>EPSG:25832</authid>
-          <description>ETRS89 / UTM zone 32N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="identify/format" value="Value"/>
-      </customproperties>
-      <provider>gdal</provider>
-      <noData>
-        <noDataList bandNo="1" useSrcNoData="0"/>
-        <noDataList bandNo="2" useSrcNoData="0"/>
-        <noDataList bandNo="3" useSrcNoData="0"/>
-        <noDataList bandNo="4" useSrcNoData="0"/>
-      </noData>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <pipe>
-        <rasterrenderer opacity="1" alphaBand="4" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
-          <rasterTransparency/>
-        </rasterrenderer>
-        <brightnesscontrast brightness="0" contrast="0"/>
-        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
-        <rasterresampler maxOversampling="2"/>
-      </pipe>
-      <blendMode>0</blendMode>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
-      <extent>
-        <xmin>546580</xmin>
-        <ymin>5915768.6078899996355176</ymin>
-        <xmax>590183.43602999998256564</xmax>
-        <ymax>5954980</ymax>
-      </extent>
-      <id>Geologische_Karte20181222134128353</id>
-      <datasource>./Geologische Karte/Geologische Karte.vrt</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Geologische Karte</layername>
       <srs>
         <spatialrefsys>
           <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
@@ -787,26 +643,26 @@ def my_form_open(dialog, layer, feature):
         <ymax>20037508.33999999985098839</ymax>
       </extent>
       <id>OpenStreetMap20181202145317466</id>
-      <datasource>&lt;GDAL_WMS>
-  &lt;Service name="TMS">
-    &lt;ServerUrl>http://tile.openstreetmap.org/${z}/${x}/${y}.png&lt;/ServerUrl>
-  &lt;/Service>
-  &lt;DataWindow>
-    &lt;UpperLeftX>-20037508.34&lt;/UpperLeftX>
-    &lt;UpperLeftY>20037508.34&lt;/UpperLeftY>
-    &lt;LowerRightX>20037508.34&lt;/LowerRightX>
-    &lt;LowerRightY>-20037508.34&lt;/LowerRightY>
-    &lt;TileLevel>19&lt;/TileLevel>
-    &lt;TileCountX>1&lt;/TileCountX>
-    &lt;TileCountY>1&lt;/TileCountY>
-    &lt;YOrigin>top&lt;/YOrigin>
-  &lt;/DataWindow>
-  &lt;Projection>EPSG:3857&lt;/Projection>
-  &lt;BlockSizeX>256&lt;/BlockSizeX>
-  &lt;BlockSizeY>256&lt;/BlockSizeY>
-  &lt;BandsCount>3&lt;/BandsCount>
-  &lt;Cache />
-&lt;/GDAL_WMS>
+      <datasource>&lt;GDAL_WMS>&#xd;
+  &lt;Service name="TMS">&#xd;
+    &lt;ServerUrl>http://tile.openstreetmap.org/${z}/${x}/${y}.png&lt;/ServerUrl>&#xd;
+  &lt;/Service>&#xd;
+  &lt;DataWindow>&#xd;
+    &lt;UpperLeftX>-20037508.34&lt;/UpperLeftX>&#xd;
+    &lt;UpperLeftY>20037508.34&lt;/UpperLeftY>&#xd;
+    &lt;LowerRightX>20037508.34&lt;/LowerRightX>&#xd;
+    &lt;LowerRightY>-20037508.34&lt;/LowerRightY>&#xd;
+    &lt;TileLevel>19&lt;/TileLevel>&#xd;
+    &lt;TileCountX>1&lt;/TileCountX>&#xd;
+    &lt;TileCountY>1&lt;/TileCountY>&#xd;
+    &lt;YOrigin>top&lt;/YOrigin>&#xd;
+  &lt;/DataWindow>&#xd;
+  &lt;Projection>EPSG:3857&lt;/Projection>&#xd;
+  &lt;BlockSizeX>256&lt;/BlockSizeX>&#xd;
+  &lt;BlockSizeY>256&lt;/BlockSizeY>&#xd;
+  &lt;BandsCount>3&lt;/BandsCount>&#xd;
+  &lt;Cache />&#xd;
+&lt;/GDAL_WMS>&#xd;
 </datasource>
       <keywordList>
         <value></value>
@@ -1073,7 +929,7 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" readOnly="0" geometry="No geometry" type="vector" hasScaleBasedVisibilityFlag="0">
       <id>Restaurants_in_Hamburg20190104182644221</id>
-      <datasource>../../../Geotesting/Test_Files/Hamburg/CSV/Restaurants_in_Hamburg.csv</datasource>
+      <datasource>../data/restaurants/restaurants_in_hamburg.csv</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1184,1858 +1040,6 @@ def my_form_open(dialog, layer, feature):
         <default field="Stadtteil" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
-    </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <extent>
-        <xmin>549374.74879119533579797</xmin>
-        <ymin>5917198.61466631293296814</ymin>
-        <xmax>585821.87473052646964788</xmax>
-        <ymax>5951848.0230074804276228</ymax>
-      </extent>
-      <id>Restaurants_with_district_and_social_values20181222140733265</id>
-      <datasource>./Restaurants_with_district_and_social_values.shp</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Restaurants_with_district_and_social_values</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>2105</srsid>
-          <srid>25832</srid>
-          <authid>EPSG:25832</authid>
-          <description>ETRS89 / UTM zone 32N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="System">ogr</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="field_1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="price">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="rating">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="review_cou">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="is_closed">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="zip_code">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="epsg25832_">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="epsg2583_1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="epsg4326_l">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="epsg4326_1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="success">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Stadtteil">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_Val">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_3">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_4">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_5">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_6">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_7">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_8">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_9">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V10">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V11">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V12">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V13">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V14">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V15">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V16">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V17">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V18">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V19">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V20">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V21">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V22">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V23">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V24">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V25">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V26">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V27">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V28">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V29">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V30">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V31">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V32">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V33">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V34">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V35">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V36">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V37">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V38">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V39">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V40">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V41">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V42">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V43">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V44">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V45">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V46">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V47">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V48">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V49">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V50">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V51">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V52">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V53">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V54">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V55">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V56">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V57">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V58">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V59">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V60">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V61">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V62">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V63">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V64">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V65">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V66">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V67">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V68">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V69">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V70">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V71">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V72">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="color" v="37,239,135,255"/>
-              <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
-              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="size_unit" v="MM"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties/>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>id</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform>.</annotationform>
-      <aliases>
-        <alias field="field_1" index="0" name=""/>
-        <alias field="id" index="1" name=""/>
-        <alias field="price" index="2" name=""/>
-        <alias field="rating" index="3" name=""/>
-        <alias field="review_cou" index="4" name=""/>
-        <alias field="is_closed" index="5" name=""/>
-        <alias field="zip_code" index="6" name=""/>
-        <alias field="epsg25832_" index="7" name=""/>
-        <alias field="epsg2583_1" index="8" name=""/>
-        <alias field="epsg4326_l" index="9" name=""/>
-        <alias field="epsg4326_1" index="10" name=""/>
-        <alias field="success" index="11" name=""/>
-        <alias field="Stadtteil" index="12" name=""/>
-        <alias field="Social_Val" index="13" name=""/>
-        <alias field="Social_V_1" index="14" name=""/>
-        <alias field="Social_V_2" index="15" name=""/>
-        <alias field="Social_V_3" index="16" name=""/>
-        <alias field="Social_V_4" index="17" name=""/>
-        <alias field="Social_V_5" index="18" name=""/>
-        <alias field="Social_V_6" index="19" name=""/>
-        <alias field="Social_V_7" index="20" name=""/>
-        <alias field="Social_V_8" index="21" name=""/>
-        <alias field="Social_V_9" index="22" name=""/>
-        <alias field="Social_V10" index="23" name=""/>
-        <alias field="Social_V11" index="24" name=""/>
-        <alias field="Social_V12" index="25" name=""/>
-        <alias field="Social_V13" index="26" name=""/>
-        <alias field="Social_V14" index="27" name=""/>
-        <alias field="Social_V15" index="28" name=""/>
-        <alias field="Social_V16" index="29" name=""/>
-        <alias field="Social_V17" index="30" name=""/>
-        <alias field="Social_V18" index="31" name=""/>
-        <alias field="Social_V19" index="32" name=""/>
-        <alias field="Social_V20" index="33" name=""/>
-        <alias field="Social_V21" index="34" name=""/>
-        <alias field="Social_V22" index="35" name=""/>
-        <alias field="Social_V23" index="36" name=""/>
-        <alias field="Social_V24" index="37" name=""/>
-        <alias field="Social_V25" index="38" name=""/>
-        <alias field="Social_V26" index="39" name=""/>
-        <alias field="Social_V27" index="40" name=""/>
-        <alias field="Social_V28" index="41" name=""/>
-        <alias field="Social_V29" index="42" name=""/>
-        <alias field="Social_V30" index="43" name=""/>
-        <alias field="Social_V31" index="44" name=""/>
-        <alias field="Social_V32" index="45" name=""/>
-        <alias field="Social_V33" index="46" name=""/>
-        <alias field="Social_V34" index="47" name=""/>
-        <alias field="Social_V35" index="48" name=""/>
-        <alias field="Social_V36" index="49" name=""/>
-        <alias field="Social_V37" index="50" name=""/>
-        <alias field="Social_V38" index="51" name=""/>
-        <alias field="Social_V39" index="52" name=""/>
-        <alias field="Social_V40" index="53" name=""/>
-        <alias field="Social_V41" index="54" name=""/>
-        <alias field="Social_V42" index="55" name=""/>
-        <alias field="Social_V43" index="56" name=""/>
-        <alias field="Social_V44" index="57" name=""/>
-        <alias field="Social_V45" index="58" name=""/>
-        <alias field="Social_V46" index="59" name=""/>
-        <alias field="Social_V47" index="60" name=""/>
-        <alias field="Social_V48" index="61" name=""/>
-        <alias field="Social_V49" index="62" name=""/>
-        <alias field="Social_V50" index="63" name=""/>
-        <alias field="Social_V51" index="64" name=""/>
-        <alias field="Social_V52" index="65" name=""/>
-        <alias field="Social_V53" index="66" name=""/>
-        <alias field="Social_V54" index="67" name=""/>
-        <alias field="Social_V55" index="68" name=""/>
-        <alias field="Social_V56" index="69" name=""/>
-        <alias field="Social_V57" index="70" name=""/>
-        <alias field="Social_V58" index="71" name=""/>
-        <alias field="Social_V59" index="72" name=""/>
-        <alias field="Social_V60" index="73" name=""/>
-        <alias field="Social_V61" index="74" name=""/>
-        <alias field="Social_V62" index="75" name=""/>
-        <alias field="Social_V63" index="76" name=""/>
-        <alias field="Social_V64" index="77" name=""/>
-        <alias field="Social_V65" index="78" name=""/>
-        <alias field="Social_V66" index="79" name=""/>
-        <alias field="Social_V67" index="80" name=""/>
-        <alias field="Social_V68" index="81" name=""/>
-        <alias field="Social_V69" index="82" name=""/>
-        <alias field="Social_V70" index="83" name=""/>
-        <alias field="Social_V71" index="84" name=""/>
-        <alias field="Social_V72" index="85" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;Social_V_3&quot;" sortOrder="1">
-        <columns>
-          <column width="-1" hidden="0" type="field" name="field_1"/>
-          <column width="-1" hidden="0" type="field" name="id"/>
-          <column width="-1" hidden="0" type="field" name="price"/>
-          <column width="-1" hidden="0" type="field" name="rating"/>
-          <column width="-1" hidden="0" type="field" name="review_cou"/>
-          <column width="-1" hidden="0" type="field" name="is_closed"/>
-          <column width="-1" hidden="0" type="field" name="zip_code"/>
-          <column width="-1" hidden="0" type="field" name="epsg25832_"/>
-          <column width="-1" hidden="0" type="field" name="epsg2583_1"/>
-          <column width="-1" hidden="0" type="field" name="epsg4326_l"/>
-          <column width="-1" hidden="0" type="field" name="epsg4326_1"/>
-          <column width="-1" hidden="0" type="field" name="success"/>
-          <column width="-1" hidden="0" type="field" name="Stadtteil"/>
-          <column width="-1" hidden="0" type="field" name="Social_Val"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_1"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_2"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_3"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_4"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_5"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_6"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_7"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_8"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_9"/>
-          <column width="-1" hidden="0" type="field" name="Social_V10"/>
-          <column width="-1" hidden="0" type="field" name="Social_V11"/>
-          <column width="-1" hidden="0" type="field" name="Social_V12"/>
-          <column width="-1" hidden="0" type="field" name="Social_V13"/>
-          <column width="-1" hidden="0" type="field" name="Social_V14"/>
-          <column width="-1" hidden="0" type="field" name="Social_V15"/>
-          <column width="-1" hidden="0" type="field" name="Social_V16"/>
-          <column width="-1" hidden="0" type="field" name="Social_V17"/>
-          <column width="-1" hidden="0" type="field" name="Social_V18"/>
-          <column width="-1" hidden="0" type="field" name="Social_V19"/>
-          <column width="-1" hidden="0" type="field" name="Social_V20"/>
-          <column width="-1" hidden="0" type="field" name="Social_V21"/>
-          <column width="-1" hidden="0" type="field" name="Social_V22"/>
-          <column width="-1" hidden="0" type="field" name="Social_V23"/>
-          <column width="-1" hidden="0" type="field" name="Social_V24"/>
-          <column width="-1" hidden="0" type="field" name="Social_V25"/>
-          <column width="-1" hidden="0" type="field" name="Social_V26"/>
-          <column width="-1" hidden="0" type="field" name="Social_V27"/>
-          <column width="-1" hidden="0" type="field" name="Social_V28"/>
-          <column width="-1" hidden="0" type="field" name="Social_V29"/>
-          <column width="-1" hidden="0" type="field" name="Social_V30"/>
-          <column width="-1" hidden="0" type="field" name="Social_V31"/>
-          <column width="-1" hidden="0" type="field" name="Social_V32"/>
-          <column width="-1" hidden="0" type="field" name="Social_V33"/>
-          <column width="-1" hidden="0" type="field" name="Social_V34"/>
-          <column width="-1" hidden="0" type="field" name="Social_V35"/>
-          <column width="-1" hidden="0" type="field" name="Social_V36"/>
-          <column width="-1" hidden="0" type="field" name="Social_V37"/>
-          <column width="-1" hidden="0" type="field" name="Social_V38"/>
-          <column width="-1" hidden="0" type="field" name="Social_V39"/>
-          <column width="-1" hidden="0" type="field" name="Social_V40"/>
-          <column width="-1" hidden="0" type="field" name="Social_V41"/>
-          <column width="-1" hidden="0" type="field" name="Social_V42"/>
-          <column width="-1" hidden="0" type="field" name="Social_V43"/>
-          <column width="-1" hidden="0" type="field" name="Social_V44"/>
-          <column width="-1" hidden="0" type="field" name="Social_V45"/>
-          <column width="-1" hidden="0" type="field" name="Social_V46"/>
-          <column width="-1" hidden="0" type="field" name="Social_V47"/>
-          <column width="-1" hidden="0" type="field" name="Social_V48"/>
-          <column width="-1" hidden="0" type="field" name="Social_V49"/>
-          <column width="-1" hidden="0" type="field" name="Social_V50"/>
-          <column width="-1" hidden="0" type="field" name="Social_V51"/>
-          <column width="-1" hidden="0" type="field" name="Social_V52"/>
-          <column width="-1" hidden="0" type="field" name="Social_V53"/>
-          <column width="-1" hidden="0" type="field" name="Social_V54"/>
-          <column width="-1" hidden="0" type="field" name="Social_V55"/>
-          <column width="-1" hidden="0" type="field" name="Social_V56"/>
-          <column width="-1" hidden="0" type="field" name="Social_V57"/>
-          <column width="-1" hidden="0" type="field" name="Social_V58"/>
-          <column width="-1" hidden="0" type="field" name="Social_V59"/>
-          <column width="-1" hidden="0" type="field" name="Social_V60"/>
-          <column width="-1" hidden="0" type="field" name="Social_V61"/>
-          <column width="-1" hidden="0" type="field" name="Social_V62"/>
-          <column width="-1" hidden="0" type="field" name="Social_V63"/>
-          <column width="-1" hidden="0" type="field" name="Social_V64"/>
-          <column width="-1" hidden="0" type="field" name="Social_V65"/>
-          <column width="-1" hidden="0" type="field" name="Social_V66"/>
-          <column width="-1" hidden="0" type="field" name="Social_V67"/>
-          <column width="-1" hidden="0" type="field" name="Social_V68"/>
-          <column width="-1" hidden="0" type="field" name="Social_V69"/>
-          <column width="-1" hidden="0" type="field" name="Social_V70"/>
-          <column width="-1" hidden="0" type="field" name="Social_V71"/>
-          <column width="-1" hidden="0" type="field" name="Social_V72"/>
-          <column width="-1" hidden="1" type="actions"/>
-        </columns>
-      </attributetableconfig>
-      <editform>.</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="field_1" expression=""/>
-        <default field="id" expression=""/>
-        <default field="price" expression=""/>
-        <default field="rating" expression=""/>
-        <default field="review_cou" expression=""/>
-        <default field="is_closed" expression=""/>
-        <default field="zip_code" expression=""/>
-        <default field="epsg25832_" expression=""/>
-        <default field="epsg2583_1" expression=""/>
-        <default field="epsg4326_l" expression=""/>
-        <default field="epsg4326_1" expression=""/>
-        <default field="success" expression=""/>
-        <default field="Stadtteil" expression=""/>
-        <default field="Social_Val" expression=""/>
-        <default field="Social_V_1" expression=""/>
-        <default field="Social_V_2" expression=""/>
-        <default field="Social_V_3" expression=""/>
-        <default field="Social_V_4" expression=""/>
-        <default field="Social_V_5" expression=""/>
-        <default field="Social_V_6" expression=""/>
-        <default field="Social_V_7" expression=""/>
-        <default field="Social_V_8" expression=""/>
-        <default field="Social_V_9" expression=""/>
-        <default field="Social_V10" expression=""/>
-        <default field="Social_V11" expression=""/>
-        <default field="Social_V12" expression=""/>
-        <default field="Social_V13" expression=""/>
-        <default field="Social_V14" expression=""/>
-        <default field="Social_V15" expression=""/>
-        <default field="Social_V16" expression=""/>
-        <default field="Social_V17" expression=""/>
-        <default field="Social_V18" expression=""/>
-        <default field="Social_V19" expression=""/>
-        <default field="Social_V20" expression=""/>
-        <default field="Social_V21" expression=""/>
-        <default field="Social_V22" expression=""/>
-        <default field="Social_V23" expression=""/>
-        <default field="Social_V24" expression=""/>
-        <default field="Social_V25" expression=""/>
-        <default field="Social_V26" expression=""/>
-        <default field="Social_V27" expression=""/>
-        <default field="Social_V28" expression=""/>
-        <default field="Social_V29" expression=""/>
-        <default field="Social_V30" expression=""/>
-        <default field="Social_V31" expression=""/>
-        <default field="Social_V32" expression=""/>
-        <default field="Social_V33" expression=""/>
-        <default field="Social_V34" expression=""/>
-        <default field="Social_V35" expression=""/>
-        <default field="Social_V36" expression=""/>
-        <default field="Social_V37" expression=""/>
-        <default field="Social_V38" expression=""/>
-        <default field="Social_V39" expression=""/>
-        <default field="Social_V40" expression=""/>
-        <default field="Social_V41" expression=""/>
-        <default field="Social_V42" expression=""/>
-        <default field="Social_V43" expression=""/>
-        <default field="Social_V44" expression=""/>
-        <default field="Social_V45" expression=""/>
-        <default field="Social_V46" expression=""/>
-        <default field="Social_V47" expression=""/>
-        <default field="Social_V48" expression=""/>
-        <default field="Social_V49" expression=""/>
-        <default field="Social_V50" expression=""/>
-        <default field="Social_V51" expression=""/>
-        <default field="Social_V52" expression=""/>
-        <default field="Social_V53" expression=""/>
-        <default field="Social_V54" expression=""/>
-        <default field="Social_V55" expression=""/>
-        <default field="Social_V56" expression=""/>
-        <default field="Social_V57" expression=""/>
-        <default field="Social_V58" expression=""/>
-        <default field="Social_V59" expression=""/>
-        <default field="Social_V60" expression=""/>
-        <default field="Social_V61" expression=""/>
-        <default field="Social_V62" expression=""/>
-        <default field="Social_V63" expression=""/>
-        <default field="Social_V64" expression=""/>
-        <default field="Social_V65" expression=""/>
-        <default field="Social_V66" expression=""/>
-        <default field="Social_V67" expression=""/>
-        <default field="Social_V68" expression=""/>
-        <default field="Social_V69" expression=""/>
-        <default field="Social_V70" expression=""/>
-        <default field="Social_V71" expression=""/>
-        <default field="Social_V72" expression=""/>
-      </defaults>
-      <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
-    </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>Restaurants_with_district_social_and_traffic_values20181222134057186</id>
-      <datasource>./Restaurants_with_district_social_and_traffic_values.shp</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Restaurants_with_district_social_and_traffic_values</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>2105</srsid>
-          <srid>25832</srid>
-          <authid>EPSG:25832</authid>
-          <description>ETRS89 / UTM zone 32N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="System">ogr</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="field_1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="price">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="rating">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="review_cou">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="is_closed">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="zip_code">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="epsg25832_">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="epsg2583_1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="epsg4326_l">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="epsg4326_1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="success">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Stadtteil">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_Val">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_3">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_4">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_5">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_6">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_7">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_8">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V_9">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V10">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V11">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V12">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V13">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V14">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V15">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V16">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V17">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V18">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V19">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V20">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V21">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V22">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V23">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V24">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V25">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V26">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V27">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V28">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V29">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V30">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V31">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V32">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V33">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V34">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V35">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V36">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V37">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V38">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V39">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V40">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V41">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V42">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V43">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V44">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V45">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V46">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V47">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V48">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V49">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V50">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V51">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V52">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V53">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V54">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V55">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V56">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V57">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V58">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V59">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V60">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V61">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V62">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V63">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V64">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V65">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V66">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V67">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V68">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V69">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V70">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V71">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Social_V72">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr_st">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__1">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__2">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__3">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__4">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__5">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__6">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__7">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__8">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr__9">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr_10">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="verkehr_11">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="color" v="218,148,191,255"/>
-              <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
-              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="size_unit" v="MM"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties/>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>id</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform>.</annotationform>
-      <aliases>
-        <alias field="field_1" index="0" name=""/>
-        <alias field="id" index="1" name=""/>
-        <alias field="price" index="2" name=""/>
-        <alias field="rating" index="3" name=""/>
-        <alias field="review_cou" index="4" name=""/>
-        <alias field="is_closed" index="5" name=""/>
-        <alias field="zip_code" index="6" name=""/>
-        <alias field="epsg25832_" index="7" name=""/>
-        <alias field="epsg2583_1" index="8" name=""/>
-        <alias field="epsg4326_l" index="9" name=""/>
-        <alias field="epsg4326_1" index="10" name=""/>
-        <alias field="success" index="11" name=""/>
-        <alias field="Stadtteil" index="12" name=""/>
-        <alias field="Social_Val" index="13" name=""/>
-        <alias field="Social_V_1" index="14" name=""/>
-        <alias field="Social_V_2" index="15" name=""/>
-        <alias field="Social_V_3" index="16" name=""/>
-        <alias field="Social_V_4" index="17" name=""/>
-        <alias field="Social_V_5" index="18" name=""/>
-        <alias field="Social_V_6" index="19" name=""/>
-        <alias field="Social_V_7" index="20" name=""/>
-        <alias field="Social_V_8" index="21" name=""/>
-        <alias field="Social_V_9" index="22" name=""/>
-        <alias field="Social_V10" index="23" name=""/>
-        <alias field="Social_V11" index="24" name=""/>
-        <alias field="Social_V12" index="25" name=""/>
-        <alias field="Social_V13" index="26" name=""/>
-        <alias field="Social_V14" index="27" name=""/>
-        <alias field="Social_V15" index="28" name=""/>
-        <alias field="Social_V16" index="29" name=""/>
-        <alias field="Social_V17" index="30" name=""/>
-        <alias field="Social_V18" index="31" name=""/>
-        <alias field="Social_V19" index="32" name=""/>
-        <alias field="Social_V20" index="33" name=""/>
-        <alias field="Social_V21" index="34" name=""/>
-        <alias field="Social_V22" index="35" name=""/>
-        <alias field="Social_V23" index="36" name=""/>
-        <alias field="Social_V24" index="37" name=""/>
-        <alias field="Social_V25" index="38" name=""/>
-        <alias field="Social_V26" index="39" name=""/>
-        <alias field="Social_V27" index="40" name=""/>
-        <alias field="Social_V28" index="41" name=""/>
-        <alias field="Social_V29" index="42" name=""/>
-        <alias field="Social_V30" index="43" name=""/>
-        <alias field="Social_V31" index="44" name=""/>
-        <alias field="Social_V32" index="45" name=""/>
-        <alias field="Social_V33" index="46" name=""/>
-        <alias field="Social_V34" index="47" name=""/>
-        <alias field="Social_V35" index="48" name=""/>
-        <alias field="Social_V36" index="49" name=""/>
-        <alias field="Social_V37" index="50" name=""/>
-        <alias field="Social_V38" index="51" name=""/>
-        <alias field="Social_V39" index="52" name=""/>
-        <alias field="Social_V40" index="53" name=""/>
-        <alias field="Social_V41" index="54" name=""/>
-        <alias field="Social_V42" index="55" name=""/>
-        <alias field="Social_V43" index="56" name=""/>
-        <alias field="Social_V44" index="57" name=""/>
-        <alias field="Social_V45" index="58" name=""/>
-        <alias field="Social_V46" index="59" name=""/>
-        <alias field="Social_V47" index="60" name=""/>
-        <alias field="Social_V48" index="61" name=""/>
-        <alias field="Social_V49" index="62" name=""/>
-        <alias field="Social_V50" index="63" name=""/>
-        <alias field="Social_V51" index="64" name=""/>
-        <alias field="Social_V52" index="65" name=""/>
-        <alias field="Social_V53" index="66" name=""/>
-        <alias field="Social_V54" index="67" name=""/>
-        <alias field="Social_V55" index="68" name=""/>
-        <alias field="Social_V56" index="69" name=""/>
-        <alias field="Social_V57" index="70" name=""/>
-        <alias field="Social_V58" index="71" name=""/>
-        <alias field="Social_V59" index="72" name=""/>
-        <alias field="Social_V60" index="73" name=""/>
-        <alias field="Social_V61" index="74" name=""/>
-        <alias field="Social_V62" index="75" name=""/>
-        <alias field="Social_V63" index="76" name=""/>
-        <alias field="Social_V64" index="77" name=""/>
-        <alias field="Social_V65" index="78" name=""/>
-        <alias field="Social_V66" index="79" name=""/>
-        <alias field="Social_V67" index="80" name=""/>
-        <alias field="Social_V68" index="81" name=""/>
-        <alias field="Social_V69" index="82" name=""/>
-        <alias field="Social_V70" index="83" name=""/>
-        <alias field="Social_V71" index="84" name=""/>
-        <alias field="Social_V72" index="85" name=""/>
-        <alias field="verkehr_st" index="86" name=""/>
-        <alias field="verkehr__1" index="87" name=""/>
-        <alias field="verkehr__2" index="88" name=""/>
-        <alias field="verkehr__3" index="89" name=""/>
-        <alias field="verkehr__4" index="90" name=""/>
-        <alias field="verkehr__5" index="91" name=""/>
-        <alias field="verkehr__6" index="92" name=""/>
-        <alias field="verkehr__7" index="93" name=""/>
-        <alias field="verkehr__8" index="94" name=""/>
-        <alias field="verkehr__9" index="95" name=""/>
-        <alias field="verkehr_10" index="96" name=""/>
-        <alias field="verkehr_11" index="97" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;success&quot;" sortOrder="1">
-        <columns>
-          <column width="-1" hidden="0" type="field" name="field_1"/>
-          <column width="-1" hidden="0" type="field" name="id"/>
-          <column width="-1" hidden="0" type="field" name="price"/>
-          <column width="-1" hidden="0" type="field" name="rating"/>
-          <column width="-1" hidden="0" type="field" name="review_cou"/>
-          <column width="-1" hidden="0" type="field" name="is_closed"/>
-          <column width="-1" hidden="0" type="field" name="zip_code"/>
-          <column width="-1" hidden="0" type="field" name="epsg25832_"/>
-          <column width="-1" hidden="0" type="field" name="epsg2583_1"/>
-          <column width="-1" hidden="0" type="field" name="epsg4326_l"/>
-          <column width="-1" hidden="0" type="field" name="epsg4326_1"/>
-          <column width="-1" hidden="0" type="field" name="success"/>
-          <column width="-1" hidden="0" type="field" name="Stadtteil"/>
-          <column width="-1" hidden="0" type="field" name="Social_Val"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_1"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_2"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_3"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_4"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_5"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_6"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_7"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_8"/>
-          <column width="-1" hidden="0" type="field" name="Social_V_9"/>
-          <column width="-1" hidden="0" type="field" name="Social_V10"/>
-          <column width="-1" hidden="0" type="field" name="Social_V11"/>
-          <column width="-1" hidden="0" type="field" name="Social_V12"/>
-          <column width="-1" hidden="0" type="field" name="Social_V13"/>
-          <column width="-1" hidden="0" type="field" name="Social_V14"/>
-          <column width="-1" hidden="0" type="field" name="Social_V15"/>
-          <column width="-1" hidden="0" type="field" name="Social_V16"/>
-          <column width="-1" hidden="0" type="field" name="Social_V17"/>
-          <column width="-1" hidden="0" type="field" name="Social_V18"/>
-          <column width="-1" hidden="0" type="field" name="Social_V19"/>
-          <column width="-1" hidden="0" type="field" name="Social_V20"/>
-          <column width="-1" hidden="0" type="field" name="Social_V21"/>
-          <column width="-1" hidden="0" type="field" name="Social_V22"/>
-          <column width="-1" hidden="0" type="field" name="Social_V23"/>
-          <column width="-1" hidden="0" type="field" name="Social_V24"/>
-          <column width="-1" hidden="0" type="field" name="Social_V25"/>
-          <column width="-1" hidden="0" type="field" name="Social_V26"/>
-          <column width="-1" hidden="0" type="field" name="Social_V27"/>
-          <column width="-1" hidden="0" type="field" name="Social_V28"/>
-          <column width="-1" hidden="0" type="field" name="Social_V29"/>
-          <column width="-1" hidden="0" type="field" name="Social_V30"/>
-          <column width="-1" hidden="0" type="field" name="Social_V31"/>
-          <column width="-1" hidden="0" type="field" name="Social_V32"/>
-          <column width="-1" hidden="0" type="field" name="Social_V33"/>
-          <column width="-1" hidden="0" type="field" name="Social_V34"/>
-          <column width="-1" hidden="0" type="field" name="Social_V35"/>
-          <column width="-1" hidden="0" type="field" name="Social_V36"/>
-          <column width="-1" hidden="0" type="field" name="Social_V37"/>
-          <column width="-1" hidden="0" type="field" name="Social_V38"/>
-          <column width="-1" hidden="0" type="field" name="Social_V39"/>
-          <column width="-1" hidden="0" type="field" name="Social_V40"/>
-          <column width="-1" hidden="0" type="field" name="Social_V41"/>
-          <column width="-1" hidden="0" type="field" name="Social_V42"/>
-          <column width="-1" hidden="0" type="field" name="Social_V43"/>
-          <column width="-1" hidden="0" type="field" name="Social_V44"/>
-          <column width="-1" hidden="0" type="field" name="Social_V45"/>
-          <column width="-1" hidden="0" type="field" name="Social_V46"/>
-          <column width="-1" hidden="0" type="field" name="Social_V47"/>
-          <column width="-1" hidden="0" type="field" name="Social_V48"/>
-          <column width="-1" hidden="0" type="field" name="Social_V49"/>
-          <column width="-1" hidden="0" type="field" name="Social_V50"/>
-          <column width="-1" hidden="0" type="field" name="Social_V51"/>
-          <column width="-1" hidden="0" type="field" name="Social_V52"/>
-          <column width="-1" hidden="0" type="field" name="Social_V53"/>
-          <column width="-1" hidden="0" type="field" name="Social_V54"/>
-          <column width="-1" hidden="0" type="field" name="Social_V55"/>
-          <column width="-1" hidden="0" type="field" name="Social_V56"/>
-          <column width="-1" hidden="0" type="field" name="Social_V57"/>
-          <column width="-1" hidden="0" type="field" name="Social_V58"/>
-          <column width="-1" hidden="0" type="field" name="Social_V59"/>
-          <column width="-1" hidden="0" type="field" name="Social_V60"/>
-          <column width="-1" hidden="0" type="field" name="Social_V61"/>
-          <column width="-1" hidden="0" type="field" name="Social_V62"/>
-          <column width="-1" hidden="0" type="field" name="Social_V63"/>
-          <column width="-1" hidden="0" type="field" name="Social_V64"/>
-          <column width="-1" hidden="0" type="field" name="Social_V65"/>
-          <column width="-1" hidden="0" type="field" name="Social_V66"/>
-          <column width="-1" hidden="0" type="field" name="Social_V67"/>
-          <column width="-1" hidden="0" type="field" name="Social_V68"/>
-          <column width="-1" hidden="0" type="field" name="Social_V69"/>
-          <column width="-1" hidden="0" type="field" name="Social_V70"/>
-          <column width="-1" hidden="0" type="field" name="Social_V71"/>
-          <column width="-1" hidden="0" type="field" name="Social_V72"/>
-          <column width="-1" hidden="0" type="field" name="verkehr_st"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__1"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__2"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__3"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__4"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__5"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__6"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__7"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__8"/>
-          <column width="-1" hidden="0" type="field" name="verkehr__9"/>
-          <column width="-1" hidden="0" type="field" name="verkehr_10"/>
-          <column width="-1" hidden="0" type="field" name="verkehr_11"/>
-          <column width="-1" hidden="1" type="actions"/>
-        </columns>
-      </attributetableconfig>
-      <editform>.</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="field_1" expression=""/>
-        <default field="id" expression=""/>
-        <default field="price" expression=""/>
-        <default field="rating" expression=""/>
-        <default field="review_cou" expression=""/>
-        <default field="is_closed" expression=""/>
-        <default field="zip_code" expression=""/>
-        <default field="epsg25832_" expression=""/>
-        <default field="epsg2583_1" expression=""/>
-        <default field="epsg4326_l" expression=""/>
-        <default field="epsg4326_1" expression=""/>
-        <default field="success" expression=""/>
-        <default field="Stadtteil" expression=""/>
-        <default field="Social_Val" expression=""/>
-        <default field="Social_V_1" expression=""/>
-        <default field="Social_V_2" expression=""/>
-        <default field="Social_V_3" expression=""/>
-        <default field="Social_V_4" expression=""/>
-        <default field="Social_V_5" expression=""/>
-        <default field="Social_V_6" expression=""/>
-        <default field="Social_V_7" expression=""/>
-        <default field="Social_V_8" expression=""/>
-        <default field="Social_V_9" expression=""/>
-        <default field="Social_V10" expression=""/>
-        <default field="Social_V11" expression=""/>
-        <default field="Social_V12" expression=""/>
-        <default field="Social_V13" expression=""/>
-        <default field="Social_V14" expression=""/>
-        <default field="Social_V15" expression=""/>
-        <default field="Social_V16" expression=""/>
-        <default field="Social_V17" expression=""/>
-        <default field="Social_V18" expression=""/>
-        <default field="Social_V19" expression=""/>
-        <default field="Social_V20" expression=""/>
-        <default field="Social_V21" expression=""/>
-        <default field="Social_V22" expression=""/>
-        <default field="Social_V23" expression=""/>
-        <default field="Social_V24" expression=""/>
-        <default field="Social_V25" expression=""/>
-        <default field="Social_V26" expression=""/>
-        <default field="Social_V27" expression=""/>
-        <default field="Social_V28" expression=""/>
-        <default field="Social_V29" expression=""/>
-        <default field="Social_V30" expression=""/>
-        <default field="Social_V31" expression=""/>
-        <default field="Social_V32" expression=""/>
-        <default field="Social_V33" expression=""/>
-        <default field="Social_V34" expression=""/>
-        <default field="Social_V35" expression=""/>
-        <default field="Social_V36" expression=""/>
-        <default field="Social_V37" expression=""/>
-        <default field="Social_V38" expression=""/>
-        <default field="Social_V39" expression=""/>
-        <default field="Social_V40" expression=""/>
-        <default field="Social_V41" expression=""/>
-        <default field="Social_V42" expression=""/>
-        <default field="Social_V43" expression=""/>
-        <default field="Social_V44" expression=""/>
-        <default field="Social_V45" expression=""/>
-        <default field="Social_V46" expression=""/>
-        <default field="Social_V47" expression=""/>
-        <default field="Social_V48" expression=""/>
-        <default field="Social_V49" expression=""/>
-        <default field="Social_V50" expression=""/>
-        <default field="Social_V51" expression=""/>
-        <default field="Social_V52" expression=""/>
-        <default field="Social_V53" expression=""/>
-        <default field="Social_V54" expression=""/>
-        <default field="Social_V55" expression=""/>
-        <default field="Social_V56" expression=""/>
-        <default field="Social_V57" expression=""/>
-        <default field="Social_V58" expression=""/>
-        <default field="Social_V59" expression=""/>
-        <default field="Social_V60" expression=""/>
-        <default field="Social_V61" expression=""/>
-        <default field="Social_V62" expression=""/>
-        <default field="Social_V63" expression=""/>
-        <default field="Social_V64" expression=""/>
-        <default field="Social_V65" expression=""/>
-        <default field="Social_V66" expression=""/>
-        <default field="Social_V67" expression=""/>
-        <default field="Social_V68" expression=""/>
-        <default field="Social_V69" expression=""/>
-        <default field="Social_V70" expression=""/>
-        <default field="Social_V71" expression=""/>
-        <default field="Social_V72" expression=""/>
-        <default field="verkehr_st" expression=""/>
-        <default field="verkehr__1" expression=""/>
-        <default field="verkehr__2" expression=""/>
-        <default field="verkehr__3" expression=""/>
-        <default field="verkehr__4" expression=""/>
-        <default field="verkehr__5" expression=""/>
-        <default field="verkehr__6" expression=""/>
-        <default field="verkehr__7" expression=""/>
-        <default field="verkehr__8" expression=""/>
-        <default field="verkehr__9" expression=""/>
-        <default field="verkehr_10" expression=""/>
-        <default field="verkehr_11" expression=""/>
-      </defaults>
-      <previewExpression>COALESCE( "id", '&lt;NULL>' )</previewExpression>
-    </maplayer>
-    <maplayer minimumScale="0" maximumScale="1e+08" readOnly="0" geometry="No geometry" type="vector" hasScaleBasedVisibilityFlag="0">
-      <id>Social_Values_2016_adjusted20181202152740910</id>
-      <datasource>file:../Data/Social_Values_2016_adjusted.csv?type=csv&amp;geomType=none&amp;subsetIndex=no&amp;watchFile=no</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>Social_Values_2016_adjusted</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
-          <srsid>3452</srsid>
-          <srid>4326</srid>
-          <authid>EPSG:4326</authid>
-          <description>WGS 84</description>
-          <projectionacronym>longlat</projectionacronym>
-          <ellipsoidacronym>WGS84</ellipsoidacronym>
-          <geographicflag>true</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <customproperties>
-        <property key="embeddedWidgets/count" value="0"/>
-        <property key="variableNames"/>
-        <property key="variableValues"/>
-      </customproperties>
-      <provider encoding="System">delimitedtext</provider>
-      <vectorjoins>
-        <join joinFieldName="Bezirk_Name" targetFieldName="Stadtgebiet" memoryCache="1" joinLayerId="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465"/>
-      </vectorjoins>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="Stadtgebiet">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Bevölkerung">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Unter 18-Jährige">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der unter 18-Jährigen in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="65-Jährige und Ältere">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der 65-Jährigen und Älteren in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Ausländerinnen und Ausländer">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Ausländeranteil in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Bevölkerung mit Migrations-hintergrund">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der Bevölkerung mit Migrations-hintergrund in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Unter 18-Jährige mit Migrations-hintergrund">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der unter 18-Jährigen mit Migrations-hintergrund in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Haushalte">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Personen je Haushalt">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Einpersonen-haushalte">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der Einpersonen-haushalte in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Haushalte mit Kindern">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der Haushalte mit Kindern in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Alleinerziehende">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der Haushalte von Alleinerziehenden in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Fläche in km²">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Bevölkerungs-dichte">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Geburten">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Sterbefälle">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Zuzüge">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Fortzüge">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Wanderungssaldo">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Sozial-versicherungs-pflichtig Beschäftigte (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Beschäftigten-quote in % (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Arbeitslose (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Arbeitslosenanteil in % (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Jüngere Arbeitslose (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Arbeitslosenanteil Jüngerer in % (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Ältere Arbeitslose (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Arbeitslosenanteil Älterer in % (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Leistungs-empfänger/-innen nach SGB II (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der Leistungs-empfänger/-innen nach SGB II in % (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Unter 15-Jährige in Mindestsicherung (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der unter 15-Jährigen in Mindestsicherung in % (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Bedarfs-gemeinschaften nach SGB II (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Lohn- und Einkommen-steuerpflichtige (2013)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Gesamtbetrag der Einkünfte je Steuerpflichtigen in EUR (2013)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Wohngebäude (2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Wohnungen (2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Bezugsfertige Wohnungen (2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Wohnungen in Ein- und Zweifamilien-häusern (2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der Wohnungen in Ein- und Zweifamilien-häusern in % (2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Wohnungsgröße in m² (2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Wohnfläche je Einwohner/-in in m² (2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Sozialwohnungen (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Sozialwohnungs-anteil in % (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Sozialwohnungen mit Bindungsauslauf bis 2022">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Sozialwohnungen mit Bindungsauslauf bis 2022 in %">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Preise für Grundstücke in EUR/m² (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Preise für Ein- bzw Zwei-familienhäuser in EUR/m² (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Preise für Eigentums-wohnungen in EUR/m² (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Kindergärten und Vorschulklassen (März 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Grundschulen (2016/2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Schülerinnen und Schüler der Sekundarstufe I (2016/2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der Schülerinnen und Schüler in Stadtteilschulen in % (2016/2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Anteil der Schülerinnen und Schüler in Gymnasien in % (2016/2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Niedergelassene Ärzte (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Allgemeinärzte (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Zahnärzte (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Apotheken (Dez 2016)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="Private PKW (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="PKW-Dichte (Jan 2017)">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ALKISVerwaltungsgrenzen Ortsteile_gml_id">
-          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ALKISVerwaltungsgrenzen Ortsteile_OBJECTID">
-          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ALKISVerwaltungsgrenzen Ortsteile_Stadtteil">
-          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ALKISVerwaltungsgrenzen Ortsteile_Ortsteilnummer">
-          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ALKISVerwaltungsgrenzen Ortsteile_Bezirk">
-          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ALKISVerwaltungsgrenzen Ortsteile_SHP_Length">
-          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="ALKISVerwaltungsgrenzen Ortsteile_SHP_Area">
-          <widgetv2config IsMultiline="0" fieldEditable="0" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <annotationform>.</annotationform>
-      <aliases>
-        <alias field="Stadtgebiet" index="0" name=""/>
-        <alias field="Bevölkerung" index="1" name=""/>
-        <alias field="Unter 18-Jährige" index="2" name=""/>
-        <alias field="Anteil der unter 18-Jährigen in %" index="3" name=""/>
-        <alias field="65-Jährige und Ältere" index="4" name=""/>
-        <alias field="Anteil der 65-Jährigen und Älteren in %" index="5" name=""/>
-        <alias field="Ausländerinnen und Ausländer" index="6" name=""/>
-        <alias field="Ausländeranteil in %" index="7" name=""/>
-        <alias field="Bevölkerung mit Migrations-hintergrund" index="8" name=""/>
-        <alias field="Anteil der Bevölkerung mit Migrations-hintergrund in %" index="9" name=""/>
-        <alias field="Unter 18-Jährige mit Migrations-hintergrund" index="10" name=""/>
-        <alias field="Anteil der unter 18-Jährigen mit Migrations-hintergrund in %" index="11" name=""/>
-        <alias field="Haushalte" index="12" name=""/>
-        <alias field="Personen je Haushalt" index="13" name=""/>
-        <alias field="Einpersonen-haushalte" index="14" name=""/>
-        <alias field="Anteil der Einpersonen-haushalte in %" index="15" name=""/>
-        <alias field="Haushalte mit Kindern" index="16" name=""/>
-        <alias field="Anteil der Haushalte mit Kindern in %" index="17" name=""/>
-        <alias field="Alleinerziehende" index="18" name=""/>
-        <alias field="Anteil der Haushalte von Alleinerziehenden in %" index="19" name=""/>
-        <alias field="Fläche in km²" index="20" name=""/>
-        <alias field="Bevölkerungs-dichte" index="21" name=""/>
-        <alias field="Geburten" index="22" name=""/>
-        <alias field="Sterbefälle" index="23" name=""/>
-        <alias field="Zuzüge" index="24" name=""/>
-        <alias field="Fortzüge" index="25" name=""/>
-        <alias field="Wanderungssaldo" index="26" name=""/>
-        <alias field="Sozial-versicherungs-pflichtig Beschäftigte (Dez 2016)" index="27" name=""/>
-        <alias field="Beschäftigten-quote in % (Dez 2016)" index="28" name=""/>
-        <alias field="Arbeitslose (Dez 2016)" index="29" name=""/>
-        <alias field="Arbeitslosenanteil in % (Dez 2016)" index="30" name=""/>
-        <alias field="Jüngere Arbeitslose (Dez 2016)" index="31" name=""/>
-        <alias field="Arbeitslosenanteil Jüngerer in % (Dez 2016)" index="32" name=""/>
-        <alias field="Ältere Arbeitslose (Dez 2016)" index="33" name=""/>
-        <alias field="Arbeitslosenanteil Älterer in % (Dez 2016)" index="34" name=""/>
-        <alias field="Leistungs-empfänger/-innen nach SGB II (Dez 2016)" index="35" name=""/>
-        <alias field="Anteil der Leistungs-empfänger/-innen nach SGB II in % (Dez 2016)" index="36" name=""/>
-        <alias field="Unter 15-Jährige in Mindestsicherung (Dez 2016)" index="37" name=""/>
-        <alias field="Anteil der unter 15-Jährigen in Mindestsicherung in % (Dez 2016)" index="38" name=""/>
-        <alias field="Bedarfs-gemeinschaften nach SGB II (Dez 2016)" index="39" name=""/>
-        <alias field="Lohn- und Einkommen-steuerpflichtige (2013)" index="40" name=""/>
-        <alias field="Gesamtbetrag der Einkünfte je Steuerpflichtigen in EUR (2013)" index="41" name=""/>
-        <alias field="Wohngebäude (2016)" index="42" name=""/>
-        <alias field="Wohnungen (2016)" index="43" name=""/>
-        <alias field="Bezugsfertige Wohnungen (2016)" index="44" name=""/>
-        <alias field="Wohnungen in Ein- und Zweifamilien-häusern (2016)" index="45" name=""/>
-        <alias field="Anteil der Wohnungen in Ein- und Zweifamilien-häusern in % (2016)" index="46" name=""/>
-        <alias field="Wohnungsgröße in m² (2016)" index="47" name=""/>
-        <alias field="Wohnfläche je Einwohner/-in in m² (2016)" index="48" name=""/>
-        <alias field="Sozialwohnungen (Jan 2017)" index="49" name=""/>
-        <alias field="Sozialwohnungs-anteil in % (Jan 2017)" index="50" name=""/>
-        <alias field="Sozialwohnungen mit Bindungsauslauf bis 2022" index="51" name=""/>
-        <alias field="Sozialwohnungen mit Bindungsauslauf bis 2022 in %" index="52" name=""/>
-        <alias field="Preise für Grundstücke in EUR/m² (Jan 2017)" index="53" name=""/>
-        <alias field="Preise für Ein- bzw Zwei-familienhäuser in EUR/m² (Jan 2017)" index="54" name=""/>
-        <alias field="Preise für Eigentums-wohnungen in EUR/m² (Jan 2017)" index="55" name=""/>
-        <alias field="Kindergärten und Vorschulklassen (März 2017)" index="56" name=""/>
-        <alias field="Grundschulen (2016/2017)" index="57" name=""/>
-        <alias field="Schülerinnen und Schüler der Sekundarstufe I (2016/2017)" index="58" name=""/>
-        <alias field="Anteil der Schülerinnen und Schüler in Stadtteilschulen in % (2016/2017)" index="59" name=""/>
-        <alias field="Anteil der Schülerinnen und Schüler in Gymnasien in % (2016/2017)" index="60" name=""/>
-        <alias field="Niedergelassene Ärzte (Jan 2017)" index="61" name=""/>
-        <alias field="Allgemeinärzte (Jan 2017)" index="62" name=""/>
-        <alias field="Zahnärzte (Dez 2016)" index="63" name=""/>
-        <alias field="Apotheken (Dez 2016)" index="64" name=""/>
-        <alias field="Private PKW (Jan 2017)" index="65" name=""/>
-        <alias field="PKW-Dichte (Jan 2017)" index="66" name=""/>
-        <alias field="ALKISVerwaltungsgrenzen Ortsteile_gml_id" index="67" name=""/>
-        <alias field="ALKISVerwaltungsgrenzen Ortsteile_OBJECTID" index="68" name=""/>
-        <alias field="ALKISVerwaltungsgrenzen Ortsteile_Stadtteil" index="69" name=""/>
-        <alias field="ALKISVerwaltungsgrenzen Ortsteile_Ortsteilnummer" index="70" name=""/>
-        <alias field="ALKISVerwaltungsgrenzen Ortsteile_Bezirk" index="71" name=""/>
-        <alias field="ALKISVerwaltungsgrenzen Ortsteile_SHP_Length" index="72" name=""/>
-        <alias field="ALKISVerwaltungsgrenzen Ortsteile_SHP_Area" index="73" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;Schülerinnen und Schüler der Sekundarstufe I (2016/2017)&quot;" sortOrder="0">
-        <columns>
-          <column width="360" hidden="0" type="field" name="Stadtgebiet"/>
-          <column width="231" hidden="0" type="field" name="Bevölkerung"/>
-          <column width="342" hidden="0" type="field" name="Unter 18-Jährige"/>
-          <column width="476" hidden="0" type="field" name="Anteil der unter 18-Jährigen in %"/>
-          <column width="314" hidden="0" type="field" name="65-Jährige und Ältere"/>
-          <column width="623" hidden="0" type="field" name="Anteil der 65-Jährigen und Älteren in %"/>
-          <column width="-1" hidden="0" type="field" name="Ausländerinnen und Ausländer"/>
-          <column width="-1" hidden="0" type="field" name="Ausländeranteil in %"/>
-          <column width="-1" hidden="0" type="field" name="Bevölkerung mit Migrations-hintergrund"/>
-          <column width="-1" hidden="0" type="field" name="Anteil der Bevölkerung mit Migrations-hintergrund in %"/>
-          <column width="-1" hidden="0" type="field" name="Unter 18-Jährige mit Migrations-hintergrund"/>
-          <column width="-1" hidden="0" type="field" name="Anteil der unter 18-Jährigen mit Migrations-hintergrund in %"/>
-          <column width="-1" hidden="0" type="field" name="Haushalte"/>
-          <column width="-1" hidden="0" type="field" name="Personen je Haushalt"/>
-          <column width="-1" hidden="0" type="field" name="Einpersonen-haushalte"/>
-          <column width="-1" hidden="0" type="field" name="Anteil der Einpersonen-haushalte in %"/>
-          <column width="-1" hidden="0" type="field" name="Haushalte mit Kindern"/>
-          <column width="-1" hidden="0" type="field" name="Anteil der Haushalte mit Kindern in %"/>
-          <column width="-1" hidden="0" type="field" name="Alleinerziehende"/>
-          <column width="-1" hidden="0" type="field" name="Anteil der Haushalte von Alleinerziehenden in %"/>
-          <column width="-1" hidden="0" type="field" name="Fläche in km²"/>
-          <column width="-1" hidden="0" type="field" name="Bevölkerungs-dichte"/>
-          <column width="-1" hidden="0" type="field" name="Geburten"/>
-          <column width="167" hidden="0" type="field" name="Sterbefälle"/>
-          <column width="-1" hidden="0" type="field" name="Zuzüge"/>
-          <column width="-1" hidden="0" type="field" name="Fortzüge"/>
-          <column width="-1" hidden="0" type="field" name="Wanderungssaldo"/>
-          <column width="-1" hidden="0" type="field" name="Sozial-versicherungs-pflichtig Beschäftigte (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Beschäftigten-quote in % (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Arbeitslose (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Arbeitslosenanteil in % (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Jüngere Arbeitslose (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Arbeitslosenanteil Jüngerer in % (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Ältere Arbeitslose (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Arbeitslosenanteil Älterer in % (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Leistungs-empfänger/-innen nach SGB II (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Anteil der Leistungs-empfänger/-innen nach SGB II in % (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Unter 15-Jährige in Mindestsicherung (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Anteil der unter 15-Jährigen in Mindestsicherung in % (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Bedarfs-gemeinschaften nach SGB II (Dez 2016)"/>
-          <column width="-1" hidden="0" type="field" name="Lohn- und Einkommen-steuerpflichtige (2013)"/>
-          <column width="-1" hidden="0" type="field" name="Gesamtbetrag der Einkünfte je Steuerpflichtigen in EUR (2013)"/>
-          <column width="-1" hidden="0" type="field" name="Wohngebäude (2016)"/>
-          <column width="-1" hidden="0" type="field" name="Wohnungen (2016)"/>
-          <column width="-1" hidden="0" type="field" name="Bezugsfertige Wohnungen (2016)"/>
-          <column width="-1" hidden="0" type="field" name="Wohnungen in Ein- und Zweifamilien-häusern (2016)"/>
-          <column width="-1" hidden="0" type="field" name="Anteil der Wohnungen in Ein- und Zweifamilien-häusern in % (2016)"/>
-          <column width="-1" hidden="0" type="field" name="Wohnungsgröße in m² (2016)"/>
-          <column width="-1" hidden="0" type="field" name="Wohnfläche je Einwohner/-in in m² (2016)"/>
-          <column width="-1" hidden="0" type="field" name="Sozialwohnungen (Jan 2017)"/>
-          <column width="-1" hidden="0" type="field" name="Sozialwohnungs-anteil in % (Jan 2017)"/>
-          <column width="-1" hidden="0" type="field" name="Sozialwohnungen mit Bindungsauslauf bis 2022"/>
-          <column width="-1" hidden="0" type="field" name="Sozialwohnungen mit Bindungsauslauf bis 2022 in %"/>
-          <column width="-1" hidden="0" type="field" name="Preise für Grundstücke in EUR/m² (Jan 2017)"/>
-          <column width="-1" hidden="0" type="field" name="Preise für Ein- bzw Zwei-familienhäuser in EUR/m² (Jan 2017)"/>
-          <column width="-1" hidden="0" type="field" name="Preise für Eigentums-wohnungen in EUR/m² (Jan 2017)"/>
-          <column width="-1" hidden="0" type="field" name="Kindergärten und Vorschulklassen (März 2017)"/>
-          <column width="453" hidden="0" type="field" name="Grundschulen (2016/2017)"/>
-          <column width="889" hidden="0" type="field" name="Schülerinnen und Schüler der Sekundarstufe I (2016/2017)"/>
-          <column width="1082" hidden="0" type="field" name="Anteil der Schülerinnen und Schüler in Stadtteilschulen in % (2016/2017)"/>
-          <column width="1014" hidden="0" type="field" name="Anteil der Schülerinnen und Schüler in Gymnasien in % (2016/2017)"/>
-          <column width="-1" hidden="0" type="field" name="Niedergelassene Ärzte (Jan 2017)"/>
-          <column width="-1" hidden="0" type="field" name="Allgemeinärzte (Jan 2017)"/>
-          <column width="377" hidden="0" type="field" name="Zahnärzte (Dez 2016)"/>
-          <column width="386" hidden="0" type="field" name="Apotheken (Dez 2016)"/>
-          <column width="448" hidden="0" type="field" name="Private PKW (Jan 2017)"/>
-          <column width="447" hidden="0" type="field" name="PKW-Dichte (Jan 2017)"/>
-          <column width="-1" hidden="1" type="actions"/>
-          <column width="363" hidden="0" type="field" name="ALKISVerwaltungsgrenzen Ortsteile_gml_id"/>
-          <column width="-1" hidden="0" type="field" name="ALKISVerwaltungsgrenzen Ortsteile_OBJECTID"/>
-          <column width="-1" hidden="0" type="field" name="ALKISVerwaltungsgrenzen Ortsteile_Stadtteil"/>
-          <column width="-1" hidden="0" type="field" name="ALKISVerwaltungsgrenzen Ortsteile_Ortsteilnummer"/>
-          <column width="-1" hidden="0" type="field" name="ALKISVerwaltungsgrenzen Ortsteile_Bezirk"/>
-          <column width="-1" hidden="0" type="field" name="ALKISVerwaltungsgrenzen Ortsteile_SHP_Length"/>
-          <column width="-1" hidden="0" type="field" name="ALKISVerwaltungsgrenzen Ortsteile_SHP_Area"/>
-        </columns>
-      </attributetableconfig>
-      <editform>.</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[# -*- coding: utf-8 -*-
-"""
-QGIS forms can have a Python function that is called when the form is
-opened.
-
-Use this function to add extra logic to your forms.
-
-Enter the name of the function in the "Python Init function"
-field.
-An example follows:
-"""
-from qgis.PyQt.QtWidgets import QWidget
-
-def my_form_open(dialog, layer, feature):
-	geom = feature.geometry()
-	control = dialog.findChild(QWidget, "MyLineEdit")
-]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="Stadtgebiet" expression=""/>
-        <default field="Bevölkerung" expression=""/>
-        <default field="Unter 18-Jährige" expression=""/>
-        <default field="Anteil der unter 18-Jährigen in %" expression=""/>
-        <default field="65-Jährige und Ältere" expression=""/>
-        <default field="Anteil der 65-Jährigen und Älteren in %" expression=""/>
-        <default field="Ausländerinnen und Ausländer" expression=""/>
-        <default field="Ausländeranteil in %" expression=""/>
-        <default field="Bevölkerung mit Migrations-hintergrund" expression=""/>
-        <default field="Anteil der Bevölkerung mit Migrations-hintergrund in %" expression=""/>
-        <default field="Unter 18-Jährige mit Migrations-hintergrund" expression=""/>
-        <default field="Anteil der unter 18-Jährigen mit Migrations-hintergrund in %" expression=""/>
-        <default field="Haushalte" expression=""/>
-        <default field="Personen je Haushalt" expression=""/>
-        <default field="Einpersonen-haushalte" expression=""/>
-        <default field="Anteil der Einpersonen-haushalte in %" expression=""/>
-        <default field="Haushalte mit Kindern" expression=""/>
-        <default field="Anteil der Haushalte mit Kindern in %" expression=""/>
-        <default field="Alleinerziehende" expression=""/>
-        <default field="Anteil der Haushalte von Alleinerziehenden in %" expression=""/>
-        <default field="Fläche in km²" expression=""/>
-        <default field="Bevölkerungs-dichte" expression=""/>
-        <default field="Geburten" expression=""/>
-        <default field="Sterbefälle" expression=""/>
-        <default field="Zuzüge" expression=""/>
-        <default field="Fortzüge" expression=""/>
-        <default field="Wanderungssaldo" expression=""/>
-        <default field="Sozial-versicherungs-pflichtig Beschäftigte (Dez 2016)" expression=""/>
-        <default field="Beschäftigten-quote in % (Dez 2016)" expression=""/>
-        <default field="Arbeitslose (Dez 2016)" expression=""/>
-        <default field="Arbeitslosenanteil in % (Dez 2016)" expression=""/>
-        <default field="Jüngere Arbeitslose (Dez 2016)" expression=""/>
-        <default field="Arbeitslosenanteil Jüngerer in % (Dez 2016)" expression=""/>
-        <default field="Ältere Arbeitslose (Dez 2016)" expression=""/>
-        <default field="Arbeitslosenanteil Älterer in % (Dez 2016)" expression=""/>
-        <default field="Leistungs-empfänger/-innen nach SGB II (Dez 2016)" expression=""/>
-        <default field="Anteil der Leistungs-empfänger/-innen nach SGB II in % (Dez 2016)" expression=""/>
-        <default field="Unter 15-Jährige in Mindestsicherung (Dez 2016)" expression=""/>
-        <default field="Anteil der unter 15-Jährigen in Mindestsicherung in % (Dez 2016)" expression=""/>
-        <default field="Bedarfs-gemeinschaften nach SGB II (Dez 2016)" expression=""/>
-        <default field="Lohn- und Einkommen-steuerpflichtige (2013)" expression=""/>
-        <default field="Gesamtbetrag der Einkünfte je Steuerpflichtigen in EUR (2013)" expression=""/>
-        <default field="Wohngebäude (2016)" expression=""/>
-        <default field="Wohnungen (2016)" expression=""/>
-        <default field="Bezugsfertige Wohnungen (2016)" expression=""/>
-        <default field="Wohnungen in Ein- und Zweifamilien-häusern (2016)" expression=""/>
-        <default field="Anteil der Wohnungen in Ein- und Zweifamilien-häusern in % (2016)" expression=""/>
-        <default field="Wohnungsgröße in m² (2016)" expression=""/>
-        <default field="Wohnfläche je Einwohner/-in in m² (2016)" expression=""/>
-        <default field="Sozialwohnungen (Jan 2017)" expression=""/>
-        <default field="Sozialwohnungs-anteil in % (Jan 2017)" expression=""/>
-        <default field="Sozialwohnungen mit Bindungsauslauf bis 2022" expression=""/>
-        <default field="Sozialwohnungen mit Bindungsauslauf bis 2022 in %" expression=""/>
-        <default field="Preise für Grundstücke in EUR/m² (Jan 2017)" expression=""/>
-        <default field="Preise für Ein- bzw Zwei-familienhäuser in EUR/m² (Jan 2017)" expression=""/>
-        <default field="Preise für Eigentums-wohnungen in EUR/m² (Jan 2017)" expression=""/>
-        <default field="Kindergärten und Vorschulklassen (März 2017)" expression=""/>
-        <default field="Grundschulen (2016/2017)" expression=""/>
-        <default field="Schülerinnen und Schüler der Sekundarstufe I (2016/2017)" expression=""/>
-        <default field="Anteil der Schülerinnen und Schüler in Stadtteilschulen in % (2016/2017)" expression=""/>
-        <default field="Anteil der Schülerinnen und Schüler in Gymnasien in % (2016/2017)" expression=""/>
-        <default field="Niedergelassene Ärzte (Jan 2017)" expression=""/>
-        <default field="Allgemeinärzte (Jan 2017)" expression=""/>
-        <default field="Zahnärzte (Dez 2016)" expression=""/>
-        <default field="Apotheken (Dez 2016)" expression=""/>
-        <default field="Private PKW (Jan 2017)" expression=""/>
-        <default field="PKW-Dichte (Jan 2017)" expression=""/>
-        <default field="ALKISVerwaltungsgrenzen Ortsteile_gml_id" expression=""/>
-        <default field="ALKISVerwaltungsgrenzen Ortsteile_OBJECTID" expression=""/>
-        <default field="ALKISVerwaltungsgrenzen Ortsteile_Stadtteil" expression=""/>
-        <default field="ALKISVerwaltungsgrenzen Ortsteile_Ortsteilnummer" expression=""/>
-        <default field="ALKISVerwaltungsgrenzen Ortsteile_Bezirk" expression=""/>
-        <default field="ALKISVerwaltungsgrenzen Ortsteile_SHP_Length" expression=""/>
-        <default field="ALKISVerwaltungsgrenzen Ortsteile_SHP_Area" expression=""/>
-      </defaults>
-      <previewExpression>COALESCE("Stadtgebiet", '&lt;NULL>')||', '||COALESCE("Bevölkerung", '&lt;NULL>')||', '||COALESCE("Unter 18-Jährige", '&lt;NULL>')||', '||COALESCE("Anteil der unter 18-Jährigen in %", '&lt;NULL>')||', '||COALESCE("65-Jährige und Ältere", '&lt;NULL>')||', '||COALESCE("Anteil der 65-Jährigen und Älteren in %", '&lt;NULL>')||', '||COALESCE("Ausländerinnen und Ausländer", '&lt;NULL>')||', '||COALESCE("Ausländeranteil in %", '&lt;NULL>')||', '||COALESCE("Bevölkerung mit Migrations-hintergrund", '&lt;NULL>')||', '||COALESCE("Anteil der Bevölkerung mit Migrations-hintergrund in %", '&lt;NULL>')||', '||COALESCE("Unter 18-Jährige mit Migrations-hintergrund", '&lt;NULL>')||', '||COALESCE("Anteil der unter 18-Jährigen mit Migrations-hintergrund in %", '&lt;NULL>')||', '||COALESCE("Haushalte", '&lt;NULL>')||', '||COALESCE("Personen je Haushalt", '&lt;NULL>')||', '||COALESCE("Einpersonen-haushalte", '&lt;NULL>')||', '||COALESCE("Anteil der Einpersonen-haushalte in %", '&lt;NULL>')||', '||COALESCE("Haushalte mit Kindern", '&lt;NULL>')||', '||COALESCE("Anteil der Haushalte mit Kindern in %", '&lt;NULL>')||', '||COALESCE("Alleinerziehende", '&lt;NULL>')||', '||COALESCE("Anteil der Haushalte von Alleinerziehenden in %", '&lt;NULL>')||', '||COALESCE("Fläche in km²", '&lt;NULL>')||', '||COALESCE("Bevölkerungs-dichte", '&lt;NULL>')||', '||COALESCE("Geburten", '&lt;NULL>')||', '||COALESCE("Sterbefälle", '&lt;NULL>')||', '||COALESCE("Zuzüge", '&lt;NULL>')||', '||COALESCE("Fortzüge", '&lt;NULL>')||', '||COALESCE("Wanderungssaldo", '&lt;NULL>')||', '||COALESCE("Sozial-versicherungs-pflichtig Beschäftigte (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Beschäftigten-quote in % (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Arbeitslose (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Arbeitslosenanteil in % (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Jüngere Arbeitslose (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Arbeitslosenanteil Jüngerer in % (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Ältere Arbeitslose (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Arbeitslosenanteil Älterer in % (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Leistungs-empfänger/-innen nach SGB II (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Anteil der Leistungs-empfänger/-innen nach SGB II in % (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Unter 15-Jährige in Mindestsicherung (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Anteil der unter 15-Jährigen in Mindestsicherung in % (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Bedarfs-gemeinschaften nach SGB II (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Lohn- und Einkommen-steuerpflichtige (2013)", '&lt;NULL>')||', '||COALESCE("Gesamtbetrag der Einkünfte je Steuerpflichtigen in EUR (2013)", '&lt;NULL>')||', '||COALESCE("Wohngebäude (2016)", '&lt;NULL>')||', '||COALESCE("Wohnungen (2016)", '&lt;NULL>')||', '||COALESCE("Bezugsfertige Wohnungen (2016)", '&lt;NULL>')||', '||COALESCE("Wohnungen in Ein- und Zweifamilien-häusern (2016)", '&lt;NULL>')||', '||COALESCE("Anteil der Wohnungen in Ein- und Zweifamilien-häusern in % (2016)", '&lt;NULL>')||', '||COALESCE("Wohnungsgröße in m² (2016)", '&lt;NULL>')||', '||COALESCE("Wohnfläche je Einwohner/-in in m² (2016)", '&lt;NULL>')||', '||COALESCE("Sozialwohnungen (Jan 2017)", '&lt;NULL>')||', '||COALESCE("Sozialwohnungs-anteil in % (Jan 2017)", '&lt;NULL>')||', '||COALESCE("Sozialwohnungen mit Bindungsauslauf bis 2022", '&lt;NULL>')||', '||COALESCE("Sozialwohnungen mit Bindungsauslauf bis 2022 in %", '&lt;NULL>')||', '||COALESCE("Preise für Grundstücke in EUR/m² (Jan 2017)", '&lt;NULL>')||', '||COALESCE("Preise für Ein- bzw Zwei-familienhäuser in EUR/m² (Jan 2017)", '&lt;NULL>')||', '||COALESCE("Preise für Eigentums-wohnungen in EUR/m² (Jan 2017)", '&lt;NULL>')||', '||COALESCE("Kindergärten und Vorschulklassen (März 2017)", '&lt;NULL>')||', '||COALESCE("Grundschulen (2016/2017)", '&lt;NULL>')||', '||COALESCE("Schülerinnen und Schüler der Sekundarstufe I (2016/2017)", '&lt;NULL>')||', '||COALESCE("Anteil der Schülerinnen und Schüler in Stadtteilschulen in % (2016/2017)", '&lt;NULL>')||', '||COALESCE("Anteil der Schülerinnen und Schüler in Gymnasien in % (2016/2017)", '&lt;NULL>')||', '||COALESCE("Niedergelassene Ärzte (Jan 2017)", '&lt;NULL>')||', '||COALESCE("Allgemeinärzte (Jan 2017)", '&lt;NULL>')||', '||COALESCE("Zahnärzte (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Apotheken (Dez 2016)", '&lt;NULL>')||', '||COALESCE("Private PKW (Jan 2017)", '&lt;NULL>')||', '||COALESCE("PKW-Dichte (Jan 2017)", '&lt;NULL>')</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>extract_businesses20190104181202382</id>
@@ -3209,13 +1213,111 @@ def my_form_open(dialog, layer, feature):
     </maplayer>
     <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
       <extent>
+        <xmin>546579.66441500000655651</xmin>
+        <ymin>5915772.29372799955308437</ymin>
+        <xmax>590183.08495499996934086</xmax>
+        <ymax>5954983.62215100042521954</ymax>
+      </extent>
+      <id>geokarte220190210125127620</id>
+      <datasource>../../../Geotesting/geokarte2/geokarte2.tif</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>geokarte2</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>2105</srsid>
+          <srid>25832</srid>
+          <authid>EPSG:25832</authid>
+          <description>ETRS89 / UTM zone 32N</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+        <noDataList bandNo="2" useSrcNoData="0"/>
+        <noDataList bandNo="3" useSrcNoData="0"/>
+        <noDataList bandNo="4" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer opacity="1" alphaBand="4" blueBand="3" greenBand="2" type="multibandcolor" redBand="1">
+          <rasterTransparency/>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
+        <xmin>546579.66441500000655651</xmin>
+        <ymin>5915772.29372799955308437</ymin>
+        <xmax>590183.08495499996934086</xmax>
+        <ymax>5954983.62215100042521954</ymax>
+      </extent>
+      <id>geokarte_2_grid20190210143341276</id>
+      <datasource>../../../Geotesting/geokarte2/geokarte_2_grid.xyz</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>geokarte_2_grid</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>2105</srsid>
+          <srid>25832</srid>
+          <authid>EPSG:25832</authid>
+          <description>ETRS89 / UTM zone 32N</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties>
+        <property key="identify/format" value="Value"/>
+      </customproperties>
+      <provider>gdal</provider>
+      <noData>
+        <noDataList bandNo="1" useSrcNoData="0"/>
+      </noData>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <pipe>
+        <rasterrenderer gradient="BlackToWhite" opacity="1" alphaBand="-1" type="singlebandgray" grayBand="1">
+          <rasterTransparency/>
+          <contrastEnhancement>
+            <minValue>0</minValue>
+            <maxValue>255</maxValue>
+            <algorithm>StretchToMinimumMaximum</algorithm>
+          </contrastEnhancement>
+        </rasterrenderer>
+        <brightnesscontrast brightness="0" contrast="0"/>
+        <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+        <rasterresampler maxOversampling="2"/>
+      </pipe>
+      <blendMode>0</blendMode>
+    </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+      <extent>
         <xmin>546580</xmin>
         <ymin>5915768.6078899996355176</ymin>
         <xmax>590183.43603000009898096</xmax>
         <ymax>5954980</ymax>
       </extent>
       <id>geokarte_grid_tiny20190105172424991</id>
-      <datasource>./geokarte_grid/geokarte_grid_tiny.xyz</datasource>
+      <datasource>../../../Geotesting/hamburg_data/geokarte_grid_tiny.xyz</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -3489,7 +1591,7 @@ def my_form_open(dialog, layer, feature):
         <ymax>5952303</ymax>
       </extent>
       <id>traffic_strength20181211143016672</id>
-      <datasource>../Data/Verkehrszaehlstellen_HH_2017-01-12/traffic_strength.shp</datasource>
+      <datasource>./traffic_strength_vm.shp</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -4256,401 +2358,6 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "gml_id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>wfs_hh_verkehrszaehlstellen_fussgaenger_bedarfszaehlstellen20181209172241517</id>
-      <datasource>../Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=fussgaenger_bedarfszaehlstellen</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>wfs_hh_verkehrszaehlstellen fussgaenger_bedarfszaehlstellen</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>2105</srsid>
-          <srid>25832</srid>
-          <authid>EPSG:25832</authid>
-          <description>ETRS89 / UTM zone 32N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="UTF-8">ogr</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="gml_id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="bezeichnung">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="zaehlstelle">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="letzte_zaehlung">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="color" v="193,227,40,255"/>
-              <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
-              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="size_unit" v="MM"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties/>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>gml_id</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform>.</annotationform>
-      <aliases>
-        <alias field="gml_id" index="0" name=""/>
-        <alias field="bezeichnung" index="1" name=""/>
-        <alias field="zaehlstelle" index="2" name=""/>
-        <alias field="letzte_zaehlung" index="3" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns>
-          <column width="606" hidden="0" type="field" name="gml_id"/>
-          <column width="828" hidden="0" type="field" name="bezeichnung"/>
-          <column width="335" hidden="0" type="field" name="zaehlstelle"/>
-          <column width="600" hidden="0" type="field" name="letzte_zaehlung"/>
-          <column width="-1" hidden="1" type="actions"/>
-        </columns>
-      </attributetableconfig>
-      <editform>.</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="gml_id" expression=""/>
-        <default field="bezeichnung" expression=""/>
-        <default field="zaehlstelle" expression=""/>
-        <default field="letzte_zaehlung" expression=""/>
-      </defaults>
-      <previewExpression>COALESCE( "gml_id", '&lt;NULL>' )</previewExpression>
-    </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>wfs_hh_verkehrszaehlstellen_kfz_bedarfszaehlstellen20181209172246033</id>
-      <datasource>../Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=kfz_bedarfszaehlstellen</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>wfs_hh_verkehrszaehlstellen kfz_bedarfszaehlstellen</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>2105</srsid>
-          <srid>25832</srid>
-          <authid>EPSG:25832</authid>
-          <description>ETRS89 / UTM zone 32N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="UTF-8">ogr</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="gml_id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="zaehlstelle">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="bezeichnung">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="knoten">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="letzte_zaehlung">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="color" v="20,209,3,255"/>
-              <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
-              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="size_unit" v="MM"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties/>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>gml_id</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform>.</annotationform>
-      <aliases>
-        <alias field="gml_id" index="0" name=""/>
-        <alias field="zaehlstelle" index="1" name=""/>
-        <alias field="bezeichnung" index="2" name=""/>
-        <alias field="knoten" index="3" name=""/>
-        <alias field="letzte_zaehlung" index="4" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns/>
-      </attributetableconfig>
-      <editform>.</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="gml_id" expression=""/>
-        <default field="zaehlstelle" expression=""/>
-        <default field="bezeichnung" expression=""/>
-        <default field="knoten" expression=""/>
-        <default field="letzte_zaehlung" expression=""/>
-      </defaults>
-      <previewExpression></previewExpression>
-    </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
-      <id>wfs_hh_verkehrszaehlstellen_rad_jaehrliche_zaehlstellen20181209172254966</id>
-      <datasource>../Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=rad_jaehrliche_zaehlstellen</datasource>
-      <keywordList>
-        <value></value>
-      </keywordList>
-      <layername>wfs_hh_verkehrszaehlstellen rad_jaehrliche_zaehlstellen</layername>
-      <srs>
-        <spatialrefsys>
-          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
-          <srsid>2105</srsid>
-          <srid>25832</srid>
-          <authid>EPSG:25832</authid>
-          <description>ETRS89 / UTM zone 32N</description>
-          <projectionacronym>utm</projectionacronym>
-          <ellipsoidacronym>GRS80</ellipsoidacronym>
-          <geographicflag>false</geographicflag>
-        </spatialrefsys>
-      </srs>
-      <provider encoding="UTF-8">ogr</provider>
-      <vectorjoins/>
-      <layerDependencies/>
-      <expressionfields/>
-      <map-layer-style-manager current="">
-        <map-layer-style name=""/>
-      </map-layer-style-manager>
-      <edittypes>
-        <edittype widgetv2type="TextEdit" name="gml_id">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="bezeichnung">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="zaehlstelle">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-        <edittype widgetv2type="TextEdit" name="letzte_zaehlung">
-          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
-        </edittype>
-      </edittypes>
-      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
-        <symbols>
-          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
-            <layer pass="0" class="SimpleMarker" locked="0">
-              <prop k="angle" v="0"/>
-              <prop k="color" v="181,47,105,255"/>
-              <prop k="horizontal_anchor_point" v="1"/>
-              <prop k="joinstyle" v="bevel"/>
-              <prop k="name" v="circle"/>
-              <prop k="offset" v="0,0"/>
-              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="offset_unit" v="MM"/>
-              <prop k="outline_color" v="0,0,0,255"/>
-              <prop k="outline_style" v="solid"/>
-              <prop k="outline_width" v="0"/>
-              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="outline_width_unit" v="MM"/>
-              <prop k="scale_method" v="diameter"/>
-              <prop k="size" v="2"/>
-              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="size_unit" v="MM"/>
-              <prop k="vertical_anchor_point" v="1"/>
-            </layer>
-          </symbol>
-        </symbols>
-        <rotation/>
-        <sizescale scalemethod="diameter"/>
-      </renderer-v2>
-      <labeling type="simple"/>
-      <customproperties/>
-      <blendMode>0</blendMode>
-      <featureBlendMode>0</featureBlendMode>
-      <layerTransparency>0</layerTransparency>
-      <displayfield>gml_id</displayfield>
-      <label>0</label>
-      <labelattributes>
-        <label fieldname="" text="Label"/>
-        <family fieldname="" name="MS Shell Dlg 2"/>
-        <size fieldname="" units="pt" value="12"/>
-        <bold fieldname="" on="0"/>
-        <italic fieldname="" on="0"/>
-        <underline fieldname="" on="0"/>
-        <strikeout fieldname="" on="0"/>
-        <color fieldname="" red="0" blue="0" green="0"/>
-        <x fieldname=""/>
-        <y fieldname=""/>
-        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
-        <angle fieldname="" value="0" auto="0"/>
-        <alignment fieldname="" value="center"/>
-        <buffercolor fieldname="" red="255" blue="255" green="255"/>
-        <buffersize fieldname="" units="pt" value="1"/>
-        <bufferenabled fieldname="" on=""/>
-        <multilineenabled fieldname="" on=""/>
-        <selectedonly on=""/>
-      </labelattributes>
-      <annotationform>.</annotationform>
-      <aliases>
-        <alias field="gml_id" index="0" name=""/>
-        <alias field="bezeichnung" index="1" name=""/>
-        <alias field="zaehlstelle" index="2" name=""/>
-        <alias field="letzte_zaehlung" index="3" name=""/>
-      </aliases>
-      <excludeAttributesWMS/>
-      <excludeAttributesWFS/>
-      <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
-        <columns/>
-      </attributetableconfig>
-      <editform>.</editform>
-      <editforminit/>
-      <editforminitcodesource>0</editforminitcodesource>
-      <editforminitfilepath>.</editforminitfilepath>
-      <editforminitcode><![CDATA[]]></editforminitcode>
-      <featformsuppress>0</featformsuppress>
-      <editorlayout>generatedlayout</editorlayout>
-      <widgets/>
-      <conditionalstyles>
-        <rowstyles/>
-        <fieldstyles/>
-      </conditionalstyles>
-      <defaults>
-        <default field="gml_id" expression=""/>
-        <default field="bezeichnung" expression=""/>
-        <default field="zaehlstelle" expression=""/>
-        <default field="letzte_zaehlung" expression=""/>
-      </defaults>
-      <previewExpression></previewExpression>
-    </maplayer>
-    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>wfs_hh_verkehrszaehlstellen_rad_pegel20181209172256133</id>
       <datasource>../Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=rad_pegel</datasource>
       <keywordList>
@@ -4834,21 +2541,15 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList">
         <value>ALKISVerwaltungsgrenzen_Ortsteile20181202141741465</value>
-        <value>Restaurants_with_district_and_social_values20181222140733265</value>
-        <value>Restaurants_with_district_social_and_traffic_values20181222134057186</value>
+        <value>Restaurants_in_Hamburg20190104182317585</value>
+        <value>extract_businesses20190104181202382</value>
+        <value>memory_20190104182136663</value>
         <value>traffic_strength20181211143016672</value>
         <value>traffic_strength_vm20181212063324219</value>
         <value>verkehr_stadtteile_vm20181211150407760</value>
-        <value>wfs_hh_verkehrszaehlstellen_fussgaenger_bedarfszaehlstellen20181209172241517</value>
-        <value>wfs_hh_verkehrszaehlstellen_kfz_bedarfszaehlstellen20181209172246033</value>
-        <value>wfs_hh_verkehrszaehlstellen_rad_jaehrliche_zaehlstellen20181209172254966</value>
         <value>wfs_hh_verkehrszaehlstellen_rad_pegel20181209172256133</value>
-        <value>extract_businesses20190104181202382</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
-        <value>disabled</value>
-        <value>disabled</value>
-        <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -4869,14 +2570,8 @@ def my_form_open(dialog, layer, feature):
         <value>2</value>
         <value>2</value>
         <value>2</value>
-        <value>2</value>
-        <value>2</value>
-        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
-        <value>to_vertex_and_segment</value>
-        <value>to_vertex_and_segment</value>
-        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -4889,9 +2584,6 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
-        <value>0.000000</value>
-        <value>0.000000</value>
-        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
