@@ -104,11 +104,11 @@ for i in range(len(df_features.columns)):
     feature_column = pd.to_numeric(feature_column, errors='coerce')
     df_features[df_features.columns[i]] = feature_column
 
+
 # Fill missing data
 from sklearn.preprocessing import Imputer
 imputer = Imputer(missing_values = 'NaN', strategy = 'mean', axis = 0)
 df_features = imputer.fit_transform(df_features)
-
 
 # scale numerical values
 from sklearn.preprocessing import StandardScaler
@@ -140,6 +140,9 @@ print("R-squared for test data: " + str(r2_score(y_test, rf_y_pred_test)))
 
 ######Mulivariate linear Regression#######
 # Fitting Multiple Linear Regression to the Training set
+
+
+
 from sklearn.linear_model import LinearRegression
 l_regressor = LinearRegression()
 l_regressor.fit(X_train, y_train)
@@ -162,10 +165,10 @@ recommendation_centroids = recommendation_centroids.iloc[:,1:9]
 recommendation_centroids = recommendation_centroids.drop(['gml_id','OBJECTID','Bezirk_Name'],axis=1)
 
 recommendation_centroids = pd.merge(left = recommendation_centroids, right = df_crimes,
-                  left_on = 'Stadtteil', right_on='City_part')
+                  left_on = 'Stadtteil', right_on='City_part',how='left')
 
 centroid_social_values = pd.merge(left=recommendation_centroids, right=df_social_values,
-                left_on='Stadtteil', right_on = 'city_part')
+                left_on='Stadtteil', right_on = 'city_part',how='left')
 
 
 
