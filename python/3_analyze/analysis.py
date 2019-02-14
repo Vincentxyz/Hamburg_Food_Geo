@@ -110,15 +110,16 @@ imputer = Imputer(missing_values = 'NaN', strategy = 'mean', axis = 0)
 df_features = imputer.fit_transform(df_features)
 
 
-# Splitting the dataset into the Training set and Test set
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(df_features[:,1:], df_all['success'], test_size = 0.3,random_state = 0)
-
 # scale numerical values
 from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
-X_train = sc_X.fit_transform(X_train)
-X_test = sc_X.transform(X_test)
+df_features = sc_X.fit_transform(df_features)
+
+# Splitting the dataset into the Training set and Test set
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(df_features, df_all['success'], test_size = 0.3,random_state = 0)
+
+
 
 
 # Fitting Random Forest Regression to the Training set
@@ -174,11 +175,15 @@ centroid_social_values = pd.merge(left=recommendation_centroids, right=df_social
 price_levels = ['€','€€','€€€','€€€€','€€€€€']
 categories = df_categories['category_alias'].unique()
 
-df_recommendation = []
+frequent_categories = df_categories.groupby(by=['category_alias']).count().sort_values(by= ['category_restaurant_id'],ascending = False).index[0:7].values
 
-for i in range(0, price_levels):
-    for j in range(0, categories):
+
+# loop through all price levels and categories to build prediction for each combination of those
+for i in range(0, len(price_levels)):
+    for j in range(0, len(frequent_categories)):
                 
+        
+        # prepare feature values for success prediction
         df_location_values = pd.DataFrame({                        
                 # Water distance
                 'distance_to_water' : centroid_social_values['distance_to_water'],
@@ -215,27 +220,92 @@ for i in range(0, price_levels):
         
         for k in range(0,len(centroid_social_values.iloc[:,0])):
         
-           df_categories_new.append(labelencoder_category.transform([categories[j]]))  
+           df_categories_new.append(labelencoder_category.transform([frequent_categories[j]]))  
            prices.append(labelencoder_price.transform([price_levels[i]]))
            
         df_categories_new = np.array(df_categories_new)
-        df_categories_new = onehotencoder.transform(df_categories_new.reshape(-1,1)).toarray()
+        df_categories_binarized = onehotencoder.transform(df_categories_new.reshape(-1,1)).toarray()
         
         
-        df_new_features = pd.concat(objs = [pd.DataFrame(prices),pd.DataFrame(df_location_values),pd.DataFrame(df_categories_new)],axis=1, ignore_index = True)
+        df_new_features = pd.concat(objs = [pd.DataFrame(prices),
+                                            pd.DataFrame(df_location_values),
+                                            pd.DataFrame(df_categories_binarized)],
+                                                axis=1, ignore_index = True)
         
+        # correct wrongly entered values
         for l in range(len(df_new_features.columns)):
             feature_column = df_new_features.iloc[:,l]
             feature_column = pd.to_numeric(feature_column, errors='coerce')
             df_new_features[df_new_features.columns[l]] = feature_column
         
         # Fill missing data
-        from sklearn.preprocessing import Imputer
         imputer = Imputer(missing_values = 'NaN', strategy = 'mean', axis = 0)
         df_new_features = imputer.fit_transform(df_new_features)
         
+        # scale numerical values
+        sc_X = StandardScaler()
+        df_features = sc_X.fit_transform(df_new_features)
         
-        rf_y_pred_locations = rf_regressor.predict(df_new_features)
+        # predict values for the combination of a certain price level and category with all locations
+        rf_y_pred = rf_regressor.predict(df_new_features)
+        
+        
+        # add prediction values to a comprising dataframe
+        if ((i==0) and (j==0)):
+            rf_y_pred_locations = pd.DataFrame({
+                        'x': centroid_social_values['x'],
+                        'y': centroid_social_values['y'],
+                        'price_level': labelencoder_price.inverse_transform(np.reshape(prices,-1)),
+                        'category': labelencoder_category.inverse_transform(np.reshape(df_categories_new,-1)),
+                        'predicted_success': rf_y_pred
+                    })
+        else:
+            rf_y_pred_locations = pd.concat([rf_y_pred_locations,
+                                             pd.DataFrame({
+                        'x': centroid_social_values['x'],
+                        'y': centroid_social_values['y'],
+                        'price_level': labelencoder_price.inverse_transform(np.reshape(prices,-1)),
+                        'category': labelencoder_category.inverse_transform(np.reshape(df_categories_new,-1)),
+                        'predicted_success': rf_y_pred
+                    })],axis=0, ignore_index = True)
+        
+### Find the maximum success predictions for each location
+df_category_maps = []
+
+for i in range(0, len(frequent_categories)):
+    df_recommendation = pd.DataFrame(columns= ['x','y', 'price_level','category','predicted_success'])
+    
+    filtered_category = rf_y_pred_locations[rf_y_pred_locations['category'] == frequent_categories[i]]
+    
+    for j in range(0,len(centroid_social_values)):
+        x = centroid_social_values.iloc[j,0]
+        y = centroid_social_values.iloc[j,1]
+        filtered_x = filtered_category[filtered_category['x'] == x]
+        filtered_y = filtered_x[filtered_x['y'] == y]
+        max_pred = -99999.0
+        candidate_found = False
+        for i in range(0,len(filtered_y)):       
+            if (filtered_y.iloc[i,4] > max_pred):
+                max_pred = filtered_y.iloc[i,4]
+                candidate_found = True
+                pred_candidate = filtered_y.iloc[i,:].to_frame().transpose()
+        if (candidate_found == True):
+            df_recommendation = pd.concat([df_recommendation, pred_candidate],
+                                          axis = 0,
+                                          ignore_index = True)
+            print('recommendation added')
+            
+        else:
+            print('no recommendation found')
+        
+    df_category_maps.append(df_recommendation)
+                
+for i in range(0, len(df_category_maps)):
+    df_category_maps[i].to_csv(github_path + '/data/recommendation_grid/recommendations_per_category/' + frequent_categories[i] + '_recommendation_centroids.csv')
+
+### Show whole quadrant according to circle
+
+
 
 #################### Exploratory Data Analysis ########################
 import matplotlib.pyplot as plt
@@ -251,7 +321,5 @@ plt.scatter(x= "Bevölkerungs-dichte", y= "success", data = df_all)
 
 plt.scatter(x= "Gesamtbetrag der Einkünfte je Steuerpflichtigen in EUR (2013)", y= "success", data = df_all)
 
-
-sns.
 
 
