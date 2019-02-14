@@ -26,15 +26,6 @@ df_all = pd.merge(left = df_all, right = df_crimes,
                   left_on = 'Stadtteil', right_on='City_part')
 
 
-scaler = preprocessing.StandardScaler()
-
-normalized_rating = scaler.fit_transform(np.array(df_all['rating']).reshape(-1,1))
-
-normalized_review_count =scaler.fit_transform(np.array(df_all['review_cou']).reshape(-1,1))
-    
-df_all['success'] = normalized_rating + normalized_review_count
-
-
 # Add categories
 
 df_categories = pd.read_csv(github_path + '/data/restaurant_categories/extract_categories.csv')
@@ -44,15 +35,21 @@ df_categories_wo_restaurant = df_categories.iloc[:, 1]
 # Encoding the categories
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 labelencoder_category = LabelEncoder()
-df_categories_wo_restaurant = labelencoder_category.fit_transform(df_categories_wo_restaurant)
+labelencoder_category = labelencoder_category.fit(df_categories_wo_restaurant)
+df_categories_wo_restaurant = labelencoder_category.transform(df_categories_wo_restaurant)
 onehotencoder = OneHotEncoder(categorical_features = [0])
 df_categories_wo_restaurant = onehotencoder.fit_transform(df_categories_wo_restaurant.reshape(-1,1)).toarray()
 
+df_categories_new = pd.DataFrame(df_categories_wo_restaurant)
+df_categories_new['category_restaurant_id'] = df_categories['category_restaurant_id']
 
-#businesses['success'] = succes
+df_all = pd.merge(left = df_all, right = df_categories_new,
+                       left_on = 'id', right_on = 'category_restaurant_id')
+
 
 df_features = pd.DataFrame({
         'id': df_all['id'],
+        
         'price' : df_all['price'].fillna('unknown'),
         
         # Water distance
@@ -82,17 +79,13 @@ df_features = pd.DataFrame({
         'prices_for_properties' : df_all['prices_for_properties'],
         'prices_for_condominiums' : df_all['prices_for_condominiums'],
         'share_students_in_Gymnasium' : df_all['share_students_in_Gymnasium'],
-        'car_density' : df_all['car_density']
+        'car_density' : df_all['car_density'],
     
   })
 
-df_features = pd.merge(left = df_features, right = df_categories,
+
+df_features = pd.merge(left = df_features, right = df_categories_new,
                        left_on = 'id', right_on = 'category_restaurant_id')
-
-# For Sachin's Excel
-#df_features.to_csv('restaurant_features.csv',encoding='utf-8')
-
-df_features.set_index('id', inplace=True,drop=True)
 
 
 from sklearn.preprocessing import LabelEncoder
@@ -119,7 +112,7 @@ df_features = imputer.fit_transform(df_features)
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(df_features, df_all['success'], test_size = 0.3,random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(df_features[:,1:], df_all['success'], test_size = 0.3,random_state = 0)
 
 # scale numerical values
 from sklearn.preprocessing import StandardScaler
@@ -144,7 +137,7 @@ print("R-squared for test data: " + str(r2_score(y_test, rf_y_pred_test)))
 
 
 
-######Mulilinear Regression#######
+######Mulivariate linear Regression#######
 # Fitting Multiple Linear Regression to the Training set
 from sklearn.linear_model import LinearRegression
 l_regressor = LinearRegression()
@@ -167,15 +160,82 @@ recommendation_centroids = recommendation_centroids.iloc[:,1:9]
 
 recommendation_centroids = recommendation_centroids.drop(['gml_id','OBJECTID','Bezirk_Name'],axis=1)
 
+recommendation_centroids = pd.merge(left = recommendation_centroids, right = df_crimes,
+                  left_on = 'Stadtteil', right_on='City_part')
+
 centroid_social_values = pd.merge(left=recommendation_centroids, right=df_social_values,
                 left_on='Stadtteil', right_on = 'city_part')
 
-recommendation_centroids = pd.merge(left = recommendation_centroids, right = df_crimes,
-                  left_on = 'Stadtteil', right_on='City_part')
+
 
 
 # Now build feature vector
 
+price_levels = ['€','€€','€€€','€€€€','€€€€€']
+categories = df_categories['category_alias'].unique()
+
+df_recommendation = []
+
+for i in range(0, price_levels):
+    for j in range(0, categories):
+                
+        df_location_values = pd.DataFrame({                        
+                # Water distance
+                'distance_to_water' : centroid_social_values['distance_to_water'],
+                
+                #Restaurant density
+                'restaurant_density': centroid_social_values['restaurant_density'],
+                
+                #Crimes
+                'crime_count': centroid_social_values['Criminal_cases'],
+                
+                #social values
+                'population': centroid_social_values['population'],
+                'share_under_18_years_old': centroid_social_values['share_under_18_years_old'],
+                'share_65_year_olds_and_older': centroid_social_values['share_65_year_olds_and_older'],
+                'share_foreigners': centroid_social_values['share_foreigners'],
+                'population_with_migration_background': centroid_social_values['population_with_migration_background'],
+                'share_population_with_migration_background': centroid_social_values['share_population_with_migration_background'],
+                'households' : centroid_social_values['households'],
+                'share_one_person_households' : centroid_social_values['share_one_person_households'],
+                'share_households_with_children': centroid_social_values['share_households_with_children'],
+                'share_households_with_single_parents' : centroid_social_values['share_households_with_single_parents'],
+                'population_density' : centroid_social_values['population_density'],
+                'employment_quote_in_%': centroid_social_values['employment_quote_in_%'],
+                'share_unemployed_people': centroid_social_values['share_unemployed_people'],
+                'sum_of_incomes_per_tax_reliable_person_in_EUR': centroid_social_values['sum_of_incomes_per_tax_reliable_person_in_EUR'],
+                'prices_for_properties' : centroid_social_values['prices_for_properties'],
+                'prices_for_condominiums' : centroid_social_values['prices_for_condominiums'],
+                'share_students_in_Gymnasium' : centroid_social_values['share_students_in_Gymnasium'],
+                'car_density' : centroid_social_values['car_density'],
+            
+          })
+        df_categories_new = []
+        prices = []
+        
+        for k in range(0,len(centroid_social_values.iloc[:,0])):
+        
+           df_categories_new.append(labelencoder_category.transform([categories[j]]))  
+           prices.append(labelencoder_price.transform([price_levels[i]]))
+           
+        df_categories_new = np.array(df_categories_new)
+        df_categories_new = onehotencoder.transform(df_categories_new.reshape(-1,1)).toarray()
+        
+        
+        df_new_features = pd.concat(objs = [pd.DataFrame(prices),pd.DataFrame(df_location_values),pd.DataFrame(df_categories_new)],axis=1, ignore_index = True)
+        
+        for l in range(len(df_new_features.columns)):
+            feature_column = df_new_features.iloc[:,l]
+            feature_column = pd.to_numeric(feature_column, errors='coerce')
+            df_new_features[df_new_features.columns[l]] = feature_column
+        
+        # Fill missing data
+        from sklearn.preprocessing import Imputer
+        imputer = Imputer(missing_values = 'NaN', strategy = 'mean', axis = 0)
+        df_new_features = imputer.fit_transform(df_new_features)
+        
+        
+        rf_y_pred_locations = rf_regressor.predict(df_new_features)
 
 #################### Exploratory Data Analysis ########################
 import matplotlib.pyplot as plt

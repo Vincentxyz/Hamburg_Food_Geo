@@ -5,7 +5,16 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::PartiallyChecked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Restaurants_in_Hamburg20190104182644221" source="C:\Users\vince_000\Documents\GitHub\Hamburg_Food_Geo\data\restaurants\restaurants_in_hamburg.csv" name="Restaurants_in_Hamburg">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="grid_centroids_with_district20190213082557355" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/data/recommendation_grid/grid_centroids_with_district.csv" name="grid_centroids_with_district">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="memory" checked="Qt::Checked" id="memory_20190213082438822" source="Point?uuid=a0607f41-9c95-40bb-a97c-328afabdaa3f&amp;crs=EPSG:25832&amp;field=field_1:integer&amp;field=x:double&amp;field=y:integer&amp;field=distance_to_water:double&amp;field=restaurant_density:integer&amp;field=gml_id:string&amp;field=OBJECTID:integer&amp;field=Bezirk_Name:string&amp;field=Stadtteil:string&amp;field=Ortsteilnummer:integer&amp;field=Bezirk:integer&amp;field=SHP_Length:double&amp;field=SHP_Area:double" name="Joined layer">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="delimitedtext" checked="Qt::Unchecked" id="water_distance_and_density20190213081949138" source="file:///C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/data/recommendation_grid/water_distance_and_density.csv?type=csv&amp;xField=x&amp;yField=y&amp;spatialIndex=no&amp;subsetIndex=no&amp;watchFile=no" name="water_distance_and_density">
+      <customproperties/>
+    </layer-tree-layer>
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="Restaurants_in_Hamburg20190104182644221" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/data/restaurants/restaurants_in_hamburg.csv" name="Restaurants_in_Hamburg">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="Restaurants_in_Hamburg20190104182317585" source="C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/Restaurants_in_Hamburg.shp" name="Restaurants_in_Hamburg">
@@ -20,7 +29,7 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="traffic_strength_vm20181212063324219" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/qgis_project/traffic_strength_vm.shp" name="traffic_strength_vm">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="traffic_strength20181211143016672" source="C:\Users\vince_000\Documents\GitHub\Hamburg_Food_Geo\qgis_project\traffic_strength_vm.shp" name="traffic_strength">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="traffic_strength20181211143016672" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/qgis_project/traffic_strength_vm.shp" name="traffic_strength">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="0" providerKey="ogr" checked="Qt::Unchecked" id="verkehr_stadtteile_vm20181211150407760" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/qgis_project/verkehr_stadtteile_vm.shp" name="verkehr_stadtteile_vm">
@@ -29,10 +38,10 @@
     <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Unchecked" id="wfs_hh_verkehrszaehlstellen_rad_pegel20181209172256133" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=rad_pegel" name="wfs_hh_verkehrszaehlstellen rad_pegel">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465" source="C:\Users\vince_000\Documents\GitHub\Hamburg_Food_Geo\data\administrative_boundaries\ALKISVerwaltungsgrenzen.gml|layername=Ortsteile" name="ALKISVerwaltungsgrenzen Ortsteile">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/data/administrative_boundaries/ALKISVerwaltungsgrenzen.gml|layername=Ortsteile" name="ALKISVerwaltungsgrenzen Ortsteile">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Checked" id="geokarte_2_grid20190210143341276" source="C:/Users/vince_000/Documents/Geotesting/geokarte2/geokarte_2_grid.xyz" name="geokarte_2_grid">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="geokarte_2_grid20190210143341276" source="C:/Users/vince_000/Documents/Geotesting/geokarte2/geokarte_2_grid.xyz" name="geokarte_2_grid">
       <customproperties/>
     </layer-tree-layer>
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="geokarte220190210125127620" source="C:/Users/vince_000/Documents/Geotesting/geokarte2/geokarte2.tif" name="geokarte2">
@@ -44,10 +53,10 @@
     <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="OpenStreetMap20181202145317466" source="&lt;GDAL_WMS>&#xd;&#xa;  &lt;Service name=&quot;TMS&quot;>&#xd;&#xa;    &lt;ServerUrl>http://tile.openstreetmap.org/${z}/${x}/${y}.png&lt;/ServerUrl>&#xd;&#xa;  &lt;/Service>&#xd;&#xa;  &lt;DataWindow>&#xd;&#xa;    &lt;UpperLeftX>-20037508.34&lt;/UpperLeftX>&#xd;&#xa;    &lt;UpperLeftY>20037508.34&lt;/UpperLeftY>&#xd;&#xa;    &lt;LowerRightX>20037508.34&lt;/LowerRightX>&#xd;&#xa;    &lt;LowerRightY>-20037508.34&lt;/LowerRightY>&#xd;&#xa;    &lt;TileLevel>19&lt;/TileLevel>&#xd;&#xa;    &lt;TileCountX>1&lt;/TileCountX>&#xd;&#xa;    &lt;TileCountY>1&lt;/TileCountY>&#xd;&#xa;    &lt;YOrigin>top&lt;/YOrigin>&#xd;&#xa;  &lt;/DataWindow>&#xd;&#xa;  &lt;Projection>EPSG:3857&lt;/Projection>&#xd;&#xa;  &lt;BlockSizeX>256&lt;/BlockSizeX>&#xd;&#xa;  &lt;BlockSizeY>256&lt;/BlockSizeY>&#xd;&#xa;  &lt;BandsCount>3&lt;/BandsCount>&#xd;&#xa;  &lt;Cache />&#xd;&#xa;&lt;/GDAL_WMS>&#xd;&#xa;" name="OpenStreetMap">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="geokarte_grid_tiny20190105172424991" source="C:\Users\vince_000\Documents\Geotesting\hamburg_data\geokarte_grid_tiny.xyz" name="geokarte_grid_tiny">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="geokarte_grid_tiny20190105172424991" source="C:/Users/vince_000/Documents/Geotesting/hamburg_data/geokarte_grid_tiny.xyz" name="geokarte_grid_tiny">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="Geokarte_tiny20190105172147400" source="C:\Users\vince_000\Documents\GitHub\Hamburg_Food_Geo\qgis_project\geomap_grounds\Geokarte_tiny.tif" name="Geokarte_tiny">
+    <layer-tree-layer expanded="1" providerKey="gdal" checked="Qt::Unchecked" id="Geokarte_tiny20190105172147400" source="C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo/qgis_project/geomap_grounds/Geokarte_tiny.tif" name="Geokarte_tiny">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -55,10 +64,10 @@
   <mapcanvas>
     <units>meters</units>
     <extent>
-      <xmin>555243.05881802784278989</xmin>
-      <ymin>5914280.91113315243273973</ymin>
-      <xmax>601026.65038502775132656</xmax>
-      <ymax>5955452.8059773026034236</ymax>
+      <xmin>532983.95566930761560798</xmin>
+      <ymin>5917049.06406309921294451</ymin>
+      <xmax>578767.54723630752414465</xmax>
+      <ymax>5958220.95890724938362837</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -81,8 +90,9 @@
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geokarte_Smaller20190105172032590"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte220190210124717414"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104181340872"/>
-      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_smaller20190210140424339"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_smaller20190210140646031"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_smaller20190210140424339"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="water_distance_and_density20190213081949138"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="app_verkehrsstaerken20181209180203116"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte220190210125127620"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geologische_Karte20181222134128353"/>
@@ -91,8 +101,10 @@
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="Geokarte_tiny20190105172147400"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_grid_tiny20190105172424991"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte220190210124926168"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190213082343605"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="geokarte_2_grid20190210143341276"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104182037435"/>
+      <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190213082438822"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="memory_20190104182136663"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465"/>
       <layer_coordinate_transform destAuthId="EPSG:25832" srcAuthId="EPSG:25832" srcDatumTransform="-1" destDatumTransform="-1" layerid="020181222141631170"/>
@@ -118,9 +130,27 @@
       <item>geokarte_grid_tiny20190105172424991</item>
       <item>geokarte220190210125127620</item>
       <item>geokarte_2_grid20190210143341276</item>
+      <item>water_distance_and_density20190213081949138</item>
+      <item>memory_20190213082438822</item>
+      <item>grid_centroids_with_district20190213082557355</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="grid_centroids_with_district" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="grid_centroids_with_district20190213082557355" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Joined layer" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="memory_20190213082438822" visible="1"/>
+      </filegroup>
+    </legendlayer>
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="water_distance_and_density" showFeatureCount="0">
+      <filegroup open="true" hidden="false">
+        <legendlayerfile isInOverview="0" layerid="water_distance_and_density20190213081949138" visible="0"/>
+      </filegroup>
+    </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Restaurants_in_Hamburg" showFeatureCount="0">
       <filegroup open="true" hidden="false">
         <legendlayerfile isInOverview="0" layerid="Restaurants_in_Hamburg20190104182644221" visible="1"/>
@@ -166,9 +196,9 @@
         <legendlayerfile isInOverview="0" layerid="ALKISVerwaltungsgrenzen_Ortsteile20181202141741465" visible="1"/>
       </filegroup>
     </legendlayer>
-    <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="geokarte_2_grid" showFeatureCount="0">
+    <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="geokarte_2_grid" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="geokarte_2_grid20190210143341276" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="geokarte_2_grid20190210143341276" visible="0"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="geokarte2" showFeatureCount="0">
@@ -955,6 +985,15 @@ def my_form_open(dialog, layer, feature):
         <map-layer-style name=""/>
       </map-layer-style-manager>
       <edittypes>
+        <edittype widgetv2type="TextEdit" name="field_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Unnamed: 0">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Unnamed: 0.1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
         <edittype widgetv2type="TextEdit" name="id">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
@@ -991,21 +1030,28 @@ def my_form_open(dialog, layer, feature):
         <edittype widgetv2type="TextEdit" name="Stadtteil">
           <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
         </edittype>
+        <edittype widgetv2type="TextEdit" name="success">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
       </edittypes>
       <annotationform>.</annotationform>
       <aliases>
-        <alias field="id" index="0" name=""/>
-        <alias field="price" index="1" name=""/>
-        <alias field="rating" index="2" name=""/>
-        <alias field="review_cou" index="3" name=""/>
-        <alias field="is_closed" index="4" name=""/>
-        <alias field="zip_code" index="5" name=""/>
-        <alias field="epsg25832_" index="6" name=""/>
-        <alias field="epsg2583_1" index="7" name=""/>
-        <alias field="epsg4326_l" index="8" name=""/>
-        <alias field="epsg4326_1" index="9" name=""/>
-        <alias field="Bezirk_Nam" index="10" name=""/>
-        <alias field="Stadtteil" index="11" name=""/>
+        <alias field="field_1" index="0" name=""/>
+        <alias field="Unnamed: 0" index="1" name=""/>
+        <alias field="Unnamed: 0.1" index="2" name=""/>
+        <alias field="id" index="3" name=""/>
+        <alias field="price" index="4" name=""/>
+        <alias field="rating" index="5" name=""/>
+        <alias field="review_cou" index="6" name=""/>
+        <alias field="is_closed" index="7" name=""/>
+        <alias field="zip_code" index="8" name=""/>
+        <alias field="epsg25832_" index="9" name=""/>
+        <alias field="epsg2583_1" index="10" name=""/>
+        <alias field="epsg4326_l" index="11" name=""/>
+        <alias field="epsg4326_1" index="12" name=""/>
+        <alias field="Bezirk_Nam" index="13" name=""/>
+        <alias field="Stadtteil" index="14" name=""/>
+        <alias field="success" index="15" name=""/>
       </aliases>
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
@@ -1026,6 +1072,9 @@ def my_form_open(dialog, layer, feature):
         <fieldstyles/>
       </conditionalstyles>
       <defaults>
+        <default field="field_1" expression=""/>
+        <default field="Unnamed: 0" expression=""/>
+        <default field="Unnamed: 0.1" expression=""/>
         <default field="id" expression=""/>
         <default field="price" expression=""/>
         <default field="rating" expression=""/>
@@ -1038,6 +1087,7 @@ def my_form_open(dialog, layer, feature):
         <default field="epsg4326_1" expression=""/>
         <default field="Bezirk_Nam" expression=""/>
         <default field="Stadtteil" expression=""/>
+        <default field="success" expression=""/>
       </defaults>
       <previewExpression></previewExpression>
     </maplayer>
@@ -1359,6 +1409,125 @@ def my_form_open(dialog, layer, feature):
       </pipe>
       <blendMode>0</blendMode>
     </maplayer>
+    <maplayer minimumScale="0" maximumScale="1e+08" readOnly="0" geometry="No geometry" type="vector" hasScaleBasedVisibilityFlag="0">
+      <id>grid_centroids_with_district20190213082557355</id>
+      <datasource>../data/recommendation_grid/grid_centroids_with_district.csv</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>grid_centroids_with_district</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=longlat +datum=WGS84 +no_defs</proj4>
+          <srsid>3452</srsid>
+          <srid>4326</srid>
+          <authid>EPSG:4326</authid>
+          <description>WGS 84</description>
+          <projectionacronym>longlat</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>true</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <customproperties/>
+      <provider encoding="UTF-8">ogr</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="field_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="x">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="y">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="distance_to_water">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="restaurant_density">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="gml_id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OBJECTID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Bezirk_Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Stadtteil">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Ortsteilnummer">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Bezirk">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SHP_Length">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SHP_Area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <annotationform></annotationform>
+      <aliases>
+        <alias field="field_1" index="0" name=""/>
+        <alias field="x" index="1" name=""/>
+        <alias field="y" index="2" name=""/>
+        <alias field="distance_to_water" index="3" name=""/>
+        <alias field="restaurant_density" index="4" name=""/>
+        <alias field="gml_id" index="5" name=""/>
+        <alias field="OBJECTID" index="6" name=""/>
+        <alias field="Bezirk_Name" index="7" name=""/>
+        <alias field="Stadtteil" index="8" name=""/>
+        <alias field="Ortsteilnummer" index="9" name=""/>
+        <alias field="Bezirk" index="10" name=""/>
+        <alias field="SHP_Length" index="11" name=""/>
+        <alias field="SHP_Area" index="12" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="12455789">
+        <columns/>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="field_1" expression=""/>
+        <default field="x" expression=""/>
+        <default field="y" expression=""/>
+        <default field="distance_to_water" expression=""/>
+        <default field="restaurant_density" expression=""/>
+        <default field="gml_id" expression=""/>
+        <default field="OBJECTID" expression=""/>
+        <default field="Bezirk_Name" expression=""/>
+        <default field="Stadtteil" expression=""/>
+        <default field="Ortsteilnummer" expression=""/>
+        <default field="Bezirk" expression=""/>
+        <default field="SHP_Length" expression=""/>
+        <default field="SHP_Area" expression=""/>
+      </defaults>
+      <previewExpression></previewExpression>
+    </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <extent>
         <xmin>549374.74879119533579797</xmin>
@@ -1572,6 +1741,200 @@ def my_form_open(dialog, layer, feature):
         <default field="epsg25832_longitude" expression=""/>
         <default field="epsg4326_latitude" expression=""/>
         <default field="epsg4326_longitude" expression=""/>
+        <default field="gml_id" expression=""/>
+        <default field="OBJECTID" expression=""/>
+        <default field="Bezirk_Name" expression=""/>
+        <default field="Stadtteil" expression=""/>
+        <default field="Ortsteilnummer" expression=""/>
+        <default field="Bezirk" expression=""/>
+        <default field="SHP_Length" expression=""/>
+        <default field="SHP_Area" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "Bezirk_Name", '&lt;NULL>' )</previewExpression>
+    </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <extent>
+        <xmin>548645</xmin>
+        <ymin>5917563</ymin>
+        <xmax>586645</xmax>
+        <ymax>5954563</ymax>
+      </extent>
+      <id>memory_20190213082438822</id>
+      <datasource>memory?geometry=Point&amp;crs=EPSG:25832&amp;field=field_1:integer(-1,0)&amp;field=x:double(20,5)&amp;field=y:integer(-1,0)&amp;field=distance_to_water:double(20,5)&amp;field=restaurant_density:integer(-1,0)&amp;field=gml_id:string(255,0)&amp;field=OBJECTID:integer(-1,0)&amp;field=Bezirk_Name:string(255,0)&amp;field=Stadtteil:string(255,0)&amp;field=Ortsteilnummer:integer(-1,0)&amp;field=Bezirk:integer(-1,0)&amp;field=SHP_Length:double(20,5)&amp;field=SHP_Area:double(20,5)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>Joined layer</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>2105</srsid>
+          <srid>25832</srid>
+          <authid>EPSG:25832</authid>
+          <description>ETRS89 / UTM zone 32N</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="UTF-8">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="field_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="x">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="y">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="distance_to_water">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="restaurant_density">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="gml_id">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="OBJECTID">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Bezirk_Name">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Stadtteil">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Ortsteilnummer">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="Bezirk">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SHP_Length">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="SHP_Area">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="94,128,176,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>Bezirk_Name</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <annotationform></annotationform>
+      <aliases>
+        <alias field="field_1" index="0" name=""/>
+        <alias field="x" index="1" name=""/>
+        <alias field="y" index="2" name=""/>
+        <alias field="distance_to_water" index="3" name=""/>
+        <alias field="restaurant_density" index="4" name=""/>
+        <alias field="gml_id" index="5" name=""/>
+        <alias field="OBJECTID" index="6" name=""/>
+        <alias field="Bezirk_Name" index="7" name=""/>
+        <alias field="Stadtteil" index="8" name=""/>
+        <alias field="Ortsteilnummer" index="9" name=""/>
+        <alias field="Bezirk" index="10" name=""/>
+        <alias field="SHP_Length" index="11" name=""/>
+        <alias field="SHP_Area" index="12" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="&quot;gml_id&quot;" sortOrder="0">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="field_1"/>
+          <column width="-1" hidden="0" type="field" name="x"/>
+          <column width="-1" hidden="0" type="field" name="y"/>
+          <column width="270" hidden="0" type="field" name="distance_to_water"/>
+          <column width="341" hidden="0" type="field" name="restaurant_density"/>
+          <column width="-1" hidden="0" type="field" name="gml_id"/>
+          <column width="-1" hidden="0" type="field" name="OBJECTID"/>
+          <column width="264" hidden="0" type="field" name="Bezirk_Name"/>
+          <column width="198" hidden="0" type="field" name="Stadtteil"/>
+          <column width="-1" hidden="0" type="field" name="Ortsteilnummer"/>
+          <column width="-1" hidden="0" type="field" name="Bezirk"/>
+          <column width="-1" hidden="0" type="field" name="SHP_Length"/>
+          <column width="-1" hidden="0" type="field" name="SHP_Area"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="field_1" expression=""/>
+        <default field="x" expression=""/>
+        <default field="y" expression=""/>
+        <default field="distance_to_water" expression=""/>
+        <default field="restaurant_density" expression=""/>
         <default field="gml_id" expression=""/>
         <default field="OBJECTID" expression=""/>
         <default field="Bezirk_Name" expression=""/>
@@ -2358,6 +2721,146 @@ def my_form_open(dialog, layer, feature):
       <previewExpression>COALESCE( "gml_id", '&lt;NULL>' )</previewExpression>
     </maplayer>
     <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
+      <id>water_distance_and_density20190213081949138</id>
+      <datasource>file:../data/recommendation_grid/water_distance_and_density.csv?type=csv&amp;xField=x&amp;yField=y&amp;spatialIndex=no&amp;subsetIndex=no&amp;watchFile=no</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>water_distance_and_density</layername>
+      <srs>
+        <spatialrefsys>
+          <proj4>+proj=utm +zone=32 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs</proj4>
+          <srsid>2105</srsid>
+          <srid>25832</srid>
+          <authid>EPSG:25832</authid>
+          <description>ETRS89 / UTM zone 32N</description>
+          <projectionacronym>utm</projectionacronym>
+          <ellipsoidacronym>GRS80</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <provider encoding="UTF-8">delimitedtext</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <expressionfields/>
+      <map-layer-style-manager current="">
+        <map-layer-style name=""/>
+      </map-layer-style-manager>
+      <edittypes>
+        <edittype widgetv2type="TextEdit" name="field_1">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="x">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="y">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="distance_to_water">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+        <edittype widgetv2type="TextEdit" name="restaurant_density">
+          <widgetv2config IsMultiline="0" fieldEditable="1" constraint="" UseHtml="0" labelOnTop="0" constraintDescription="" notNull="0"/>
+        </edittype>
+      </edittypes>
+      <renderer-v2 forceraster="0" symbollevels="0" type="singleSymbol" enableorderby="0">
+        <symbols>
+          <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
+            <layer pass="0" class="SimpleMarker" locked="0">
+              <prop k="angle" v="0"/>
+              <prop k="color" v="249,130,214,255"/>
+              <prop k="horizontal_anchor_point" v="1"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="name" v="circle"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="0,0,0,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0"/>
+              <prop k="outline_width_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="scale_method" v="diameter"/>
+              <prop k="size" v="2"/>
+              <prop k="size_map_unit_scale" v="0,0,0,0,0,0"/>
+              <prop k="size_unit" v="MM"/>
+              <prop k="vertical_anchor_point" v="1"/>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale scalemethod="diameter"/>
+      </renderer-v2>
+      <labeling type="simple"/>
+      <customproperties/>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerTransparency>0</layerTransparency>
+      <displayfield>field_1</displayfield>
+      <label>0</label>
+      <labelattributes>
+        <label fieldname="" text="Label"/>
+        <family fieldname="" name="MS Shell Dlg 2"/>
+        <size fieldname="" units="pt" value="12"/>
+        <bold fieldname="" on="0"/>
+        <italic fieldname="" on="0"/>
+        <underline fieldname="" on="0"/>
+        <strikeout fieldname="" on="0"/>
+        <color fieldname="" red="0" blue="0" green="0"/>
+        <x fieldname=""/>
+        <y fieldname=""/>
+        <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+        <angle fieldname="" value="0" auto="0"/>
+        <alignment fieldname="" value="center"/>
+        <buffercolor fieldname="" red="255" blue="255" green="255"/>
+        <buffersize fieldname="" units="pt" value="1"/>
+        <bufferenabled fieldname="" on=""/>
+        <multilineenabled fieldname="" on=""/>
+        <selectedonly on=""/>
+      </labelattributes>
+      <annotationform></annotationform>
+      <aliases>
+        <alias field="field_1" index="0" name=""/>
+        <alias field="x" index="1" name=""/>
+        <alias field="y" index="2" name=""/>
+        <alias field="distance_to_water" index="3" name=""/>
+        <alias field="restaurant_density" index="4" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <attributeactions default="-1"/>
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="87855104">
+        <columns>
+          <column width="-1" hidden="0" type="field" name="field_1"/>
+          <column width="-1" hidden="0" type="field" name="x"/>
+          <column width="-1" hidden="0" type="field" name="y"/>
+          <column width="-1" hidden="0" type="field" name="distance_to_water"/>
+          <column width="-1" hidden="0" type="field" name="restaurant_density"/>
+          <column width="-1" hidden="1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <editform></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <widgets/>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <defaults>
+        <default field="field_1" expression=""/>
+        <default field="x" expression=""/>
+        <default field="y" expression=""/>
+        <default field="distance_to_water" expression=""/>
+        <default field="restaurant_density" expression=""/>
+      </defaults>
+      <previewExpression>COALESCE( "field_1", '&lt;NULL>' )</previewExpression>
+    </maplayer>
+    <maplayer simplifyAlgorithm="0" minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" readOnly="0" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
       <id>wfs_hh_verkehrszaehlstellen_rad_pegel20181209172256133</id>
       <datasource>../Data/Verkehrszaehlstellen_HH_2017-01-12/wfs_hh_verkehrszaehlstellen.gml|layername=rad_pegel</datasource>
       <keywordList>
@@ -2548,8 +3051,10 @@ def my_form_open(dialog, layer, feature):
         <value>traffic_strength_vm20181212063324219</value>
         <value>verkehr_stadtteile_vm20181211150407760</value>
         <value>wfs_hh_verkehrszaehlstellen_rad_pegel20181209172256133</value>
+        <value>water_distance_and_density20190213081949138</value>
       </LayerSnappingList>
       <LayerSnappingEnabledList type="QStringList">
+        <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
         <value>disabled</value>
@@ -2570,8 +3075,10 @@ def my_form_open(dialog, layer, feature):
         <value>2</value>
         <value>2</value>
         <value>2</value>
+        <value>2</value>
       </LayerSnappingToleranceUnitList>
       <LayerSnapToList type="QStringList">
+        <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
         <value>to_vertex_and_segment</value>
@@ -2584,6 +3091,7 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapType type="QString">off</DefaultSnapType>
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList">
+        <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
         <value>0.000000</value>
