@@ -83,9 +83,9 @@
     <units>meters</units>
     <extent>
       <xmin>544115.30240459833294153</xmin>
-      <ymin>5917215.32903183624148369</ymin>
+      <ymin>5917138.70181290060281754</ymin>
       <xmax>584015.30240459833294153</xmax>
-      <ymax>5956065.32903183624148369</ymax>
+      <ymax>5955988.70181290060281754</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>

@@ -45,19 +45,19 @@ while (x < (MAX_x_25832 - (TILE_SIZE/2))):
   y = MIN_y_25832
   while (y < (MAX_y_25832 - (TILE_SIZE/2))):
     min_distance = 99999999999.0
-    for i in range(len(water_points)):
-        distance = calculate_distance(x,
-                                      y,
-                                      water_points.iloc[i,1],
-                                      water_points.iloc[i,2])
-        
-        if distance < min_distance:
-            min_distance = distance
-    
-    distance_to_water.append(min_distance)
-    
-    restaurant_densities.append(get_number_of_nearby_restaurants(x,y,400))
-    
+#    for i in range(len(water_points)):
+#        distance = calculate_distance(x,
+#                                      y,
+#                                      water_points.iloc[i,1],
+#                                      water_points.iloc[i,2])
+#        
+#        if distance < min_distance:
+#            min_distance = distance
+#    
+#    distance_to_water.append(min_distance)
+#    
+#    restaurant_densities.append(get_number_of_nearby_restaurants(x,y,400))
+#    
     x_values.append(x)
     y_values.append(y)
     print('point ' + str(x) + ', ' + str(y) + ' finished')

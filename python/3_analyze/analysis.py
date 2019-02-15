@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
 
 github_path = 'C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo'
 
@@ -87,6 +90,7 @@ df_features = pd.DataFrame({
 df_features = pd.merge(left = df_features, right = df_categories_new,
                        left_on = 'id', right_on = 'category_restaurant_id')
 
+df_features = df_features.drop(['category_restaurant_id','id'],axis = 1)
 
 from sklearn.preprocessing import LabelEncoder
 
@@ -97,13 +101,14 @@ df_features['price'] = labelencoder_price.transform(df_features['price'])
 
 # Replace strange values
 
-df_features['prices_for_one_or_two_family_houses_in_EUR/sqm'] = pd.to_numeric('prices_for_one_or_two_family_houses_in_EUR/sqm', errors = 'coerce')
-
 for i in range(len(df_features.columns)):
     feature_column = df_features.iloc[:,i]
     feature_column = pd.to_numeric(feature_column, errors='coerce')
     df_features[df_features.columns[i]] = feature_column
 
+feature_columns = df_features.columns.values
+distinct_categories = df_categories['category_alias'].unique()
+feature_columns[(len(feature_columns)-len(distinct_categories)):(len(feature_columns))] = labelencoder_category.inverse_transform(pd.to_numeric(feature_columns[(len(feature_columns)-len(distinct_categories)):(len(feature_columns))]))
 
 # Fill missing data
 from sklearn.preprocessing import Imputer
@@ -115,46 +120,98 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 df_features = sc_X.fit_transform(df_features)
 
-# Splitting the dataset into the Training set and Test set
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(df_features, df_all['success'], test_size = 0.3,random_state = 0)
 
 
 
+####### Random Forest Regression #######
+rf_training_r2 = []
+rf_test_r2 = []
+svr_training_r2 = []
+svr_test_r2 = []
+lr_training_r2 = []
+lr_test_r2 = []
 
-# Fitting Random Forest Regression to the Training set
-from sklearn.ensemble import RandomForestRegressor
-rf_regressor = RandomForestRegressor(n_estimators = 1000, random_state = 0, max_depth = 5)
-rf_regressor.fit(X_train, y_train)
+for i in range(0,1):
+    # Splitting the dataset into the Training set and Test set
+    from sklearn.model_selection import train_test_split
+    X_train, X_test, y_train, y_test = train_test_split(df_features, df_all['success'], test_size = 0.3,random_state = 0)
 
-# Predicting the Test set results
-rf_y_pred_train = rf_regressor.predict(X_train)
-rf_y_pred_test = rf_regressor.predict(X_test)
+    
+    # Fitting Random Forest Regression to the Training set
+    from sklearn.ensemble import RandomForestRegressor
+    rf_regressor = RandomForestRegressor(n_estimators = 1000, max_depth = 5)
+    rf_regressor.fit(X_train, y_train)
+    
+    # Predicting the Test set results
+    rf_y_pred_train = rf_regressor.predict(X_train)
+    rf_y_pred_test = rf_regressor.predict(X_test)
+    
+    from sklearn.metrics import r2_score, mean_squared_error
+    print("Random Forest: R-squared for training data: " + str(r2_score(y_train, rf_y_pred_train)))
+    rf_training_r2.append(r2_score(y_train, rf_y_pred_train))
+    print("Random Forest: R-squared for test data: " + str(r2_score(y_test, rf_y_pred_test)))
+    rf_test_r2.append(r2_score(y_test, rf_y_pred_test))
+    
+    rf_feature_importances = pd.concat([pd.DataFrame(feature_columns),pd.DataFrame(rf_regressor.feature_importances_)],axis=1)
+    rf_feature_importances.columns = ['attribute','importance']
+    
+    ####### Support Vector Regression ########
+    
+    # Fitting SVR to the dataset
+    from sklearn.svm import SVR
+    regressor = SVR(kernel = 'rbf')
+    regressor.fit(X_train, y_train)
+    
+    # Predicting a new result
+    svr_y_pred_train = regressor.predict(X_train)
+    svr_y_pred_test = regressor.predict(X_test)
+    
+    print("SVR: R-squared for training data: " + str(r2_score(y_train, svr_y_pred_train)))
+    svr_training_r2.append(r2_score(y_train, svr_y_pred_train))
+    print("SVR: R-squared for test data: " + str(r2_score(y_test, svr_y_pred_test)))
+    svr_test_r2.append(r2_score(y_test, svr_y_pred_test))
+    
+    ###### Mulivariate linear Regressio #######
+    # Fitting Multiple Linear Regression to the Training set
+    
+    from sklearn.linear_model import LinearRegression
+    l_regressor = LinearRegression()
+    l_regressor.fit(X_train, y_train)
+    
+    # Predicting the Test set results
+    l_y_pred_train = l_regressor.predict(X_train)
+    l_y_pred_test = l_regressor.predict(X_test)
+    
+    print("Linear Regression: R-squared for training data: " + str(r2_score(y_train, l_y_pred_train)))
+    lr_training_r2.append(r2_score(y_train, l_y_pred_train))
+    print("Linear Regression: R-squared for test data: " + str(r2_score(y_test, l_y_pred_test)))
+    lr_training_r2.append(r2_score(y_test, l_y_pred_test))
 
-from sklearn.metrics import r2_score, mean_squared_error
-print("R-squared for training data: " + str(r2_score(y_train, rf_y_pred_train)))
-print("R-squared for test data: " + str(r2_score(y_test, rf_y_pred_test)))
+# Save training r2 values
 
+df_training_rf = pd.DataFrame({'regressor' : 'RF', 'R2' : rf_training_r2})
+df_training_svr = pd.DataFrame({'regressor' : 'SVR', 'R2' : svr_training_r2})
+df_training_lr = pd.DataFrame({'regressor' : 'LR', 'R2' : lr_training_r2})
 
+df_r2_training = df_training_rf.append(df_training_svr, ignore_index=True)
+df_r2_training = df_r2_training.append(df_training_lr, ignore_index = True)
 
+df_r2_training.to_csv(github_path + '/data/regression_comparison/r2_training_data.csv')
 
-######Mulivariate linear Regression#######
-# Fitting Multiple Linear Regression to the Training set
+sns.boxplot(x = 'regressor', y = 'R2', data = df_r2_training)
 
+# Save test r2 values
 
+df_test_rf = pd.DataFrame({'regressor' : 'RF', 'R2' : rf_test_r2})
+df_test_svr = pd.DataFrame({'regressor' : 'SVR', 'R2' : svr_test_r2})
+df_test_lr = pd.DataFrame({'regressor' : 'LR', 'R2' : lr_test_r2})
 
-from sklearn.linear_model import LinearRegression
-l_regressor = LinearRegression()
-l_regressor.fit(X_train, y_train)
+df_r2_test = df_test_rf.append(df_test_svr, ignore_index=True)
+df_r2_test = df_r2_test.append(df_test_lr, ignore_index = True)
 
-# Predicting the Test set results
-l_y_pred_train = l_regressor.predict(X_train)
-l_y_pred_test = l_regressor.predict(X_test)
+df_r2_test.to_csv(github_path + '/data/regression_comparison/r2_test_data.csv')
 
-print("R-squared for training data: " + str(r2_score(y_train, l_y_pred_train)))
-print("R-squared for test data: " + str(r2_score(y_test, l_y_pred_test)))
-
-
+sns.boxplot(x = 'regressor', y = 'R2', data = df_r2_test)
 
 
 ################## Build Recommendation Grid #######
@@ -235,7 +292,7 @@ for i in range(0, len(price_levels)):
                                             pd.DataFrame(df_categories_binarized)],
                                                 axis=1, ignore_index = True)
         
-        # correct wrongly entered values
+        # correct wrongly entered values from data source
         for l in range(len(df_new_features.columns)):
             feature_column = df_new_features.iloc[:,l]
             feature_column = pd.to_numeric(feature_column, errors='coerce')
@@ -304,25 +361,72 @@ for i in range(0, len(frequent_categories)):
     df_category_maps.append(df_recommendation)
                 
 for i in range(0, len(df_category_maps)):
-    df_category_maps[i].to_csv(github_path + '/data/recommendation_grid/recommendations_per_category/' + frequent_categories[i] + '_recommendation_centroids.csv')
+    social_values = pd.DataFrame({    
+                # x and y
+                'x': centroid_social_values['x'],
+                'y': centroid_social_values['y'],
+                
+                # Water distance
+                'distance_to_water' : centroid_social_values['distance_to_water'],
+                
+                #Restaurant density
+                'restaurant_density': centroid_social_values['restaurant_density'],
+                
+                #Crimes
+                'crime_count': centroid_social_values['Criminal_cases'],
+                
+                #social values
+                'population': centroid_social_values['population'],
+                'share_under_18_years_old': centroid_social_values['share_under_18_years_old'],
+                'share_65_year_olds_and_older': centroid_social_values['share_65_year_olds_and_older'],
+                'share_foreigners': centroid_social_values['share_foreigners'],
+                'population_with_migration_background': centroid_social_values['population_with_migration_background'],
+                'share_population_with_migration_background': centroid_social_values['share_population_with_migration_background'],
+                'households' : centroid_social_values['households'],
+                'share_one_person_households' : centroid_social_values['share_one_person_households'],
+                'share_households_with_children': centroid_social_values['share_households_with_children'],
+                'share_households_with_single_parents' : centroid_social_values['share_households_with_single_parents'],
+                'population_density' : centroid_social_values['population_density'],
+                'employment_quote_in_%': centroid_social_values['employment_quote_in_%'],
+                'share_unemployed_people': centroid_social_values['share_unemployed_people'],
+                'sum_of_incomes_per_tax_reliable_person_in_EUR': centroid_social_values['sum_of_incomes_per_tax_reliable_person_in_EUR'],
+                'prices_for_properties' : centroid_social_values['prices_for_properties'],
+                'prices_for_condominiums' : centroid_social_values['prices_for_condominiums'],
+                'share_students_in_Gymnasium' : centroid_social_values['share_students_in_Gymnasium'],
+                'car_density' : centroid_social_values['car_density'],
+            
+          })
+    
+    df_category_maps[i]['x'] = pd.to_numeric(df_category_maps[i]['x'])
+    df_category_maps[i]['y'] = pd.to_numeric(df_category_maps[i]['y'])
+   
+    social_values['x'] = pd.to_numeric(social_values['x'])
+    social_values['y'] = pd.to_numeric(social_values['y'])
+    
+    category_map = pd.merge(left = df_category_maps[i], right = social_values,
+                            left_on = ['x','y'], right_on = ['x','y'])
+    
+    category_map = category_map.sort_values(by = ['predicted_success'], ascending = False)
+    
+    category_map.to_csv(github_path + '/data/recommendation_grid/recommendations_per_category/' + frequent_categories[i] + '_recommendation_centroids.csv')
 
-### Show whole quadrant according to circle
-
+    category_map.iloc[0:5,:].to_csv(github_path + '/data/recommendation_grid/recommendations_per_category/' + frequent_categories[i] + '_top_5_centroids.csv')
 
 
 #################### Exploratory Data Analysis ########################
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-import random
 
 
+sns.boxplot(x= "price", y= "success", data = df_all.fillna('unknown'), order = ['unknown','€','€€','€€€','€€€€','€€€€€'])
 
-plt.scatter(x= "distance_to_water", y= "success", data = df_all.sample(200))
+#sns.boxplot(x= labelencoder_category.inverse_transform('hotdogs'), y= "success", data = df_all)
 
-plt.scatter(x= "Bevölkerungs-dichte", y= "success", data = df_all)
+sns.lineplot(x= "share_one_person_households", y= "success", data = df_all)
 
-plt.scatter(x= "Gesamtbetrag der Einkünfte je Steuerpflichtigen in EUR (2013)", y= "success", data = df_all)
+sns.lineplot(x= "density", y= "success", data = df_all)
 
+
+sns.relplot(x= "distance_to_water", y= "success", kind = "line", data = df_all)
+
+sns.relplot(x= "share_households_with_single_parents", y= "success", kind = "line", data = df_all)
 
 
