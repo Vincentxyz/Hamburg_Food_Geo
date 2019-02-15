@@ -154,6 +154,17 @@ for i in range(0,1):
     
     rf_feature_importances = pd.concat([pd.DataFrame(feature_columns),pd.DataFrame(rf_regressor.feature_importances_)],axis=1)
     rf_feature_importances.columns = ['attribute','importance']
+    rf_feature_importances = rf_feature_importances.sort_values(by = ['importance'],ascending = False)
+    rf_feature_importances.to_csv(github_path + '/data/feature_importances/rf_feature_importances.csv')
+    
+    rf_feature_importances['importance'] = rf_feature_importances['importance'] * 100
+    
+    ax_feature_importance = sns.barplot(x= "importance", y= "attribute", 
+                data = rf_feature_importances.iloc[0:10,:], orient = 'h', 
+                color = 'blue')
+    
+    ax_feature_importance.set(xlabel='Feature Importance in %', ylabel='Feature')
+
     
     ####### Support Vector Regression ########
     
@@ -420,7 +431,17 @@ sns.boxplot(x= "price", y= "success", data = df_all.fillna('unknown'), order = [
 
 #sns.boxplot(x= labelencoder_category.inverse_transform('hotdogs'), y= "success", data = df_all)
 
+sns.lineplot(x= "prices_for_condominiums", y= "success", data = df_all)
+
+
 sns.lineplot(x= "share_one_person_households", y= "success", data = df_all)
+
+sns.lineplot(x= "population_density", y= "success", data = df_all)
+
+sns.lineplot(x= "share_foreigners", y= "success", data = df_all)
+
+sns.lineplot(x= "sum_of_incomes_per_tax_reliable_person_in_EUR", y= "success", data = df_all)
+
 
 sns.lineplot(x= "density", y= "success", data = df_all)
 
