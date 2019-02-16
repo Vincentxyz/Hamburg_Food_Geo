@@ -234,66 +234,71 @@ for i in range(0,no_fittings):
 
 # Save training r2 values
 
-df_training_rf_r2 = pd.DataFrame({'regressor' : 'RF', 'R2' : rf_training_r2})
-df_training_svr_r2 = pd.DataFrame({'regressor' : 'SVR', 'R2' : svr_training_r2})
-df_training_lr_r2 = pd.DataFrame({'regressor' : 'LR', 'R2' : lr_training_r2})
+df_training_rf_r2 = pd.DataFrame({'Regressor' : 'RFR', 'R2' : rf_training_r2})
+df_training_svr_r2 = pd.DataFrame({'Regressor' : 'SVR', 'R2' : svr_training_r2})
+df_training_lr_r2 = pd.DataFrame({'Regressor' : 'LR', 'R2' : lr_training_r2})
 
 df_r2_training = df_training_rf_r2.append(df_training_svr_r2, ignore_index=True)
 df_r2_training = df_r2_training.append(df_training_lr_r2, ignore_index = True)
 
-df_r2_training.to_csv(github_path + '/data/regression_comparison/r2_training_data.csv')
+#df_r2_training.to_csv(github_path + '/data/regression_comparison/r2_training_data.csv')
 
-sns.boxplot(x = 'regressor', y = 'R2', data = df_r2_training)
+sns.boxplot(x = 'Regressor', y = 'R2', data = df_r2_training)
 
 # Save training adj_r2 values
 
-df_training_rf_adj_r2 = pd.DataFrame({'regressor' : 'RF', 'Adj_R2' : rf_training_adj_r2})
-df_training_svr_adj_r2 = pd.DataFrame({'regressor' : 'SVR', 'Adj_R2' : svr_training_adj_r2})
-df_training_lr_adj_r2 = pd.DataFrame({'regressor' : 'LR', 'Adj_R2' : lr_training_adj_r2})
+df_training_rf_adj_r2 = pd.DataFrame({'Regressor' : 'RFR', 'Adjusted R2' : rf_training_adj_r2})
+df_training_svr_adj_r2 = pd.DataFrame({'Regressor' : 'SVR', 'Adjusted R2' : svr_training_adj_r2})
+df_training_lr_adj_r2 = pd.DataFrame({'Regressor' : 'LR', 'Adjusted R2' : lr_training_adj_r2})
 
 df_adj_r2_training = df_training_rf_adj_r2.append(df_training_svr_adj_r2, ignore_index=True)
 df_adj_r2_training = df_adj_r2_training.append(df_training_lr_adj_r2, ignore_index = True)
 
-df_adj_r2_training.to_csv(github_path + '/data/regression_comparison/r2_training_data.csv')
+#df_adj_r2_training.to_csv(github_path + '/data/regression_comparison/r2_training_data.csv')
 
 
 # With linear legression
-sns.boxplot(x = 'regressor', y = 'Adj_R2', data = df_adj_r2_training)
+sns.boxplot(x = 'Regressor', y = 'Adjusted R2', data = df_adj_r2_training)
 
 
 # Without linear legression
-sns.boxplot(x = 'regressor', y = 'Adj_R2', data = df_adj_r2_training[df_adj_r2_training['regressor'] != 'LR'])
+sns.boxplot(x = 'Regressor', y = 'Adjusted R2', data = df_adj_r2_training[df_adj_r2_training['regressor'] != 'LR'])
 
 # Save test r2 values
 
-df_test_rf_r2 = pd.DataFrame({'regressor' : 'RF', 'R2' : rf_test_r2})
-df_test_svr_r2 = pd.DataFrame({'regressor' : 'SVR', 'R2' : svr_test_r2})
-df_test_lr_r2 = pd.DataFrame({'regressor' : 'LR', 'R2' : lr_test_r2})
+df_test_rf_r2 = pd.DataFrame({'Regressor' : 'RFR', 'R2' : rf_test_r2})
+df_test_svr_r2 = pd.DataFrame({'Regressor' : 'SVR', 'R2' : svr_test_r2})
+df_test_lr_r2 = pd.DataFrame({'Regressor' : 'LR', 'R2' : lr_test_r2})
 
 df_r2_test = df_test_rf_r2.append(df_test_svr_r2, ignore_index=True)
 df_r2_test = df_r2_test.append(df_test_lr_r2, ignore_index = True)
 
-df_r2_test.to_csv(github_path + '/data/regression_comparison/r2_test_data.csv')
+#df_r2_test.to_csv(github_path + '/data/regression_comparison/r2_test_data.csv')
 
-sns.boxplot(x = 'regressor', y = 'R2', data = df_r2_test)
+# With linear regression
+sns.boxplot(x = 'Regressor', y = 'R2', data = df_r2_test)
+
+# Without linear legression
+sns.boxplot(x = 'Regressor', y = 'R2', data = df_r2_test[df_r2_test['regressor'] != 'LR'])
+
 
 # Save test adj_r2 values
 
-df_test_rf_adj_r2 = pd.DataFrame({'regressor' : 'RF', 'Adj_R2' : rf_test_adj_r2})
-df_test_svr_adj_r2 = pd.DataFrame({'regressor' : 'SVR', 'Adj_R2' : svr_test_adj_r2})
-df_test_lr_adj_r2 = pd.DataFrame({'regressor' : 'LR', 'Adj_R2' : lr_test_adj_r2})
+df_test_rf_adj_r2 = pd.DataFrame({'Regressor' : 'RFR', 'Adjusted R2' : rf_test_adj_r2})
+df_test_svr_adj_r2 = pd.DataFrame({'Regressor' : 'SVR', 'Adjusted R2' : svr_test_adj_r2})
+df_test_lr_adj_r2 = pd.DataFrame({'Regressor' : 'LR', 'Adjusted R2' : lr_test_adj_r2})
 
 df_adj_r2_test = df_test_rf_adj_r2.append(df_test_svr_adj_r2, ignore_index=True)
 df_adj_r2_test = df_adj_r2_test.append(df_test_lr_adj_r2, ignore_index = True)
 
-df_adj_r2_test.to_csv(github_path + '/data/regression_comparison/r2_test_data.csv')
+#df_adj_r2_test.to_csv(github_path + '/data/regression_comparison/r2_test_data.csv')
 
 # With linear legression
-sns.boxplot(x = 'regressor', y = 'Adj_R2', data = df_adj_r2_test)
+sns.boxplot(x = 'Regressor', y = 'Adjusted R2', data = df_adj_r2_test)
 
 
 # Without linear legression
-sns.boxplot(x = 'regressor', y = 'Adj_R2', data = df_adj_r2_test[df_adj_r2_training['regressor'] != 'LR'])
+sns.boxplot(x = 'Regressor', y = 'Adjusted R2', data = df_adj_r2_test[df_adj_r2_training['Regressor'] != 'LR'])
 
 
 ################## Build Recommendation Grid #######

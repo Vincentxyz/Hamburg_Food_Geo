@@ -171,8 +171,10 @@ Date:\\
 \acro{csv}[CSV]{comma-separated values}
 \acro{etrs89}[ETRS89]{European Terrestrial Reference System 1989}
 \acro{json}[JSON]{JavaScript Object Notation}
+\acro{lr}[LR] {Linear Regression}
 \acro{metaver}[MetaVer\copyright]{MetadatenVerbund}
 \acro{oob}[OOB]{out-of-bag}
+\acro{rbf}[RBF]{Radial basis function}
 \acro{rfr}[RFR]{Random Forest Regression}
 \acro{sse}[SSE]{sum of squared errors of the regression model}
 \acro{sst}[SST]{sum of squred errors of the baseline model}
@@ -325,6 +327,7 @@ From Figure \ref{fig:yelp_factsheet_figures}, it can be seen that the restaurant
 \lhead{\emph{Analysis methods}}
 
 \section{Random Forest Regression}
+\label{sec:random_forest_regression}
 
 \subsection{General description}
 
@@ -360,9 +363,9 @@ Bagging and Boosting are two techniques to construct an ensemble of individual c
 
 \section{Regression performance measures}
 
-A common performance measure for the quality of fit of regression models is the ``coefficient of determination'', which is also called ``R-Squared'' \cite{Devasthali.2018}. This coefficient of determination uses a baseline model, which is a model that consistently predicts the mean of all observations of the dependent variable. This baseline model is a model that a created regression model can be compared to, to see how much more accurate the own predictions were to a poor model.
+A common performance measure for the quality of fit of regression models is the ``coefficient of determination'', which is also called ``$R^2$'' \cite{Devasthali.2018}. This coefficient of determination uses a baseline model, which is a model that consistently predicts the mean of all observations of the dependent variable. This baseline model is a model that a created regression model can be compared to, to see how much more accurate the own predictions were to a poor model.
 
-Following are the calculation of the \ac{sse}, \ac{sst} and R-squared \cite{Devasthali.2018}:
+Following are the calculation of the \ac{sse}, \ac{sst} and $R^2$ \cite{Devasthali.2018}:
 
 \[SSE = \sum\limits_{i=1}^n (y_{i} - \hat{y}_{i})^2\]
 
@@ -370,9 +373,9 @@ Following are the calculation of the \ac{sse}, \ac{sst} and R-squared \cite{Deva
 
 \[ R^2 = 1 - \frac{SSE}{SST}\]
 
-According to this calculation, R-squared always lies between 0 and 1, if the created regression model yields more accurate predictions than the baseline model \cite{Devasthali.2018}. The closer R-squared is to 1, the closer are the predictions by the regression model to the actual values. Additionally, the higher R-squared is, the more variations of the dependent variable are explained by the model.
+According to this calculation, $R^2$ always lies between 0 and 1, if the created regression model yields more accurate predictions than the baseline model \cite{Devasthali.2018}. The closer $R^2$ is to 1, the closer are the predictions by the regression model to the actual values. Additionally, the higher $R^2$ is, the more variations of the dependent variable are explained by the model.
 
-A weak point of R-squared is that additions of more independent variables never lower the value of R-squared, even for variables with little or no information gain \cite{Devasthali.2018}. To cope with this problem, another performance measure called ``adjusted R-squared'' was introduced, which introduces a negative effect on the measure for the inclusion of ineffective variables. It is calculated as follows \cite{Devasthali.2018}:
+A weak point of $R^2$ is that additions of more independent variables never lower the value of $R^2$, even for variables with little or no information gain \cite{Devasthali.2018}. To cope with this problem, another performance measure called ``adjusted $R^2$'' was introduced, which introduces a negative effect on the measure for the inclusion of ineffective variables. It is calculated as follows \cite{Devasthali.2018}:
 
 \[ \bar{R}^2 = 1 - (1-R^2)\frac{n-1}{n-p-1}\]
 
@@ -380,7 +383,7 @@ n = no of data points
 
 p = no of independent variables in the model
 
-R-squared therefore only improves (moves closer to 1), if significant variables are added to the model and deteriorates (moves closer to 0), if variables are added that are not valuable to the prediction of the dependent variable \cite{Devasthali.2018}. 
+$R^2$ therefore only improves (moves closer to 1), if significant variables are added to the model and deteriorates (moves closer to 0), if variables are added that are not valuable to the prediction of the dependent variable \cite{Devasthali.2018}. 
 
 \chapter{Data extraction}
 \label{Data extraction}
@@ -440,8 +443,8 @@ yelp_api.search_query()
 The list of parameters for this function is the same as the https query which is provided by Yelp \cite{yelp.businesses.search}. For this project, this function was used as:
 \begin{verbatim}
 response = yelp_api.search_query(term='restaurants',
-	 latitude=latitude, longitude=longitude, 
-	limit=50, offset=0, radius = radius)
+	 	latitude=latitude, longitude=longitude, 
+		limit=50, offset=0, radius = radius)
 \end{verbatim}
 where latitude, longitude and radius defined the centroid of the search area.
 Note that for each query, only a maximum of 50 restaurants could be returned (default=20). This means that:
@@ -454,7 +457,7 @@ This process was built into the get\_restaurants(latitude, longitude, radius) fu
 \subsubsection{Determining latitudes and longitudes for restaurant searches}
 \label{Determining_latitudes_and_longitudes_for_restaurant_searches}
 
-To receive data of all restaurants in Hamburg, the city had to be divided into tiles of size 2000 meters by 2000 meters. As Yelp only responded with less or equal than 1,000 restaurants, the tiles were even quartered, when exactly these 1,000 restaurants were sent back. With smaller tiles, all restaurants could be retrieved. The vertices of the tiles were the latitudes and longitudes used by the function get\_restaurants() mentioned in section \ref{retrieving_data_within_a_certain_area}. This process consisted of the following steps:
+To receive data of all restaurants in Hamburg, the city had to be divided into tiles of size 2,000 meters by 2,000 meters. As Yelp only responded with less or equal than 1,000 restaurants, the tiles were even quartered, when exactly these 1,000 restaurants were sent back. With smaller tiles, all restaurants could be retrieved. The vertices of the tiles were the latitudes and longitudes used by the function get\_restaurants() mentioned in section \ref{retrieving_data_within_a_certain_area}. This process consisted of the following steps:
 \begin{itemize}
 \item Pre-determine the maximum latitude, maximum longitude, minimum latitude and minimum longitude of Hamburg. These points were manually picked out from a map of Hamburg in QGIS.
 \item Create a new empty list of latitudes and a new empty list of longitudes.
@@ -465,14 +468,36 @@ To receive data of all restaurants in Hamburg, the city had to be divided into t
 Note that the set of pre-determined maximum/minimum latitudes and longitudes were of ETRS89 (EPSG:25832) \ac{crs}, while Yelp \ac{api} calls require WGS84 (EPSG:4326). Therefore, a helper function [transform\_coord()] using the Python module pyproj \cite{JeffWhitaker.2018} was written to transform the formats of the latitudes and longitudes so that they could properly be passed into the Yelp \ac{api} calls.
 
 \subsubsection{Extracting data of all restaurants in Hamburg}
+\label{Extracting data of all restaurants in Hamburg}
 As mentioned in section \ref{Determining_latitudes_and_longitudes_for_restaurant_searches}, each Yelp search query requires a latitude, longitude and radius to determine the search location.
-The radius was calculated from the length of the tile’s side which is 2000 meters by the following formula:
+
+The radius of each search was calculated by the radius of all overlapping circles that could form a complete grid as shown in figure \ref{fig:Yelp_extraction_grid}. To receive all restaurants in a grid of tiles having a square of 2000 meters by 2000 meters, the radius of the searches needed to at least contain these squares. The longest distance of a square center to any point in the square is given by the distance of the square center to the edges. This distance can be calculated with the law of Pythogoras. If `c' is the distance of a triangle with `a' being the distance of the center of the square to the center of the left side of the sqaure and `b' being the distance from the center of the left side of the square to the top left corner, then
+
+\begin{equation}
+ a^2 + b^2 = c^2
+\end{equation}
+ 
+\begin{equation}
+ c = \sqrt{a^2+b^2}
+\end{equation}
+ 
+\begin{equation}
+ radius = \sqrt{Tile Size/2 + Tile Size/2}
+\end{equation}
+The corresponding code for the calculation of the radius was given by the following formula:
 
 \begin{verbatim}
 radius = int(math.sqrt(math.pow(TILE_SIZE,2)*2)+1)
 \end{verbatim}
 
 which was constant during all Yelp \ac{api} calls.
+
+\begin{figure}[h]
+\includegraphics[scale=0.4]{Figures/Yelp_extraction_grid.jpeg}
+\centering
+\caption{Yelp data extraction search grid}
+\label{fig:Yelp_extraction_grid}
+\end{figure}
 
 Each \{latitude, longitude\} pair to be passed into each Yelp API calls was taken from the lists of latitudes and longitudes created in section \ref{Determining_latitudes_and_longitudes_for_restaurant_searches}.
 
@@ -482,7 +507,7 @@ The result of each call was stored into a \ac{json} file respective to the latit
 
 \subsection{Data wrangling and storing}
 
-As data in the \ac{json} file mentioned in section [link] was un-wrangled, it must be loaded back into Python for processing by:
+As data in the \ac{json} file mentioned in section \ref{Extracting data of all restaurants in Hamburg} was split, it had to be loaded back into Python for processing by:
 \begin{verbatim}
 with open('merged_extract.json') as json_data:
   businesses = json.load(json_data)
@@ -618,9 +643,56 @@ To prevent the effects that numbers in different value ranges would have, the fe
 
 In the training of a regressor, a regression technique is fitted to the training data to create a regressor that is able to predict values for unseen sets of features. In this paper, three different types of regression techniques were evaluated for their adequacy on the prediction of the restaurant success - \ac{rfr}, \ac{svr} and linear regression.
 
-The available data was split into a training set containing 70\% of the data records and a test set containing 30\% of the training records. Each of the regressors was fitted with the training set and then should predict both the values from the training set as well as the values from the test set. The training set values were fit
+The available data was split into a training set containing 70\% of the data records and a test set containing 30\% of the training records. Each of the regressors was fitted with the training set and then should predict both the values from the training set as well as the values from the test set. All three steps of the train-test-split, regressor fitting and prediction of test features were conducted 100 times to gain a stabler overview of the performance measures of the regressors. The $R^2$ and adjusted $R^2$ values were measured for both the training and test predictions for all regressors and are explained in the following.
 
+Based on experiences made with the training and test data, the \ac{rfr} regressor was set to consist of 1000 trees and have a maximum depth of trees of five nodes. The \ac{svr} regressor was set to employ the \ac{rbf} kernel.
 
+In figure \ref{fig:boxplot_r2_training_data} the $R^2$ values for the prediction of training set values for all three regression techniques are shown. It can be seen that the random forest values vary betweeen values of ca. 0.257 to 0.262, while \ac{svr} and \ac{lr} show $R^2$ values between ca. 0.23 than 0.24.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Regressor_comparison/boxplot_r2_training_data.png}
+\centering
+\caption{Boxplot diagram of the $R^2$ values for training data predictions}
+\label{fig:boxplot_r2_training_data}
+\end{figure}
+
+Figure \ref{fig:boxplot_adj_r2_training_data} presents the Adjusted $R^2$ values of the training data predictions of the regressors. While the Adjusted $R^2$  values of all three regressors are a little lower than their $R^2$ values (deviation of ca. 0.05 for each regressor) for the predictions of the same data, the order of regressors in their performance is the same. Hence, \ac{rfr} performs best on the training data among all three regressors.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Regressor_comparison/boxplot_adj_r2_training_data.png}
+\centering
+\caption{Boxplot diagram of the Adjusted $R^2$ values for training data predictions}
+\label{fig:boxplot_adj_r2_training_data}
+\end{figure}
+
+The boxplot diagrams for the $R^2$ values of the test set predictions for all regressors are depicted in figure \ref{fig:boxplot_r2_test_data_all}. However, the \ac{lr} values are so low with values of $-4 * 10^27$ that the \ac{svr} and \ac{rfr} values are not displayed visibly. Therefore, the \ac{lr} values have been excluded in figure \ref{fig:boxplot_r2_test_data_without_lr}. It is recognizable that the \ac{svr} and \ac{rfr} predict the test values with a much higher accuracy than linear regression and that \ac{svr} performs even slightly better than \ac{rfr}.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Regressor_comparison/boxplot_r2_test_data_all.png}
+\centering
+\caption{Boxplot diagram of the $R^2$ values for test data predictions of all regressors}
+\label{fig:boxplot_r2_test_data_all}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Regressor_comparison/boxplot_r2_test_data_without_lr.png}
+\centering
+\caption{Boxplot diagram of the $R^2$ values for test data predictions excluding linear regression}
+\label{fig:boxplot_r2_test_data_without_lr}
+\end{figure}
+
+Since a change of $R^2$ values to Adjusted $R^2$ values never increases the values, the the \ac{lr} Adjusted $R^2$ values will still be very low for Adjusted $R^2$ and they are not depicted in the Adjusted $R^2$ values that are displayed in figure \ref{fig:boxplot_adj_r2_test_data_without_lr}. In this boxplot diagram, it can be seen that \ac{svr} delivers slightly more accurate values than \ac{rfr} for the test values, as prior was also shown by the $R^2$ values of the test set predictions.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Regressor_comparison/boxplot_adj_r2_test_data_without_lr.png}
+\centering
+\caption{Boxplot diagram of the Adjusted $R^2$ values for test data predictions excluding linear regreesion}
+\label{fig:boxplot_adj_r2_test_data_without_lr}
+\end{figure}
+
+These $R^2$ values, having values of more than 0, but still far away from 1, indicate that the feature analysis of location dependent features have a correlation with the restaurant success better than simple guessing of the mean values, but not as high as to be the one indicator for restaurant success. Values of ca. 0.2 for the training data and ca. 0.1 for the test data may give an indication of which locations statistically lead to more success than others, but most of the restaurant succcess is still dependent on other factors, such as the quality of food, service, cleanliness and others, as explained in chapter \ref{elements}.
+
+The \ac{rfr} regressor showed by far the most accurate predictions in the training set, while the \ac{svr} regressor delivered a slightly higher accuracy for the test set predictions. In consideration of the adequacy of \ac{rfr} for restaurant location analyses given by the reasons explained in the section \ref{sec:random_forest_regression} and the overall acceptable performance in both the training data and the test data, further restaurant recommendations in the following sections are based on predictions by the \ac{rfr} regressor.
 
 \section{Exploratory data Analysis}
 
