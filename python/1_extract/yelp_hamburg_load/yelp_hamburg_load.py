@@ -33,10 +33,64 @@ def get_restaurants(latitude, longitude, radius):
         return restaurants_list
   return restaurants_list
 
+
+
+#restaurants = get_restaurants(MIN_LAT, MIN_LONG)
+
 import os
 #os.chdir('C:\Users\vince_000\Documents\Geotesting\Test_Files\Hamburg')
+import csv
+
+filename = '0.csv'
+keys = restaurants[0].keys()
+
+with open(filename, 'w') as f:
+  w = csv.DictWriter(f, keys)
+  w.writeheader()
+  w.writerows(restaurants)
+
+import json
+filename = '0.json'
+with open(filename, 'w') as f:
+  json.dump(restaurants, f)
+
+with open(filename, 'r') as f:
+  jdata = json.load(f)
+
+#ids= aliases= names= image_urls= is_closeds= urls= review_counts= \
+#  categories_titles= ratings= latitudes= longitudes= prices= addresses= cities= zip_codes= phones= distances = []
+#
+#example = jdata[0]['price']
+#print(example)
+#
+#for r in jdata:
+#  ids.append(r['id'])
+#  aliases.append(r['alias'])
+#  names.append(r['name'])
+#  image_urls.append(r['image_url'])
+#  is_closeds.append(r['is_closed'])
+#  urls.append(r['url'])
+#  review_counts.append(r['review_count'])
+#  categories_titles.append(r['categories'][0]['title'])
+#  ratings.append(r['rating'])
+#  latitudes.append(r['coordinates']['latitude'])
+#  longitudes.append(r['coordinates']['longitude'])
+#  #prices.append(r['price'])
+#  addresses.append(r['location']['address1'])
+#  cities.append(r['location']['city'])
+#  zip_codes.append(r['location']['zip_code'])
+#  phones.append(r['phone'])
+#  distances.append(r['distance'])
+
+#import pandas as pd
+#print(ids)
+#df = pd.DataFrame(ids)
+
+#print(dataset)
 
 import pyproj
+import numpy as np
+
 def transform_coord(lat_in, long_in): #output to yelp
   inProj = pyproj.Proj(init='epsg:25832')
   outProj = pyproj.Proj(init='epsg:4326')

@@ -7,6 +7,12 @@ from collections import namedtuple
 import os
 os.chdir('C:/Users/vince_000/Documents/Geotesting/Test_Files/Hamburg/JSON')
 
+def transform_coord(long_in, lat_in): #output to yelp
+  inProj = pyproj.Proj(init='epsg:4326')
+  outProj = pyproj.Proj(init='epsg:25832')
+  long_out,lat_out = pyproj.transform(inProj,outProj,long_in,lat_in)
+  return lat_out, long_out
+
 #definition of a restaurant
 Restaurant = namedtuple("Restaurant",
                         'id \
