@@ -57,37 +57,6 @@ with open(filename, 'w') as f:
 with open(filename, 'r') as f:
   jdata = json.load(f)
 
-#ids= aliases= names= image_urls= is_closeds= urls= review_counts= \
-#  categories_titles= ratings= latitudes= longitudes= prices= addresses= cities= zip_codes= phones= distances = []
-#
-#example = jdata[0]['price']
-#print(example)
-#
-#for r in jdata:
-#  ids.append(r['id'])
-#  aliases.append(r['alias'])
-#  names.append(r['name'])
-#  image_urls.append(r['image_url'])
-#  is_closeds.append(r['is_closed'])
-#  urls.append(r['url'])
-#  review_counts.append(r['review_count'])
-#  categories_titles.append(r['categories'][0]['title'])
-#  ratings.append(r['rating'])
-#  latitudes.append(r['coordinates']['latitude'])
-#  longitudes.append(r['coordinates']['longitude'])
-#  #prices.append(r['price'])
-#  addresses.append(r['location']['address1'])
-#  cities.append(r['location']['city'])
-#  zip_codes.append(r['location']['zip_code'])
-#  phones.append(r['phone'])
-#  distances.append(r['distance'])
-
-#import pandas as pd
-#print(ids)
-#df = pd.DataFrame(ids)
-
-#print(dataset)
-
 import pyproj
 import numpy as np
 
