@@ -229,6 +229,20 @@ Date:\\
 \chapter{Factors of restaurant success}
 \lhead{\emph{Factors of restaurant success}}
 
+\section{Restaurant viability factors}
+\label{viability_factors}
+
+Success or failure of a restaurant depends on various factors. According to Parsa et. al \cite{Parsa.2005}, factors which impact the viability of restaurant are broadly classified into four categories. These categories are internal environment, external environment, family life cycle and organizational life cycle. The different factors under these categories are clearly classified by the model developed by Parsa et. al \cite{Parsa.2005}, which can be seen in figure \ref{fig:Factors_on_restaurant_viability}. 
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Figures/Restaurant_sucess_factors/Factors_on_restaurant_viability.png}
+\centering
+\caption{Impact of various factors on restaurant viability \cite{Parsa.2005}}
+\label{fig:Factors_on_restaurant_viability}
+\end{figure}
+
+For a successful restaurant, it is essential to secure a suitable location, maintain service levels and food quality, control the cost of labor, food and beverages, well defined goals, finance and marketing management, and strong leadership \cite{Parsa.2005}. The restaurant may fail or succeed due to any of these factors. A restaurant location has significant impact on the success or failure of a restaurant , for example opening a nightclub restaurant near a police station thinking of safety may be a wrong selection of location as many customers will not feel comfortable due to police scrutiny. This project aims at selecting a beneficial location for a new restaurant while considering location dependent features which may impact restaurant success.
+
 \section{Elements of a restaurant location analysis}
 \label{elements}
 
@@ -699,7 +713,99 @@ These $R^2$ values, having values of more than 0, but still far away from 1, ind
 
 The \ac{rfr} regressor showed by far the most accurate predictions in the training set, while the \ac{svr} regressor delivered a slightly higher accuracy for the test set predictions. In consideration of the adequacy of \ac{rfr} for restaurant location analyses given by the reasons explained in the section \ref{sec:random_forest_regression} and the overall acceptable performance in both the training data and the test data, further restaurant recommendations in the following sections are based on predictions by the \ac{rfr} regressor.
 
+
+\section{Creation of a recommendation map}
+\label{creation_of_recommendation_map}
+
+With the regressors that were trained in the section \ref{regressor_training}, potential beneficial points of opening up a restaurant in Hamburg should be deducted. To know, which locations represent a beneficial spot, the features given by points across all the map of Hamburg had to be analyzed and a chance for success had to be predicted. For this purpose, a recommendation grid was created that predicted the chance for success for centroids of squares (tiles) on the map of Hamburg. These centroids were determined with a Python script called ``recommendation\_grid\_preparation'', which created centroids from the minimum x-value to the maximum y-value in the \ac{etrs89} \ac{crs}. These tiles were created in a distance of 1,000 points on the x-axis and 1,000 points on the y-axis from each other. Therefore, each centroid was representative of a tile of 1,000 by 1,000 points/meters. The centroids were loaded into QGIS and are displayed in figure \ref{fig:Recommendation_Grid_Centroids}.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Recommendation_map/Recommendation_Grid_Centroids.png}
+\centering
+\caption{Recommendation grid centroids}
+\label{fig:Recommendation_Grid_Centroids}
+\end{figure}
+
+Since the grid centroids were created to a square map around Hamburg, not all grid centroids were, in fact, located within the boundaries of Hamburg. Therefore, the centroids were filtered to those on the map of Hamburg in QGIS and joined with the city districts, on which they were located, as displayed in figure \ref{fig:Recommendation_Grid_Centroids_reduced}.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Recommendation_map/Recommendation_Grid_Centroids_reduced.png}
+\centering
+\caption{Recommendation grid centroids filtered with the Hamburg districts}
+\label{fig:Recommendation_Grid_Centroids_reduced}
+\end{figure}
+
+In the next step, all the features for the recommendation centroids were collected together and used to predict the success contributions of these locations. The location dependent features, which are described in section \ref{sec:Feature_selection}, were mainly location dependent and could be either extracted from the city district that a centroid was in, or calculated, like the distance to the next water bodies or the restaurant density in these centroids.
+
+Two factors, however, were not location dependent and multiple values had to be fed into the feature sets to predict the success of each variation. One of these factors is the price level as a category from price level 1 to price level 5. Predictions for all of these price levels were created, however, most of the times the price level 2 was selected as the price level with the highest success contribution, independent of the other features. As price has a relatively high contribution to restaurant success, the highest success contributing price was to be predicted for every poin. The second factor, which was included and which was not location dependent, was the category of the restaurant. As there were many restaurants with different categories with the same success contributions, the ``best'' restaurant category was not predicted, but taken as an input parameter. The business question that the reommendation map therefore answers is, if a customer wants to open up a restaurant of a certain category, e.g. a Vietnamese restaurant, where the location with the highest success contribution would be. For this, the categories with the seven highest frequencies in Hamburg were taken into account and used for an exemplary analysis. The seven most frequent categories are presented in table \ref{table:category_frequencies}. For each of these most frequent categories, a recommendation/prediction map was created.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline
+ restaurant category & number of restaurants \\
+ \hline
+ cafes & 520 \\ 
+ german & 391 \\  
+ italian & 387 \\    
+ hotdogs & 245 \\
+ greek & 223 \\
+ pizza & 193 \\
+ kebab & 165 \\
+ \hline
+\end{tabular}
+\caption{Restaurant category frequencies in Hamburg}
+\label{table:category_frequencies}
+\end{center}
+\end{table}
+
+In the Python file ``anylysis.py'', predictions for all recommendation centroids were created in two for-loops that replicate the predictions for all seven top categories and all price levels. Afterwards, the prediction values were saved together with their locations and their feature values into \ac{csv} files that could later be loaded into QGIS. Additionally, the top five locations for every category map were extracted and saved into a separate \ac{csv} file to be able to highlight them on the maps.
+
+For the creation of the recommendation maps, for each category, the recommendation centroids were loaded onto the QGIS Hamburg map together with their predicted success contribution and the additional features. These recommendation centroids were then saved in the same color and additionally converted to a raster that would show the success contribution as a color on the map. To save this raster, the attribute field was set to the predicted success and the raster resolution was set to 1,000 units per pixel. The color of the rasters were set to ``Singleband gray'' with a color gradient from black to white meaning the darker a location is, the less success is expected at this location and the brighter a location gets, the more success is expected. Furthermore, the transparency of the rasters were set to 40\% to be able to see the Hamburg district map in the background. In addition, the top 5 centroids of each categegory were imported into QGIS and displayed on the map. In figure \ref{fig:Greek_restaurant_success_contribution_map}, the success prediction map for Greek restaurants is shown as an example. Enabling the ``Identify Features'' option after clicking on the recommendation centroids layer of the respective category shows the features in a given location.
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Figures/Recommendation_map/greek_restaurant_recommendation_map.png}
+\centering
+\caption{Greek restaurant success contribution map}
+\label{fig:Greek_restaurant_success_contribution_map}
+\end{figure}
+
+\section{Locations for restaurant recommendations for restaurants in Hamburg}
+
+In section \ref{creation_of_recommendation_map}, recommendation maps that indicate the success contribution of all points in Hamburg for a given restaurant category, were created. It was recognized that for the seven most frequent restaurant categories (cafes, german, italian, hotdogs, greek, pizza and kebab), always the five locations were found to be most success contributing. These five locations are displayed in figure \ref{fig:Top_Five_Locations}. The x and y coordinates on the ETRS89 \ac{crs} are given in table \ref{table:top_five_locations}. The predictions for these five locations are based on all the features, which were used in the \ac{rfr}. Further, as price category, always price level 2 was predicted with the highest success contribution.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline
+x & y \\
+ \hline
+ 562645 & 5936563 \\ 
+ 566645 & 5938563 \\  
+ 564645 & 5923563 \\    
+ 559645 & 5938563 \\
+ 559645 & 5940563 \\
+ \hline
+\end{tabular}
+
+\caption{Top 5 locations for restaurant success according to random forest predictions (ETRS89)}
+\label{table:top_five_locations}
+\end{center}
+\end{table}
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Figures/Recommendation_map/Top_Five_Locations.png}
+\centering
+\caption{Top 5 locations for restaurant success according to random forest predictions}
+\label{fig:Top_Five_Locations}
+\end{figure}
+
+
+\chapter{Discussion}
+\lhead{\emph{Results}}
+
 \section{Exploratory data analysis}
+\label{Exploratory_data_analysis}
 
 \textbf{1.	Variable Importance}
 
@@ -789,103 +895,24 @@ Figure \ref{fig:lineplot_population_density} shows that the frequency and succes
 
 It can be seen from the value frequency in figure \ref{fig:lineplot_one_person_households} that the number of restaurants is higher in areas with a high share of one-person households of more than 45\%. Additionally, the success rate tends to be higher in the areas with high shares of one-person households. This could be due to people in one-person households having their meal more frequently outside with others in company.
 
-\section{Creation of a recommendation map}
-\label{creation_of_recommendation_map}
+\section{Discussion of results}
 
-With the regressors that were trained in the section \ref{regressor_training}, potential beneficial points of opening up a restaurant in Hamburg should be deducted. To know, which locations represent a beneficial spot, the features given by points across all the map of Hamburg had to be analyzed and a chance for success had to be predicted. For this purpose, a recommendation grid was created that predicted the chance for success for centroids of squares (tiles) on the map of Hamburg. These centroids were determined with a Python script called ``recommendation\_grid\_preparation'', which created centroids from the minimum x-value to the maximum y-value in the \ac{etrs89} \ac{crs}. These tiles were created in a distance of 1,000 points on the x-axis and 1,000 points on the y-axis from each other. Therefore, each centroid was representative of a tile of 1,000 by 1,000 points/meters. The centroids were loaded into QGIS and are displayed in figure \ref{fig:Recommendation_Grid_Centroids}.
+In this paper, a recommendation map for restaurants together with beneficial locations for a new restaurant could be created. This recommendation map answers to any potential restaurant owner the question of where to place a restaurant. Since the $R^2$ and Adjusted $R^2$ values of the \ac{rfr} were clearly positive, the predictions can bring value to the decision. Furthermore, the features that were used for the prediction of the success, can be delivered to potential restaurant owners, which enables them to evaluate these values themselves for their location decision.
 
-\begin{figure}[h]
-\includegraphics[scale=0.7]{Figures/Recommendation_map/Recommendation_Grid_Centroids.png}
-\centering
-\caption{Recommendation grid centroids}
-\label{fig:Recommendation_Grid_Centroids}
-\end{figure}
+However, the overview of 21 features and the restaurant category as input values for a location decision may be too complex for a human to handle. Since the final model of 1,0000 weighted decision trees within the random forest regressor is also too complex to understand for human beings, the grounds for the prediction of restaurant success are difficult to understand. This may leave a potential restaurant owner with a decision on a location for a new restaurant without the understanding of why this location was chosen. The feature importances and exploratory data analysis presented in section \ref{exploratory_data_analysis} present the relationships between important features of the random forest regressor, but a decision model with more than 22 features is challenging to understand by two-dimensional models than can be visually understood by human beings.
 
-Since the grid centroids were created to a square map around Hamburg, not all grid centroids were, in fact, located within the boundaries of Hamburg. Therefore, the centroids were filtered to those on the map of Hamburg in QGIS and joined with the city districts, on which they were located, as displayed in figure \ref{fig:Recommendation_Grid_Centroids_reduced}.
+Additional to the problem of model understandability, the success of a restaurant is not only explainable by its location. As described in section \ref{viability_factors}, there are more factors to the viability of a restaurant than its location. This is recognizable in the $R^2$ and Adjusted $R^2$ values for the test sets of ca. 0.1. These values are high enough to add value to a decision, but are not high enough to rely the restaurant success on the prections.
 
-\begin{figure}[h]
-\includegraphics[scale=0.7]{Figures/Recommendation_map/Recommendation_Grid_Centroids_reduced.png}
-\centering
-\caption{Recommendation grid centroids filtered with the Hamburg districts}
-\label{fig:Recommendation_Grid_Centroids_reduced}
-\end{figure}
+A challenge to the prediction of restaurant success, furthermore, was the success metric itself. Restaurant success would usually be measured by financial figures like the profit, revenue or customer count of this restaurant. In lack of this data, a success metric was created based on the Yelp reviews count and rating, which itself would be a valuable feature to predicting a restaurant's success. As the reviews of a restaurant both are a mirror of the restaurant success, but itself are a feature that can influence the restaurant's success, this metric is applicable for this paper, but has limitations. These limitations may also stem from the fact that a restaurant, which has high rated and many reviews, but which does not work profitably still would be seen as a successful restaurant.
 
-In the next step, all the features for the recommendation centroids were collected together and used to predict the success contributions of these locations. The location dependent features, which are described in section \ref{sec:Feature_selection}, were mainly location dependent and could be either extracted from the city district that a centroid was in, or calculated, like the distance to the next water bodies or the restaurant density in these centroids.
+Another limitation resulting from the given data is the restriction of the restaurant location analysis to one city. As one city's feature may be closer to each other than in the comparison to other cities or villages in the same or other countries, data from more cities would be beneficial to the prediction of success. However, as the provision and measurement of data is not performed equally in different countries and even within Germany, such an analysis would suffer from a questionable comparability of data and the availability of data.
 
-Two factors, however, were not location dependent and multiple values had to be fed into the feature sets to predict the success of each variation. One of these factors is the price level as a category from price level 1 to price level 5. Predictions for all of these price levels were created, however, most of the times the price level 2 was selected as the price level with the highest success contribution, independent of the other features. As price has a relatively high contribution to restaurant success, the highest success contributing price was to be predicted for every poin. The second factor, which was included and which was not location dependent, was the category of the restaurant. As there were many restaurants with different categories with the same success contributions, the ``best'' restaurant category was not predicted, but taken as an input parameter. The business question that the reommendation map therefore answers is, if a customer wants to open up a restaurant of a certain category, e.g. a Vietnamese restaurant, where the location with the highest success contribution would be. For this, the categories with the seven highest frequencies in Hamburg were taken into account and used for an exemplary analysis. The seven most frequent categories are presented in table \ref{table:category_frequencies}. For each of these most frequent categories, a recommendation/prediction map was created.
-
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{| c | c |}
-\hline
- restaurant category & number of restaurants \\
- \hline
- cafes & 520 \\ 
- german & 391 \\  
- italian & 387 \\    
- hotdogs & 245 \\
- greek & 223 \\
- pizza & 193 \\
- kebab & 165 \\
- \hline
-\end{tabular}
-\caption{Restaurant category frequencies in Hamburg}
-\label{table:category_frequencies}
-\end{center}
-\end{table}
-
-In the Python file ``anylysis.py'', predictions for all recommendation centroids were created in two for-loops that replicate the predictions for all seven top categories and all price levels. Afterwards, the prediction values were saved together with their locations and their feature values into \ac{csv} files that could later be loaded into QGIS. Additionally, the top five locations for every category map were extracted and saved into a separate \ac{csv} file to be able to highlight them on the maps.
-
-For the creation of the recommendation maps, for each category, the recommendation centroids were loaded onto the QGIS Hamburg map together with their predicted success contribution and the additional features. These recommendation centroids were then saved in the same color and additionally converted to a raster that would show the success contribution as a color on the map. To save this raster, the attribute field was set to the predicted success and the raster resolution was set to 1,000 units per pixel. The color of the rasters were set to ``Singleband gray'' with a color gradient from black to white meaning the darker a location is, the less success is expected at this location and the brighter a location gets, the more success is expected. Furthermore, the transparency of the rasters were set to 40\% to be able to see the Hamburg district map in the background. In addition, the top 5 centroids of each categegory were imported into QGIS and displayed on the map. In figure \ref{fig:Greek_restaurant_success_contribution_map}, the success prediction map for Greek restaurants is shown as an example. Enabling the ``Identify Features'' option after clicking on the recommendation centroids layer of the respective category shows the features in a given location.
-
-\begin{figure}[h]
-\includegraphics[scale=0.5]{Figures/Recommendation_map/greek_restaurant_recommendation_map.png}
-\centering
-\caption{Greek restaurant success contribution map}
-\label{fig:Greek_restaurant_success_contribution_map}
-\end{figure}
-
-\section{Locations for restaurant recommendations for restaurants in Hamburg}
-
-In section \ref{creation_of_recommendation_map}, recommendation maps that indicate the success contribution of all points in Hamburg for a given restaurant category, were created. It was recognized that for the seven most frequent restaurant categories (cafes, german, italian, hotdogs, greek, pizza and kebab), always the five locations were found to be most success contributing. These five locations are displayed in figure \ref{fig:Top_Five_Locations}. The x and y coordinates on the ETRS89 \ac{crs} are given in table \ref{table:top_five_locations}. The predictions for these five locations are based on all the features, which were used in the \ac{rfr}. Further, as price category, always price level 2 was predicted with the highest success contribution.
-
-\begin{table}[h!]
-\begin{center}
-\begin{tabular}{| c | c |}
-\hline
-x & y \\
- \hline
- 562645 & 5936563 \\ 
- 566645 & 5938563 \\  
- 564645 & 5923563 \\    
- 559645 & 5938563 \\
- 559645 & 5940563 \\
- \hline
-\end{tabular}
-
-\caption{Top 5 locations for restaurant success according to random forest predictions (ETRS89)}
-\label{table:top_five_locations}
-\end{center}
-\end{table}
-
-\begin{figure}[h]
-\includegraphics[scale=0.5]{Figures/Recommendation_map/Top_Five_Locations.png}
-\centering
-\caption{Top 5 locations for restaurant success according to random forest predictions}
-\label{fig:Top_Five_Locations}
-\end{figure}
-
-\chapter{Results and discussion}
-\lhead{\emph{Results and discussion}}
-
-\section{Results}
-
-\section{Discussion}
+Despite all these challenges, the predictions of restaurant success and creation of a recommendatoin may still be a beneficial technique for restaurant owners, e.g. to start or to verify their own analysis.
 
 \chapter{Conclusion}
 \lhead{\emph{Conclusion}}  
 
-
+This paper aims at a restaurant location analysis in Hamburg and to strives to find a method of selecting a beneficial location for the success of a restaurants. For this, the correlation of location dependent features to restaurant success has been analyzed and applied to a random forest regressor, which is able to predict the contribution to a restaurant success from the features given by a location. With this, a map could be created that presents recommended locations for the placement of a restaurant given a restaurant category. Five locations were named, which are predicted as beneficial to restaurant success on any of the seven most frequent restaurant categories in Hamburg.
 
 %% ----------------------------------------------------------------
 % Now begin the Appendices, including them as separate files
