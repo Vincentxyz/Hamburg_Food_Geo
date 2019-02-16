@@ -262,7 +262,7 @@ sns.boxplot(x = 'Regressor', y = 'Adjusted R2', data = df_adj_r2_training)
 
 
 # Without linear legression
-sns.boxplot(x = 'Regressor', y = 'Adjusted R2', data = df_adj_r2_training[df_adj_r2_training['regressor'] != 'LR'])
+sns.boxplot(x = 'Regressor', y = 'Adjusted R2', data = df_adj_r2_training[df_adj_r2_training['Regressor'] != 'LR'])
 
 # Save test r2 values
 
@@ -279,7 +279,7 @@ df_r2_test = df_r2_test.append(df_test_lr_r2, ignore_index = True)
 sns.boxplot(x = 'Regressor', y = 'R2', data = df_r2_test)
 
 # Without linear legression
-sns.boxplot(x = 'Regressor', y = 'R2', data = df_r2_test[df_r2_test['regressor'] != 'LR'])
+sns.boxplot(x = 'Regressor', y = 'R2', data = df_r2_test[df_r2_test['Regressor'] != 'LR'])
 
 
 # Save test adj_r2 values
@@ -518,6 +518,10 @@ sns.lineplot(x= "share_foreigners", y= "success", data = df_all)
 
 sns.lineplot(x= "sum_of_incomes_per_tax_reliable_person_in_EUR", y= "success", data = df_all)
 
+#df_all['sum_of_incomes_per_tax_reliable_person_in_EUR'].count()
+
+sns.lineplot(x= "sum_of_incomes_per_tax_reliable_person_in_EUR", y= "success", data = df_all)
+
 
 sns.lineplot(x= "density", y= "success", data = df_all)
 
@@ -525,5 +529,25 @@ sns.lineplot(x= "density", y= "success", data = df_all)
 sns.relplot(x= "distance_to_water", y= "success", kind = "line", data = df_all)
 
 sns.relplot(x= "share_households_with_single_parents", y= "success", kind = "line", data = df_all)
+
+# compare different ages
+df_under_18 = pd.DataFrame({'age_group': ['Under 18 years old'] * len(df_all.index),
+                            'share': df_all['share_under_18_years_old'],
+                            'success': df_all['success']
+                            })
+
+df_above_65 = pd.DataFrame({'age_group': ['65 years old and older'] * len(df_all.index),
+                            'share': df_all['share_65_year_olds_and_older'],
+                            'success': df_all['success']
+                            })
+    
+df_middle_age = pd.DataFrame({'age_group': ['18 to 65 years old'] * len(df_all.index),
+                            'share': [100] * len(df_all.index) - df_all['share_65_year_olds_and_older'] - df_all['share_under_18_years_old'],
+                            'success': df_all['success']
+                            })
+    
+df_age_groups= pd.concat([df_under_18,df_above_65],axis = 0)
+    
+sns.lineplot(x= "share", y= "success", data = df_middle_age)
 
 

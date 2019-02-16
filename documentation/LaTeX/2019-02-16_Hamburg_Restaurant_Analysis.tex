@@ -640,6 +640,7 @@ As explained in section \ref{district_profiles} and section \ref{criminal_count}
 To prevent the effects that numbers in different value ranges would have, the features were standardized.
 
 \section{Regressor training}
+\label{regressor_training}
 
 In the training of a regressor, a regression technique is fitted to the training data to create a regressor that is able to predict values for unseen sets of features. In this paper, three different types of regression techniques were evaluated for their adequacy on the prediction of the restaurant success - \ac{rfr}, \ac{svr} and linear regression.
 
@@ -697,6 +698,25 @@ The \ac{rfr} regressor showed by far the most accurate predictions in the traini
 \section{Exploratory data Analysis}
 
 \section{Creation of a recommendation map}
+
+With the regressors that were trained in the section \ref{regressor_training}, potential beneficial points of opening up a restaurant in Hamburg should be deducted. To know, which locations represent a beneficial spot, the features given by points across all the map of Hamburg had to be analyzed and a chance for success had to be predicted. For this purpose, a recommendation grid was created that predicted the chance for success for centroids of squares (tiles) on the map of Hamburg. These centroids were determined with a Python script called ``recommendation\_grid\_preparation'', which created centroids from the minimum x-value to the maximum y-value in the \ac{etrs89} \ac{crs}. These tiles were created in a distance of 1000 points on the x-axis and 1000 points on the y-axis from each other. Therefore, each centroid was representative of a tile of 1000 by 1000 points/meters. The centroids were loaded into QGIS and are displayed in figure \ref{fig:Recommendation_Grid_Centroids}.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Recommendation_map/Recommendation_Grid_Centroids.png}
+\centering
+\caption{Recommendation grid centroids}
+\label{fig:Recommendation_Grid_Centroids}
+\end{figure}
+
+Since the grid centroids were created to a square map around Hamburg, not all grid centroids were, in fact, located within the boundaries of Hamburg. Therefore, the centroids were filtered to those on the map of Hamburg in QGIS and joined with the city districts, on which they were located, as displayed in figure \ref{fig:Recommendation_Grid_Centroids_reduced}.
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Recommendation_map/Recommendation_Grid_Centroids_reduced.png}
+\centering
+\caption{Recommendation grid centroids filtered with the Hamburg districts}
+\label{fig:Recommendation_Grid_Centroids_reduced}
+\end{figure}
+
 
 
 \chapter{Results and discussion}
