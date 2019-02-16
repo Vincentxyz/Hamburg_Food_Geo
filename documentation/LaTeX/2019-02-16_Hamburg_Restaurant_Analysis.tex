@@ -151,8 +151,8 @@ Date:\\
 \listoffigures  % Write out the List of Figures
 
 %% ----------------------------------------------------------------
-%\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
-%\listoftables  % Write out the List of Tables
+\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
+\listoftables  % Write out the List of Tables
 
 %% ----------------------------------------------------------------
 \setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
@@ -226,9 +226,12 @@ Date:\\
 \chapter{Introduction}
 \lhead{\emph{Introduction}}
 
-\chapter{Elements of a restaurant location analysis}
+\chapter{Factors of restaurant success}
+\lhead{\emph{Factors of restaurant success}}
+
+\section{Elements of a restaurant location analysis}
 \label{elements}
-\lhead{\emph{Elements of a restaurant location analysis}}
+
 
 Location plays a critical role in the success or failure of a restaurant business \cite{Tzeng.2002} \cite{Parsa.2005} \cite{Camillo.2008}. Not every location may be a suitable location for every kind of restaurant. There are various factors such as demographic values of the restaurant neighborhood, accessibility, visibility and others, which need to be taken into account when selecting the location for opening a new restaurant. To find the best location for a new restaurant, location analysis technique can be used. Some of the elements of restaurant analysis technique are \cite{EvanTarver.21.04.2017} \cite{Webstaurantstore.com.25.07.2018}:
 
@@ -609,6 +612,7 @@ The criminal activity near a location of a restaurant can be an important factor
 \lhead{\emph{Data analysis}}
 
 \section{Feature selection and preparation}
+\label{sec:Feature_selection}
 
 To prevent overfitting, the number features in the training data should be kept to only the valuable features that support the prediction success in regression. The available data sources and features have been outlined in chapter \ref{Data extraction} on page \pageref{Data extraction}. 
 
@@ -646,7 +650,7 @@ In the training of a regressor, a regression technique is fitted to the training
 
 The available data was split into a training set containing 70\% of the data records and a test set containing 30\% of the training records. Each of the regressors was fitted with the training set and then should predict both the values from the training set as well as the values from the test set. All three steps of the train-test-split, regressor fitting and prediction of test features were conducted 100 times to gain a stabler overview of the performance measures of the regressors. The $R^2$ and adjusted $R^2$ values were measured for both the training and test predictions for all regressors and are explained in the following.
 
-Based on experiences made with the training and test data, the \ac{rfr} regressor was set to consist of 1000 trees and have a maximum depth of trees of five nodes. The \ac{svr} regressor was set to employ the \ac{rbf} kernel.
+Based on experiences made with the training and test data, the \ac{rfr} regressor was set to consist of 1,000 trees and have a maximum depth of trees of five nodes. The \ac{svr} regressor was set to employ the \ac{rbf} kernel.
 
 In figure \ref{fig:boxplot_r2_training_data} the $R^2$ values for the prediction of training set values for all three regression techniques are shown. It can be seen that the random forest values vary betweeen values of ca. 0.257 to 0.262, while \ac{svr} and \ac{lr} show $R^2$ values between ca. 0.23 than 0.24.
 
@@ -687,7 +691,7 @@ Since a change of $R^2$ values to Adjusted $R^2$ values never increases the valu
 \begin{figure}[h]
 \includegraphics[scale=0.7]{Figures/Regressor_comparison/boxplot_adj_r2_test_data_without_lr.png}
 \centering
-\caption{Boxplot diagram of the Adjusted $R^2$ values for test data predictions excluding linear regreesion}
+\caption{Boxplot diagram of the Adjusted $R^2$ values for test data predictions excluding linear regression}
 \label{fig:boxplot_adj_r2_test_data_without_lr}
 \end{figure}
 
@@ -695,11 +699,100 @@ These $R^2$ values, having values of more than 0, but still far away from 1, ind
 
 The \ac{rfr} regressor showed by far the most accurate predictions in the training set, while the \ac{svr} regressor delivered a slightly higher accuracy for the test set predictions. In consideration of the adequacy of \ac{rfr} for restaurant location analyses given by the reasons explained in the section \ref{sec:random_forest_regression} and the overall acceptable performance in both the training data and the test data, further restaurant recommendations in the following sections are based on predictions by the \ac{rfr} regressor.
 
-\section{Exploratory data Analysis}
+\section{Exploratory data analysis}
+
+\textbf{1.	Variable Importance}
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Exploratory/feature_importance_barplot.png}
+\centering
+\caption{Feature importance for random forest predictions}
+\label{fig:feature_importance_barplot}
+\end{figure}
+
+Figure \ref{fig:feature_importance_barplot} shows the features which had high a importance in the random forest prediction. The overview indicates that the price is the most important feature for the success and failure of a restaurant. Further, the density of restaurants, type of food like hotdogs, price of condominiums, distance from water and households with one person play a significant role in the success of the restaurants.
+
+\textbf{2.	Price level}
+
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Exploratory/boxplot_price_levels.png}
+\centering
+\caption{Boxplot diagram of restaurant price levels with success}
+\label{fig:boxplot_price_levels}
+\end{figure}
+
+Figure \ref{fig:boxplot_price_levels} shows the relationship between the price level and success of the restaurants in the dataset. It can be seen that the median of boxplots for different price levels increases together with the price level and it starts decreasing with a higher price level than 3. It indicates that the price level of restaurants in the extracted data had a correlation to their success. This could mean that there are consumers willing to pay high prices for restaurants and leave a good review, if they are satisfied and consider the prices justified. With price level 4, the overall restaurant success decreases, which could indicate either that too few consumers are willing to pay prices in this range or that the consumers were not satisfied with the restaurants’ offerings. Price level 5 showed no records, which may either indicate a lack of demand in this price range or a lack of restaurants able to service a justified offering for price level 5.
+
+\textbf{3.	Distance to Water}
+ 
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Exploratory/lineplot_distance_to_water.png}
+\centering
+\caption{Restaurant distance to water and success}
+\label{fig:lineplot_distance_to_water}
+\end{figure}
+ 
+From figure \ref{fig:lineplot_distance_to_water}, it can be seen that most of the restaurants are located within a range of 400 meters from water spots and that there is a huge variation in the success rate of these restaurant. However, the number of restaurants with the higher success rate is in the majority present in restaurants within a range of 200 meters near water spots.
+
+\textbf{4.	Condominiums Price}
+ 
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Exploratory/lineplot_prices_for_condominiums.png}
+\centering
+\caption{Condominium Price and success}
+\label{fig:lineplot_prices_for_condominiums}
+\end{figure}
+ 
+Figure \ref{fig:lineplot_prices_for_condominiums} shows that the price of condominiums and success of the restaurants in the dataset are slightly positively correlated, although this correlation varies strongly. This could mean that the prices of condominium are high in the area of high restaurant demand and supportive markets, such as downtown areas, which may lead to high restaurant success rates.
+
+\textbf{5.	Income}
+ 
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Exploratory/lineplot_income.png}
+\centering
+\caption{Income and success}
+\label{fig:lineplot_income}
+\end{figure}
+
+From figure \ref{fig:lineplot_income}, it can be seen that the success of restaurants in the extracted data is proportional to the income of the inhabitants in the vicinity of a restaurant. Also, it could indicate that the number of restaurants is significantly less in extremely high-income areas of more than 70,000 euros per inhabitant and year, but still these restaurants have high success rate.
+
+\textbf{6.	Restaurant density}
+ 
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Exploratory/lineplot_restaurant_densities.png}
+\centering
+\caption{Restaurant density and success}
+\label{fig:lineplot_restaurant_densities}
+\end{figure}
+
+Figure \ref{fig:lineplot_restaurant_densities} shows that the overall success rate does not vary much with the increase in restaurant density. This could be due to the positive effect restaurant density through a high demand of the market providing enough customers to all restaurants and the negative effect of competition through other restaurants.
+
+\textbf{7.	Population Density}
+ 
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Exploratory/lineplot_population_density.png}
+\centering
+\caption{Population density and success}
+\label{fig:lineplot_population_density}
+\end{figure}
+
+Figure \ref{fig:lineplot_population_density} shows that the frequency and success rate of restaurants are higher in the low population density area with less than 2,500 inhabitants. This could be due to the reason that areas in the vicinity of city centers with more commercial activity are usually less residential area. Additionally, it can be seen that the frequency of restaurants in high population density areas with more than 9,000 inhabitants is lower, but the success rate tends to be higher which could be due to the residential area.
+
+\textbf{8.	One-Person Households}
+ 
+\begin{figure}[h]
+\includegraphics[scale=0.7]{Figures/Exploratory/lineplot_one_person_households.png}
+\centering
+\caption{One-person households and success}
+\label{fig:lineplot_one_person_households}
+\end{figure}
+
+It can be seen from the value frequency in figure \ref{fig:lineplot_one_person_households} that the number of restaurants is higher in areas with a high share of one-person households of more than 45\%. Additionally, the success rate tends to be higher in the areas with high shares of one-person households. This could be due to people in one-person households having their meal more frequently outside with others in company.
 
 \section{Creation of a recommendation map}
+\label{creation_of_recommendation_map}
 
-With the regressors that were trained in the section \ref{regressor_training}, potential beneficial points of opening up a restaurant in Hamburg should be deducted. To know, which locations represent a beneficial spot, the features given by points across all the map of Hamburg had to be analyzed and a chance for success had to be predicted. For this purpose, a recommendation grid was created that predicted the chance for success for centroids of squares (tiles) on the map of Hamburg. These centroids were determined with a Python script called ``recommendation\_grid\_preparation'', which created centroids from the minimum x-value to the maximum y-value in the \ac{etrs89} \ac{crs}. These tiles were created in a distance of 1000 points on the x-axis and 1000 points on the y-axis from each other. Therefore, each centroid was representative of a tile of 1000 by 1000 points/meters. The centroids were loaded into QGIS and are displayed in figure \ref{fig:Recommendation_Grid_Centroids}.
+With the regressors that were trained in the section \ref{regressor_training}, potential beneficial points of opening up a restaurant in Hamburg should be deducted. To know, which locations represent a beneficial spot, the features given by points across all the map of Hamburg had to be analyzed and a chance for success had to be predicted. For this purpose, a recommendation grid was created that predicted the chance for success for centroids of squares (tiles) on the map of Hamburg. These centroids were determined with a Python script called ``recommendation\_grid\_preparation'', which created centroids from the minimum x-value to the maximum y-value in the \ac{etrs89} \ac{crs}. These tiles were created in a distance of 1,000 points on the x-axis and 1,000 points on the y-axis from each other. Therefore, each centroid was representative of a tile of 1,000 by 1,000 points/meters. The centroids were loaded into QGIS and are displayed in figure \ref{fig:Recommendation_Grid_Centroids}.
 
 \begin{figure}[h]
 \includegraphics[scale=0.7]{Figures/Recommendation_map/Recommendation_Grid_Centroids.png}
@@ -717,7 +810,70 @@ Since the grid centroids were created to a square map around Hamburg, not all gr
 \label{fig:Recommendation_Grid_Centroids_reduced}
 \end{figure}
 
+In the next step, all the features for the recommendation centroids were collected together and used to predict the success contributions of these locations. The location dependent features, which are described in section \ref{sec:Feature_selection}, were mainly location dependent and could be either extracted from the city district that a centroid was in, or calculated, like the distance to the next water bodies or the restaurant density in these centroids.
 
+Two factors, however, were not location dependent and multiple values had to be fed into the feature sets to predict the success of each variation. One of these factors is the price level as a category from price level 1 to price level 5. Predictions for all of these price levels were created, however, most of the times the price level 2 was selected as the price level with the highest success contribution, independent of the other features. As price has a relatively high contribution to restaurant success, the highest success contributing price was to be predicted for every poin. The second factor, which was included and which was not location dependent, was the category of the restaurant. As there were many restaurants with different categories with the same success contributions, the ``best'' restaurant category was not predicted, but taken as an input parameter. The business question that the reommendation map therefore answers is, if a customer wants to open up a restaurant of a certain category, e.g. a Vietnamese restaurant, where the location with the highest success contribution would be. For this, the categories with the seven highest frequencies in Hamburg were taken into account and used for an exemplary analysis. The seven most frequent categories are presented in table \ref{table:category_frequencies}. For each of these most frequent categories, a recommendation/prediction map was created.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline
+ restaurant category & number of restaurants \\
+ \hline
+ cafes & 520 \\ 
+ german & 391 \\  
+ italian & 387 \\    
+ hotdogs & 245 \\
+ greek & 223 \\
+ pizza & 193 \\
+ kebab & 165 \\
+ \hline
+\end{tabular}
+\caption{Restaurant category frequencies in Hamburg}
+\label{table:category_frequencies}
+\end{center}
+\end{table}
+
+In the Python file ``anylysis.py'', predictions for all recommendation centroids were created in two for-loops that replicate the predictions for all seven top categories and all price levels. Afterwards, the prediction values were saved together with their locations and their feature values into \ac{csv} files that could later be loaded into QGIS. Additionally, the top five locations for every category map were extracted and saved into a separate \ac{csv} file to be able to highlight them on the maps.
+
+For the creation of the recommendation maps, for each category, the recommendation centroids were loaded onto the QGIS Hamburg map together with their predicted success contribution and the additional features. These recommendation centroids were then saved in the same color and additionally converted to a raster that would show the success contribution as a color on the map. To save this raster, the attribute field was set to the predicted success and the raster resolution was set to 1,000 units per pixel. The color of the rasters were set to ``Singleband gray'' with a color gradient from black to white meaning the darker a location is, the less success is expected at this location and the brighter a location gets, the more success is expected. Furthermore, the transparency of the rasters were set to 40\% to be able to see the Hamburg district map in the background. In addition, the top 5 centroids of each categegory were imported into QGIS and displayed on the map. In figure \ref{fig:Greek_restaurant_success_contribution_map}, the success prediction map for Greek restaurants is shown as an example. Enabling the ``Identify Features'' option after clicking on the recommendation centroids layer of the respective category shows the features in a given location.
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Figures/Recommendation_map/greek_restaurant_recommendation_map.png}
+\centering
+\caption{Greek restaurant success contribution map}
+\label{fig:Greek_restaurant_success_contribution_map}
+\end{figure}
+
+\section{Locations for restaurant recommendations for restaurants in Hamburg}
+
+In section \ref{creation_of_recommendation_map}, recommendation maps that indicate the success contribution of all points in Hamburg for a given restaurant category, were created. It was recognized that for the seven most frequent restaurant categories (cafes, german, italian, hotdogs, greek, pizza and kebab), always the five locations were found to be most success contributing. These five locations are displayed in figure \ref{fig:Top_Five_Locations}. The x and y coordinates on the ETRS89 \ac{crs} are given in table \ref{table:top_five_locations}. The predictions for these five locations are based on all the features, which were used in the \ac{rfr}. Further, as price category, always price level 2 was predicted with the highest success contribution.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{| c | c |}
+\hline
+x & y \\
+ \hline
+ 562645 & 5936563 \\ 
+ 566645 & 5938563 \\  
+ 564645 & 5923563 \\    
+ 559645 & 5938563 \\
+ 559645 & 5940563 \\
+ \hline
+\end{tabular}
+
+\caption{Top 5 locations for restaurant success according to random forest predictions (ETRS89)}
+\label{table:top_five_locations}
+\end{center}
+\end{table}
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{Figures/Recommendation_map/Top_Five_Locations.png}
+\centering
+\caption{Top 5 locations for restaurant success according to random forest predictions}
+\label{fig:Top_Five_Locations}
+\end{figure}
 
 \chapter{Results and discussion}
 \lhead{\emph{Results and discussion}}

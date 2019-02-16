@@ -146,7 +146,7 @@ lr_test_adj_r2 = []
 
 
 # Change no_fittings to 100 for an analysis of the different regressors, 1 for using the regressor for the recommendations 
-no_fittings = 100
+no_fittings = 1
 
 for i in range(0,no_fittings):
     # Splitting the dataset into the Training set and Test set
