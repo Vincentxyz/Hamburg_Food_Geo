@@ -7,6 +7,11 @@ import numpy as np
 
 github_path = 'C:/Users/vince_000/Documents/GitHub/Hamburg_Food_Geo'
 
+def calc_adjusted_r_squared(r_squared, n, p):
+    adj_r_squared = 1.0 - (1.0 - r_squared) * (n-1) / (n-p-1)
+    
+    return adj_r_squared
+
 df_restaurants = pd.read_csv(github_path + '/data/restaurants/Restaurants_in_Hamburg.csv')
 df_social_values = pd.read_csv(github_path + '/data/social_values/Social_Values_2016_adjusted.csv')
 df_water_distances = pd.read_csv(github_path + '/data/water_distances/all_water_distances.csv')
@@ -131,7 +136,19 @@ svr_test_r2 = []
 lr_training_r2 = []
 lr_test_r2 = []
 
-for i in range(0,1):
+rf_training_adj_r2 = []
+rf_test_adj_r2 = []
+svr_training_adj_r2 = []
+svr_test_adj_r2 = []
+lr_training_adj_r2 = []
+lr_test_adj_r2 = []
+
+
+
+# Change no_fittings to 100 for an analysis of the different regressors, 1 for using the regressor for the recommendations 
+no_fittings = 100
+
+for i in range(0,no_fittings):
     # Splitting the dataset into the Training set and Test set
     from sklearn.model_selection import train_test_split
     X_train, X_test, y_train, y_test = train_test_split(df_features, df_all['success'], test_size = 0.3,random_state = 0)
@@ -148,9 +165,15 @@ for i in range(0,1):
     
     from sklearn.metrics import r2_score, mean_squared_error
     print("Random Forest: R-squared for training data: " + str(r2_score(y_train, rf_y_pred_train)))
-    rf_training_r2.append(r2_score(y_train, rf_y_pred_train))
     print("Random Forest: R-squared for test data: " + str(r2_score(y_test, rf_y_pred_test)))
+    print("Random Forest: Adjusted R-squared for training data"+ str(calc_adjusted_r_squared(r2_score(y_train, rf_y_pred_train),len(pd.DataFrame(df_features).columns),1)))
+    print("Random Forest: Adjusted R-squared for test data"+ str(calc_adjusted_r_squared(r2_score(y_test, rf_y_pred_test),len(pd.DataFrame(df_features).columns),1)))
+
+    
+    rf_training_r2.append(r2_score(y_train, rf_y_pred_train))
     rf_test_r2.append(r2_score(y_test, rf_y_pred_test))
+    rf_training_adj_r2.append(calc_adjusted_r_squared(r2_score(y_train, rf_y_pred_train),len(pd.DataFrame(df_features).columns),1))
+    rf_test_adj_r2.append(calc_adjusted_r_squared(r2_score(y_test, rf_y_pred_test),len(pd.DataFrame(df_features).columns),1))
     
     rf_feature_importances = pd.concat([pd.DataFrame(feature_columns),pd.DataFrame(rf_regressor.feature_importances_)],axis=1)
     rf_feature_importances.columns = ['attribute','importance']
@@ -158,12 +181,12 @@ for i in range(0,1):
     rf_feature_importances.to_csv(github_path + '/data/feature_importances/rf_feature_importances.csv')
     
     rf_feature_importances['importance'] = rf_feature_importances['importance'] * 100
-    
-    ax_feature_importance = sns.barplot(x= "importance", y= "attribute", 
-                data = rf_feature_importances.iloc[0:10,:], orient = 'h', 
-                color = 'blue')
-    
-    ax_feature_importance.set(xlabel='Feature Importance in %', ylabel='Feature')
+#    
+#    ax_feature_importance = sns.barplot(x= "importance", y= "attribute", 
+#                data = rf_feature_importances.iloc[0:10,:], orient = 'h', 
+#                color = 'blue')
+#    
+#    ax_feature_importance.set(xlabel='Feature Importance in %', ylabel='Feature')
 
     
     ####### Support Vector Regression ########
@@ -178,51 +201,99 @@ for i in range(0,1):
     svr_y_pred_test = regressor.predict(X_test)
     
     print("SVR: R-squared for training data: " + str(r2_score(y_train, svr_y_pred_train)))
-    svr_training_r2.append(r2_score(y_train, svr_y_pred_train))
     print("SVR: R-squared for test data: " + str(r2_score(y_test, svr_y_pred_test)))
+    print("SVR: Adjusted R-squared for training data"+ str(calc_adjusted_r_squared(r2_score(y_train, svr_y_pred_train),len(pd.DataFrame(df_features).columns),1)))
+    print("SVR: Adjusted R-squared for test data"+ str(calc_adjusted_r_squared(r2_score(y_test, svr_y_pred_test),len(pd.DataFrame(df_features).columns),1)))
+
+    
     svr_test_r2.append(r2_score(y_test, svr_y_pred_test))
+    svr_training_r2.append(r2_score(y_train, svr_y_pred_train))
+    svr_training_adj_r2.append(calc_adjusted_r_squared(r2_score(y_train, svr_y_pred_train),len(pd.DataFrame(df_features).columns),1))
+    svr_test_adj_r2.append(calc_adjusted_r_squared(r2_score(y_test, svr_y_pred_test),len(pd.DataFrame(df_features).columns),1))
     
     ###### Mulivariate linear Regressio #######
     # Fitting Multiple Linear Regression to the Training set
     
     from sklearn.linear_model import LinearRegression
-    l_regressor = LinearRegression()
-    l_regressor.fit(X_train, y_train)
+    lr_regressor = LinearRegression()
+    lr_regressor.fit(X_train, y_train)
     
     # Predicting the Test set results
-    l_y_pred_train = l_regressor.predict(X_train)
-    l_y_pred_test = l_regressor.predict(X_test)
+    lr_y_pred_train = lr_regressor.predict(X_train)
+    lr_y_pred_test = lr_regressor.predict(X_test)
     
-    print("Linear Regression: R-squared for training data: " + str(r2_score(y_train, l_y_pred_train)))
-    lr_training_r2.append(r2_score(y_train, l_y_pred_train))
-    print("Linear Regression: R-squared for test data: " + str(r2_score(y_test, l_y_pred_test)))
-    lr_training_r2.append(r2_score(y_test, l_y_pred_test))
+    print("Linear Regression: R-squared for training data: " + str(r2_score(y_train, lr_y_pred_train)))
+    print("Linear Regression: R-squared for test data: " + str(r2_score(y_test, lr_y_pred_test)))
+
+    
+    lr_training_r2.append(r2_score(y_train, lr_y_pred_train))
+    lr_test_r2.append(r2_score(y_test, lr_y_pred_test))
+       
+    lr_training_adj_r2.append(calc_adjusted_r_squared(r2_score(y_train, lr_y_pred_train),len(pd.DataFrame(df_features).columns),1))
+    lr_test_adj_r2.append(calc_adjusted_r_squared(r2_score(y_test, lr_y_pred_test),len(pd.DataFrame(df_features).columns),1))
 
 # Save training r2 values
 
-df_training_rf = pd.DataFrame({'regressor' : 'RF', 'R2' : rf_training_r2})
-df_training_svr = pd.DataFrame({'regressor' : 'SVR', 'R2' : svr_training_r2})
-df_training_lr = pd.DataFrame({'regressor' : 'LR', 'R2' : lr_training_r2})
+df_training_rf_r2 = pd.DataFrame({'regressor' : 'RF', 'R2' : rf_training_r2})
+df_training_svr_r2 = pd.DataFrame({'regressor' : 'SVR', 'R2' : svr_training_r2})
+df_training_lr_r2 = pd.DataFrame({'regressor' : 'LR', 'R2' : lr_training_r2})
 
-df_r2_training = df_training_rf.append(df_training_svr, ignore_index=True)
-df_r2_training = df_r2_training.append(df_training_lr, ignore_index = True)
+df_r2_training = df_training_rf_r2.append(df_training_svr_r2, ignore_index=True)
+df_r2_training = df_r2_training.append(df_training_lr_r2, ignore_index = True)
 
 df_r2_training.to_csv(github_path + '/data/regression_comparison/r2_training_data.csv')
 
 sns.boxplot(x = 'regressor', y = 'R2', data = df_r2_training)
 
+# Save training adj_r2 values
+
+df_training_rf_adj_r2 = pd.DataFrame({'regressor' : 'RF', 'Adj_R2' : rf_training_adj_r2})
+df_training_svr_adj_r2 = pd.DataFrame({'regressor' : 'SVR', 'Adj_R2' : svr_training_adj_r2})
+df_training_lr_adj_r2 = pd.DataFrame({'regressor' : 'LR', 'Adj_R2' : lr_training_adj_r2})
+
+df_adj_r2_training = df_training_rf_adj_r2.append(df_training_svr_adj_r2, ignore_index=True)
+df_adj_r2_training = df_adj_r2_training.append(df_training_lr_adj_r2, ignore_index = True)
+
+df_adj_r2_training.to_csv(github_path + '/data/regression_comparison/r2_training_data.csv')
+
+
+# With linear legression
+sns.boxplot(x = 'regressor', y = 'Adj_R2', data = df_adj_r2_training)
+
+
+# Without linear legression
+sns.boxplot(x = 'regressor', y = 'Adj_R2', data = df_adj_r2_training[df_adj_r2_training['regressor'] != 'LR'])
+
 # Save test r2 values
 
-df_test_rf = pd.DataFrame({'regressor' : 'RF', 'R2' : rf_test_r2})
-df_test_svr = pd.DataFrame({'regressor' : 'SVR', 'R2' : svr_test_r2})
-df_test_lr = pd.DataFrame({'regressor' : 'LR', 'R2' : lr_test_r2})
+df_test_rf_r2 = pd.DataFrame({'regressor' : 'RF', 'R2' : rf_test_r2})
+df_test_svr_r2 = pd.DataFrame({'regressor' : 'SVR', 'R2' : svr_test_r2})
+df_test_lr_r2 = pd.DataFrame({'regressor' : 'LR', 'R2' : lr_test_r2})
 
-df_r2_test = df_test_rf.append(df_test_svr, ignore_index=True)
-df_r2_test = df_r2_test.append(df_test_lr, ignore_index = True)
+df_r2_test = df_test_rf_r2.append(df_test_svr_r2, ignore_index=True)
+df_r2_test = df_r2_test.append(df_test_lr_r2, ignore_index = True)
 
 df_r2_test.to_csv(github_path + '/data/regression_comparison/r2_test_data.csv')
 
 sns.boxplot(x = 'regressor', y = 'R2', data = df_r2_test)
+
+# Save test adj_r2 values
+
+df_test_rf_adj_r2 = pd.DataFrame({'regressor' : 'RF', 'Adj_R2' : rf_test_adj_r2})
+df_test_svr_adj_r2 = pd.DataFrame({'regressor' : 'SVR', 'Adj_R2' : svr_test_adj_r2})
+df_test_lr_adj_r2 = pd.DataFrame({'regressor' : 'LR', 'Adj_R2' : lr_test_adj_r2})
+
+df_adj_r2_test = df_test_rf_adj_r2.append(df_test_svr_adj_r2, ignore_index=True)
+df_adj_r2_test = df_adj_r2_test.append(df_test_lr_adj_r2, ignore_index = True)
+
+df_adj_r2_test.to_csv(github_path + '/data/regression_comparison/r2_test_data.csv')
+
+# With linear legression
+sns.boxplot(x = 'regressor', y = 'Adj_R2', data = df_adj_r2_test)
+
+
+# Without linear legression
+sns.boxplot(x = 'regressor', y = 'Adj_R2', data = df_adj_r2_test[df_adj_r2_training['regressor'] != 'LR'])
 
 
 ################## Build Recommendation Grid #######
