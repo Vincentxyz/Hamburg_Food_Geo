@@ -1,0 +1,40 @@
+\vspace {1em}
+\contentsline {chapter}{Abstract}{ii}{dummy.1}% 
+\vspace {1em}
+\contentsline {chapter}{List of Figures}{iv}{dummy.3}% 
+\contentsline {chapter}{Abbreviations}{v}{chapter*.5}% 
+\vspace {2em}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}% 
+\contentsline {chapter}{\numberline {2}Elements of a restaurant location analysis}{2}{chapter.7}% 
+\contentsline {chapter}{\numberline {3}Data sources}{5}{chapter.9}% 
+\contentsline {section}{\numberline {3.1}Transparency Portal Hamburg}{5}{section.10}% 
+\contentsline {section}{\numberline {3.2}Online restaurant portals}{6}{section.12}% 
+\contentsline {subsection}{\numberline {3.2.1}Tripadvisor}{6}{subsection.13}% 
+\contentsline {subsection}{\numberline {3.2.2}Google Places}{6}{subsection.14}% 
+\contentsline {subsection}{\numberline {3.2.3}Facebook}{6}{subsection.16}% 
+\contentsline {subsection}{\numberline {3.2.4}Yelp}{7}{subsection.17}% 
+\contentsline {chapter}{\numberline {4}Analysis methods}{9}{chapter.19}% 
+\contentsline {section}{\numberline {4.1}Random Forest Regression}{9}{section.20}% 
+\contentsline {subsection}{\numberline {4.1.1}General description}{9}{subsection.21}% 
+\contentsline {subsection}{\numberline {4.1.2}Random Forest Regression Algorithm}{10}{subsection.25}% 
+\contentsline {subsection}{\numberline {4.1.3}Estimation of the random forest error rate}{10}{subsection.29}% 
+\contentsline {subsection}{\numberline {4.1.4}Bagging and boosting}{10}{subsection.33}% 
+\contentsline {section}{\numberline {4.2}Regression performance measures}{11}{section.34}% 
+\contentsline {chapter}{\numberline {5}Data extraction}{13}{chapter.37}% 
+\contentsline {section}{\numberline {5.1}Hamburg district map}{13}{section.38}% 
+\contentsline {section}{\numberline {5.2}Yelp restaurant data extraction}{13}{section.43}% 
+\contentsline {subsection}{\numberline {5.2.1}Restaurant success calculation}{13}{subsection.44}% 
+\contentsline {section}{\numberline {5.3}City district profiles Hamburg}{14}{section.46}% 
+\contentsline {section}{\numberline {5.4}Proximity to water}{15}{section.47}% 
+\contentsline {section}{\numberline {5.5}Restaurant density}{16}{section.52}% 
+\contentsline {section}{\numberline {5.6}Count of criminal cases}{17}{section.53}% 
+\contentsline {chapter}{\numberline {6}Data analysis}{18}{chapter.54}% 
+\contentsline {section}{\numberline {6.1}Feature selection and preparation}{18}{section.55}% 
+\contentsline {section}{\numberline {6.2}Regressor training}{19}{section.56}% 
+\contentsline {section}{\numberline {6.3}Exploratory data Analysis}{19}{section.58}% 
+\contentsline {section}{\numberline {6.4}Creation of a recommendation map}{19}{section.59}% 
+\contentsline {chapter}{\numberline {7}Results and discussion}{20}{chapter.60}% 
+\contentsline {section}{\numberline {7.1}Results}{20}{section.61}% 
+\contentsline {section}{\numberline {7.2}Discussion}{20}{section.62}% 
+\contentsline {chapter}{\numberline {8}Conclusion}{21}{chapter.63}% 
+\vspace {2em}
