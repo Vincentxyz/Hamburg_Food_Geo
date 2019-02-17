@@ -103,7 +103,7 @@ df_points = pd.DataFrame({'lat': latitudes, 'long': longitudes})
 df_etrs_points = pd.DataFrame({'lat': etrs_latitudes, 'long': etrs_longitudes})
 print(df_points)
 
-radius = int(math.sqrt(math.pow(TILE_SIZE,2)*2)+1)
+radius = int(math.sqrt(math.pow(TILE_SIZE,2)*2))
 
 for i in range(len(df_points)):
     lat = df_points.iloc[i,0]
